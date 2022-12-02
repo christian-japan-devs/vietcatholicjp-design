@@ -4,7 +4,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import {navigation, subNavigation} from '../../lib/constants'
 import { Disclosure } from '@headlessui/react'
 import { ChevronUpIcon } from '@heroicons/react/20/solid'
-
+import Link from 'next/link'
 
 export default function NavBar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -42,10 +42,12 @@ export default function NavBar() {
         <div>
           <nav className="flex h-9 items-center justify-between" aria-label="Global">
             <div className="flex lg:min-w-0 lg:flex-1" aria-label="Global">
-              <a href="/" className="-m-1.5 p-1.5">
-                <span className="sr-only">VietCatholicJapan</span>
-                <img className="h-8" src="/vietcatholicjp-icon.svg" alt="" />
-              </a>
+              <Link href="/">
+                <a  className="-m-1.5 p-1.5">
+                  <span className="sr-only">VietCatholicJapan</span>
+                  <img className="h-8" src="/vietcatholicjp-icon.svg" alt="" />
+                </a>
+              </Link>
             </div>
             <div className="flex lg:hidden">
               <button
@@ -142,13 +144,13 @@ export default function NavBar() {
                           <div className="mx-4 border-l border-r border-b border-gray-300">
                           <Disclosure.Panel className="px-6 py-2 text-sm text-gray-500">
                             {navi.sub_navi.map((item)=>(
+                              <Link key={item.name} href={item.href}>
                               <a
-                              key={item.name}
-                              href={item.href}
                               className="-mx-3 block rounded-lg py-2 px-2 text-base font-semibold leading-7 text-gray-600 hover:text-gray-200 hover:bg-sky-600"
                               >
                                 {item.name}
                               </a>
+                              </Link>
                             ))}
                           </Disclosure.Panel>
                           </div>

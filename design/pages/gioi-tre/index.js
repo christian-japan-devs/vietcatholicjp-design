@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { useState } from 'react'
 import Layout from '../../components/layout/Layout'
 import {MetaProps} from '../../components/layout/meta'
+import Link from 'next/link'
 
 const meta_data = {
   title:"",
@@ -83,15 +84,16 @@ export default function Index() {
                         &rarr;
                       </span>
                     </a>
-                    <a
-                      href="/gioi-tre/dai-hoi"
-                      className="inline-block rounded-lg backdrop-blur-md bg-white/30 px-4 py-1.5 md:py-4 text-sm md:text-2xl font-semibold leading-7 text-white shadow-sm ring-1 ring-gray-200 hover:bg-pink-700 hover:ring-pinnk-700"
-                    >
-                      Chương trình
-                      <span className="ml-2 text-blue-400" aria-hidden="true">
-                        &rarr;
-                      </span>
-                    </a>
+                    <Link  href="/gioi-tre/dai-hoi">
+                      <a
+                        className="inline-block rounded-lg backdrop-blur-md bg-white/30 px-4 py-1.5 md:py-4 text-sm md:text-2xl font-semibold leading-7 text-white shadow-sm ring-1 ring-gray-200 hover:bg-pink-700 hover:ring-pinnk-700"
+                      >
+                        Chương trình
+                        <span className="ml-2 text-blue-400" aria-hidden="true">
+                          &rarr;
+                        </span>
+                      </a>
+                    </Link>
                   </div>
                 </div>
             </div>
