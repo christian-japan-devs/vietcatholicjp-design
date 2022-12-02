@@ -1,8 +1,8 @@
 
-import {Register} from '../../types/register'
+import {RegisterType} from '../../types/register'
 
 type RegisterProps = {
-    register: Register,
+    register: RegisterType,
     onSubmit: (id:string) => void,
 }
 
