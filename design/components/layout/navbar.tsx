@@ -10,7 +10,7 @@ export default function NavBar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <div className="border pb-2 border-b-slate-300">
+    <div className="border pb-2 border-b-slate-300 dark:bg-slate-800">
       <div className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
         <svg
           className="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]"
@@ -42,8 +42,8 @@ export default function NavBar() {
         <div>
           <nav className="flex h-9 items-center justify-between" aria-label="Global">
             <div className="flex lg:min-w-0 lg:flex-1" aria-label="Global">
-              <Link href="/">
-                <a  className="-m-1.5 p-1.5">
+              <Link href="/" legacyBehavior>
+                <a  className="-m-1.5 mb-2 p-1.5 xl:ml-12 xl:mb-4">
                   <span className="sr-only">VietCatholicJapan</span>
                   <img className="h-8" src="/vietcatholicjp-icon.svg" alt="" />
                 </a>
@@ -52,7 +52,7 @@ export default function NavBar() {
             <div className="flex lg:hidden">
               <button
                 type="button"
-                className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+                className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 dark:text-gray-200 text-gray-700"
                 onClick={() => setMobileMenuOpen(true)}
               >
                 <span className="sr-only">Open main menu</span>
@@ -61,22 +61,24 @@ export default function NavBar() {
             </div>
             <div className="hidden lg:flex lg:justify-center lg:gap-x-12">
               {navigation.map((item) => (
-                <a key={item.name} href={item.href} className="font-semibold text-gray-900 hover:text-gray-900">
-                  {item.name}
-                </a>
+                <Link key={item.name} href={item.href} legacyBehavior>
+                  <a  className="font-semibold text-gray-900 dark:text-gray-200 dark:hover:text-gray-400 hover:text-gray-900">
+                    {item.name}
+                  </a>
+                </Link>
               ))}
             </div>
             <div className="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-end">
               <a
                 href="#"
-                className="inline-block rounded-lg px-3 py-1.5 text-sm font-semibold leading-6 text-gray-900 shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20"
+                className="inline-block rounded-lg px-3 py-1.5 text-sm font-semibold leading-6 text-gray-900 shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20 dark:text-gray-200 dark:hover:text-gray-400"
               >
                 Log in
               </a>
             </div>
           </nav>
           <Dialog as="div" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
-            <Dialog.Panel className="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 lg:hidden">
+            <Dialog.Panel className="fixed inset-0 z-10 overflow-y-auto bg-white dark:bg-slate-900 px-6 py-6 lg:hidden">
             <div className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
               <svg
                 className="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]"
@@ -118,11 +120,11 @@ export default function NavBar() {
                 <div className="flex">
                   <button
                     type="button"
-                    className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+                    className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 dark:text-gray-200"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     <span className="sr-only">Close menu</span>
-                    <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                    <XMarkIcon className="h-6 w-6 dark:text-gray-200" aria-hidden="true" />
                   </button>
                 </div>
               </div>
@@ -133,20 +135,20 @@ export default function NavBar() {
                       <Disclosure key={index}>
                       {({ open }) => (
                         <>
-                          <Disclosure.Button className="flex w-full justify-between rounded-lg px-2 py-2 text-left text-base font-medium text-gray-900 hover:text-gray-200 hover:bg-sky-600 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+                          <Disclosure.Button className="flex w-full justify-between rounded-lg px-2 py-2 text-left text-base font-medium text-gray-900 dark:text-gray-200 hover:text-gray-200 hover:bg-sky-600 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                             <span>{navi.name}</span>
                             <ChevronUpIcon
                               className={`${
                                 open ? 'rotate-180 transform' : ''
-                              } h-5 w-5 text-gray-700`}
+                              } h-5 w-5 text-gray-700 dark:text-gray-200`}
                             />
                           </Disclosure.Button>
                           <div className="mx-4 border-l border-r border-b border-gray-300">
-                          <Disclosure.Panel className="px-6 py-2 text-sm text-gray-500">
+                          <Disclosure.Panel className="px-6 py-2 text-sm text-gray-500 dark:text-gray-200">
                             {navi.sub_navi.map((item)=>(
-                              <Link key={item.name} href={item.href}>
+                              <Link key={item.name} href={item.href} legacyBehavior>
                               <a
-                              className="-mx-3 block rounded-lg py-2 px-2 text-base font-semibold leading-7 text-gray-600 hover:text-gray-200 hover:bg-sky-600"
+                              className="-mx-3 block rounded-lg py-2 px-2 text-base font-semibold leading-7 text-gray-600 dark:text-gray-200 hover:text-gray-200 hover:bg-sky-600"
                               >
                                 {item.name}
                               </a>
@@ -162,7 +164,7 @@ export default function NavBar() {
                   <div className="py-6">
                     <a
                       href="#"
-                      className="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-6 text-gray-900 hover:bg-gray-400/10"
+                      className="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-6 dark:text-gray-200 hover:text-gray-200 text-gray-900 hover:bg-gray-400/10"
                     >
                       Log in
                     </a>
