@@ -80,11 +80,11 @@ export default function Index() {
                       className="inline-block rounded-lg backdrop-blur-md bg-white/30 px-4 py-1.5 md:py-4 text-sm md:text-2xl font-semibold leading-7 text-white shadow-sm ring-1 ring-gray-200 hover:bg-pink-700 hover:ring-pinnk-700"
                     >
                       Đăng ký
-                      <span className="ml-2 text-pink-400" aria-hidden="true">
+                      <span className="ml-2 text-blue-400" aria-hidden="true">
                         &rarr;
                       </span>
                     </a>
-                    <Link  href="/gioi-tre/dai-hoi">
+                    <Link  href="/gioi-tre/dai-hoi" legacyBehavior>
                       <a
                         className="inline-block rounded-lg backdrop-blur-md bg-white/30 px-4 py-1.5 md:py-4 text-sm md:text-2xl font-semibold leading-7 text-white shadow-sm ring-1 ring-gray-200 hover:bg-pink-700 hover:ring-pinnk-700"
                       >
@@ -99,27 +99,26 @@ export default function Index() {
             </div>
             </div>
       </section>
-      <section className="bg-accent-dark mb-8">
+      <section className="bg-accent-dark mb-8 border-t border-steel-200">
         <div className="space-y-4 flex flex-col items-center">
             <h2 className="text-gray-800 pt-8 dark:text-gray-200 text-2xl font-semibold">
-                ĐẠI HỘI GIOI TRE II
+                ĐẠI HỘI GIỚI TRẺ
             </h2>
-            <a target="_blank" rel="noreferrer" href="https://goo.gl/maps/C8aaRLZ1MUdTTb127" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white backdrop-blur-md bg-white/20 rounded-lg hover:bg-pink-500 focus:ring-4 focus:outline-none focus:ring-pink-300 dark:bg-pink-600 dark:hover:bg-pink-700 dark:focus:ring-pink-800">
-                Địa chỉ
-                <svg aria-hidden="true" className="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"></path></svg>
-            </a>
+            <h2 className="text-gray-800 pt-2 dark:text-gray-200 text-2xl font-semibold">
+                VIỆT NAM TẠI NHẬT LẦN I
+            </h2>
         </div>
-        <div className="px-24 my-24 grid grid-flow-col grid-rows-2 grid-cols-2 gap-8">
+        <div className="mt-8 mb-16 md:px-24 md:my-24 grid grid-flow-col grid-rows-2 grid-cols-2 md:gap-8">
           <div className="transform scale-110 -rotate-6">
-            <img className='rounded-lg' src="/youth_event/game-01.jpg" alt="" loading="lazy"/>
+            <img className='rounded-lg' src="/youth_event/pray-02.jpg" alt="" loading="lazy"/>
           </div>
-          <div className="transform scale-100 rotate-6 transform">
+          <div className="transform md:scale-100 rotate-6">
             <img className='rounded-lg' src="/youth_event/sinh-hoat.jpg" alt="" loading="lazy"/>
           </div>
-          <div className="transform translate-y-12 -rotate-6">
+          <div className="transform translate-y-6 -rotate-6">
             <img className='rounded-lg' src="/youth_event/youth-dance.jpg" alt="" loading="lazy"/>
           </div>
-          <div className="row-start-1 col-start-2 rotate-6 transform translate-x-20 translate-y-4">
+          <div className="row-start-1 col-start-2 rotate-6 transform ">
             <img className='rounded-lg' src="/youth_event/group-04.jpg" alt="" loading="lazy"/>
           </div>
         </div>

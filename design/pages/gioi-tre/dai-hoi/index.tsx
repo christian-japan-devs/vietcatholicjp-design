@@ -1,14 +1,20 @@
 import { useState } from 'react'
 import NavBar from '../../../components/layout/navbar'
 import Disclosure from '../../../components/Disclosure'
-import Image from 'next/image'
+import Layout from '../../../components/layout/Layout'
+
+const meta_data = {
+    title:"",
+    description:"string",
+    ogUrl:"",
+    ogImage:""
+}
 
 export default function Event() {
 
   return (
-    <div className="isolate bg-white">
-        <NavBar/>
-        <section className="max-w-screen-xl items-center mt-4 mx-auto px-4 bg-gradient-to-b to-pink-600 from-sky-400">
+    <Layout meta_data={meta_data}>
+        <section className="max-w-screen-xl items-center mx-auto px-4 bg-gradient-to-b to-pink-600 from-skbg-gray-700y-400 dark:to-gray-700 dark:from-stone-900">
             <div className="space-y-4 flex flex-col items-center">
                 <h2 className="text-gray-100 pt-8 dark:text-gray-200 text-2xl font-semibold">
                     CHƯƠNG TRÌNH ĐẠI HỘI II
@@ -20,110 +26,110 @@ export default function Event() {
                 </a>
             </div>
             <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-2">
-                <div className='mt-8'>
+                <div className='mt-8 pt-4 px-4 backdrop-blur-md bg-white/30 rounded-box'>
                     <h2 className="text-gray-100 mb-4 text-center dark:text-gray-200 text-2xl font-semibold">NGÀY 1, thứ năm 04/05/2023
                     </h2>
-                    <ol className="relative border-l border-gray-200 dark:border-gray-700">                  
+                    <ol className="relative border-l border-gray-200 dark:border-gray-800">                  
                         <li className="mb-6 ml-4">
-                            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-                            <time className="text-lg font-normal text-gray-100 dark:text-gray-500">09:00 - 10:00</time>
+                            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-800"></div>
+                            <time className="text-lg font-normal text-gray-100 dark:text-gray-200">09:00 - 10:00</time>
                             <Disclosure className="mt-4" title="Đón tiếp, ghi danh" content="Đón tiếp, ghi danh"/>
                         </li>
                         <li className="mb-6 ml-4">
-                            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-                            <time className="text-md font-normal text-gray-100 dark:text-gray-500">10:00 - 10:45</time>
+                            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-800"></div>
+                            <time className="text-md font-normal text-gray-100 dark:text-gray-200">10:00 - 10:45</time>
                             <Disclosure className="mt-4" title="Sinh hoat chung" content="Sinh hoat chung"/>
                         </li>
                         <li className="mb-6 ml-4">
-                            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-                            <time className="text-md font-normal text-gray-100 dark:text-gray-500">11:00 - 12:30</time>
+                            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-800"></div>
+                            <time className="text-md font-normal text-gray-100 dark:text-gray-200">11:00 - 12:30</time>
                             <Disclosure className="mt-4" title="Com trưa- Sinh hoạt nhóm" content="Com trua- Sinh hoat nhóm"/>
                         </li>
                         <li className="mb-6 ml-4">
-                            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-                            <time className="text-md font-normal text-gray-100 dark:text-gray-500">12:45 - 13:45</time>
+                            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-800"></div>
+                            <time className="text-md font-normal text-gray-100 dark:text-gray-200">12:45 - 13:45</time>
                             <Disclosure className="mt-4" title="Khai mạc Đại Hội" content="Đón tiếp, ghi danh"/>
                         </li>
                         <li className="mb-6 ml-4">
-                            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-                            <time className="text-md font-normal text-gray-100 dark:text-gray-500">14:00 - 15:30</time>
+                            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-800"></div>
+                            <time className="text-md font-normal text-gray-100 dark:text-gray-200">14:00 - 15:30</time>
                             <Disclosure className="mt-4" title="Trò chơi, thi đua" content="Đón tiếp, ghi danh"/>
                         </li>
                         <li className="mb-6 ml-4">
-                            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-                            <time className="text-md font-normal text-gray-100 dark:text-gray-500">15:30 - 17:30</time>
+                            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-800"></div>
+                            <time className="text-md font-normal text-gray-100 dark:text-gray-200">15:30 - 17:30</time>
                             <Disclosure className="mt-4" title="Thi DOCAT" content="Hướng dẫn thi DOCAT"/>
                         </li>
                         <li className="mb-6 ml-4">
-                            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-                            <time className="text-md font-normal text-gray-100 dark:text-gray-500">17:30 - 18:00</time>
+                            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-800"></div>
+                            <time className="text-md font-normal text-gray-100 dark:text-gray-200">17:30 - 18:00</time>
                             <Disclosure className="mt-4" title="Nghỉ ngơi - ăn tối" content="Hướng dẫn lấy đồ ăn tối"/>
                         </li>
                         <li className="mb-6 ml-4">
-                            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-                            <time className="text-md font-normal text-gray-100 dark:text-gray-500">18:30 - 21:30</time>
+                            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-800"></div>
+                            <time className="text-md font-normal text-gray-100 dark:text-gray-200">18:30 - 21:30</time>
                             <Disclosure className="mt-4" title="Diễn nguyện - Văn nghệ" content="Diễn nguyện - Văn nghệ"/>
                         </li>
                         <li className="mb-6 ml-4">
-                            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-                            <time className="text-md font-normal text-gray-100 dark:text-gray-500">21:30 - 22:30</time>
+                            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-800"></div>
+                            <time className="text-md font-normal text-gray-100 dark:text-gray-200">21:30 - 22:30</time>
                             <Disclosure className="mt-4" title="Tĩnh nguyện" content="Tĩnh nguyện"/>
                         </li>
                         <li className="mb-6 ml-4">
-                            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-                            <time className="text-md font-normal text-gray-100 dark:text-gray-500">22:30 - </time>
+                            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-800"></div>
+                            <time className="text-md font-normal text-gray-100 dark:text-gray-200">22:30 - </time>
                             <Disclosure className="mt-4" title="Nghỉ đêm" content="Hướng dẫn nghỉ đêm"/>
                         </li>
                     </ol>
                 </div>
-                <div className='mt-8 pb-12'>
-                <h2 className="text-gray-100 mb-4 text-center dark:text-gray-200 text-2xl font-semibold">NGÀY 2, thứ sáu 05/05/2023
+                <div className='mt-8 mb-8 pb-12 pt-4 px-4 backdrop-blur-md bg-white/30 rounded-box'>
+                    <h2 className="text-gray-100 mb-4 text-center dark:text-gray-200 text-2xl font-semibold">NGÀY 2, thứ sáu 05/05/2023
                     </h2>
                     <ol className="relative border-l border-gray-200 dark:border-gray-700">                  
                     <li className="mb-6 ml-4">
-                            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-                            <time className="text-lg font-normal text-gray-100 dark:text-gray-500">05:30 - 07:00</time>
+                            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-800"></div>
+                            <time className="text-lg font-normal text-gray-100 dark:text-gray-200">05:30 - 07:00</time>
                             <Disclosure className="mt-4" title="Báo thức - Vệ sinh cá nhân" content="Báo thức - Vệ sinh cá nhân"/>
                         </li>
                         <li className="mb-6 ml-4">
-                            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-                            <time className="text-md font-normal text-gray-100 dark:text-gray-500">07:00 - 07:30</time>
+                            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-800"></div>
+                            <time className="text-md font-normal text-gray-100 dark:text-gray-200">07:00 - 07:30</time>
                             <Disclosure className="mt-4" title="Tập thể dục" content="Tập thể dục"/>
                         </li>
                         <li className="mb-6 ml-4">
-                            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-                            <time className="text-md font-normal text-gray-100 dark:text-gray-500">08:30 - 10:00</time>
+                            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-800"></div>
+                            <time className="text-md font-normal text-gray-100 dark:text-gray-200">08:30 - 10:00</time>
                             <Disclosure className="mt-4" title="Thảo luận chuyên đề" content="Ghi rõ nội dung các chuyên đề."/>
                         </li>
                         <li className="mb-6 ml-4">
-                            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-                            <time className="text-md font-normal text-gray-100 dark:text-gray-500">10:00 - 11:45</time>
+                            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-800"></div>
+                            <time className="text-md font-normal text-gray-100 dark:text-gray-200">10:00 - 11:45</time>
                             <Disclosure className="mt-4" title="Trò chơi liên hoàn" content="Trò chơi liên hoàn"/>
                         </li>
                         <li className="mb-6 ml-4">
-                            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-                            <time className="text-md font-normal text-gray-100 dark:text-gray-500">12:00 - 13:00</time>
+                            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-800"></div>
+                            <time className="text-md font-normal text-gray-100 dark:text-gray-200">12:00 - 13:00</time>
                             <Disclosure className="mt-4" title="Nghỉ ngơi ăn trưa" content="Nghỉ ngơi ăn trưa"/>
                         </li>
                         <li className="mb-6 ml-4">
-                            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-                            <time className="text-md font-normal text-gray-100 dark:text-gray-500">13:00 - 13:30</time>
+                            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-800"></div>
+                            <time className="text-md font-normal text-gray-100 dark:text-gray-200">13:00 - 13:30</time>
                             <Disclosure className="mt-4" title="Tập Hát" content="Hướng dẫn thi DOCAT"/>
                         </li>
                         <li className="mb-6 ml-4">
-                            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-                            <time className="text-md font-normal text-gray-100 dark:text-gray-500">13:30 - 15:30</time>
+                            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-800"></div>
+                            <time className="text-md font-normal text-gray-100 dark:text-gray-200">13:30 - 15:30</time>
                             <Disclosure className="mt-4" title="Thánh Lễ bế mạc Đại Hội" content="Thánh Lễ bế mạc Đại Hội"/>
                         </li>
                         <li className="mb-6 ml-4">
-                            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-                            <time className="text-md font-normal text-gray-100 dark:text-gray-500">15:30 - 16:30</time>
+                            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-800"></div>
+                            <time className="text-md font-normal text-gray-100 dark:text-gray-200">15:30 - 16:30</time>
                             <Disclosure className="mt-4" title="Dọn vệ sinh chung" content="Dọn vệ sinh chung"/>
                         </li>
                     </ol>
                 </div>
             </div>
         </section>
-    </div>
+    </Layout>
   )
 }
