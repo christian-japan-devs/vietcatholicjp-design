@@ -10,7 +10,6 @@ export interface Post {
   title: string
   slug: string
   date: string
-  emoji: string
   seo: SEO
   content: string
 }
@@ -21,7 +20,6 @@ export interface PostCard {
   author: Profile
   excerpt: string
   date: string
-  emoji: string
 }
 
 type PostType = {
