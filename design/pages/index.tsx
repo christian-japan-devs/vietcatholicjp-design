@@ -1,7 +1,7 @@
 import Layout from '../components/layout/Layout'
 import {MetaProps} from '../components/layout/meta'
 import Link from 'next/link'
-import {href_gt_dh} from '../lib/constants'
+import {href_gt_dh,href_pv_gio_le} from '../lib/constants'
 
 const meta_data:MetaProps = {
   title:"Giáo đoàn công giáo Việt Nam tại Nhật",
@@ -9,6 +9,9 @@ const meta_data:MetaProps = {
   ogUrl:"/",
   ogImage:"/vietcatholicjp-bg.jpeg"
 }
+
+import {mass_home_schedule} from '../types/sample_data/mass_schedule'
+
 export default function Home() {
 
   return (
@@ -23,7 +26,7 @@ export default function Home() {
       </div>
 
       <div className="relative px-2 lg:px-8">
-        <div className="mx-auto max-w-3xl pt-4 pb-4 sm:pt-8 sm:pb-8">
+        <div className="mx-auto max-w-5xl pt-4 pb-4 sm:pt-8 sm:pb-8">
           <div className="p-4 md:px-16 md:py-4 bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700">
             <div>
               <h1 className="text-4xl font-serif font-bold tracking-tight sm:text-center sm:text-6xl">
@@ -82,6 +85,65 @@ export default function Home() {
         </div>
       </div>
 
+      <section className="max-w-5xl lg:min-w-5xl bg-white border p-4 border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 md:flex md:flex-col md:items-center my-6 mx-auto px-4">
+        <div className="space-y-4 mb-8 justify-center text-center">
+            <h1 className="text-2xl font-serif font-bold tracking-tight sm:text-center sm:text-6xl">
+              {mass_home_schedule.title}
+            </h1>
+            <h3 className='text-gray-800 mt-2 text-center text-2xl sm:text-3xl dark:text-gray-200 font-semibold'>Ngày {mass_home_schedule.date}</h3>
+        </div>
+        <div className="max-w-5xl lg:min-w-5xl md:justify-center">
+          <div className="flex flex-col items-center">
+            <div className="justify-center">
+              <Link href={href_pv_gio_le} legacyBehavior>
+                <a className="inline-block rounded-lg px-2 py-1 text-sm leading-7 text-gray-800 dark:text-gray-200 hover:text-gray-600 hover:bg-gray-100 ring-1 ring-gray-200 hover:ring-gray-200">
+                  Xem đầy đủ
+                  <span className="text-gray-800 dark:text-gray-200" aria-hidden="true">&rarr;</span>
+                </a>
+              </Link>
+          </div>
+          </div>
+              <div className="overflow-x-auto mt-8 relative dark:bg-slate-900 dark:border rounded shadow-md sm:rounded-lg">
+                <table className="w-full min-w-5xl max-w-screen-lg mt-2 text-sm text-left text-gray-700 dark:text-gray-200">
+                    <thead className="text-xs text-gray-900 bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                        <tr>
+                            <th scope="col" className="py-3 px-6">
+                                Giờ lễ
+                            </th>
+                            <th scope="col" className="py-3 px-6">
+                                Cha
+                            </th>
+                            <th scope="col" className="py-3 px-6">
+                                Nhà thờ
+                            </th>
+                            <th scope="col" className="py-3 px-6">
+                              Tỉnh
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                      {mass_home_schedule.time_schedule.map((mass,idx)=>(
+                        <tr key={idx} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                            <td className="py-4 px-6">
+                              {mass.time}
+                            </td>
+                            <td className="py-4 px-6">
+                              {mass.father}
+                            </td>
+                            <td className="py-4 px-6">
+                              {mass.church_name}
+                            </td>
+                            <td className="py-4 px-6">
+                              {mass.province}
+                            </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                </table>
+              </div>
+        </div>
+      </section>
+
       <div className="my-8 sm:flex sm:flex-col sm:items-center">
         <h1 className="text-4xl mb-4 text-cyan-800 text-center font-serif font-bold tracking-tight sm:text-center sm:text-6xl">
           Thông báo
@@ -134,29 +196,31 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="my-8 sm:flex sm:flex-col sm:items-center">
-        <h1 className="text-4xl mb-4 text-center font-serif tracking-tight sm:text-center sm:text-6xl">
-          Nghe tin mừng mỗi
-        </h1>
-        <div className="sm:justify-center sm:rounded-xl carousel carousel-center max-w-md md:min-w-3xl md:max-w-5xl p-4 space-x-4 bg-gradient-to-r from-pink-400 to-blue-400">
-          <div className="carousel-item">
-            <div className="card w-80 md:w-96 shadow-xl">
-              <div className="card-body">
-              <iframe className="w-64 h-56 md:w-96 md:h-80" src="https://www.youtube.com/embed/ZCVSCOt5J7k?start=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+      <div className="mt-12 sm:flex sm:flex-col sm:items-center">
+        <div className="sm:justify-center not-prose relative bg-slate-50 md:max-w-3xl lg:max-w-5xl  rounded-xl overflow-hidden dark:bg-slate-800/25">
+          <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,#fff,rgba(255,255,255,0.6))] dark:bg-grid-slate-700/25 dark:[mask-image:linear-gradient(0deg,rgba(255,255,255,0.1),rgba(255,255,255,0.5))]" ></div>
+          <h1 className="text-4xl mt-4 text-center font-serif tracking-tight sm:text-center sm:text-6xl">
+            Nghe tin mừng hàng tuần
+          </h1>
+          <div className="relative rounded-xl overflow-auto">
+            <div className="my-4 ms:my-12 relative w-full flex gap-6 snap-x overflow-x-auto pb-8">
+              <div className="snap-center shrink-0">
+                <div className="shrink-0 w-2 sm:w-48"></div>
               </div>
-            </div>
-          </div> 
-          <div className="carousel-item">
-            <div className="card w-80 md:w-96 shadow-xl">
-              <div className="card-body">
-              <iframe className="w-64 h-56 md:w-96 md:h-80" src="https://www.youtube.com/embed/wEsZLwkhPkU?start=14" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+              <div className="snap-center shrink-0 first:pl-8 last:pr-8">
+                <iframe className="shrink-0 w-80 h-56 md:w-96 md:h-64 rounded-lg shadow-xl bg-white" src="https://www.youtube.com/embed/ZCVSCOt5J7k?start=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
               </div>
-            </div>
-          </div>
-          <div className="carousel-item">
-            <div className="card w-80 md:w-96 shadow-xl">
-              <div className="card-body">
-              <iframe className="w-64 h-56 md:w-96 md:h-80" src="https://www.youtube.com/embed/_hmPiy3Tukw?start=4" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+              <div className="snap-center shrink-0 first:pl-8 last:pr-8">
+                <iframe className="shrink-0 w-80 h-56 md:w-96 md:h-64 rounded-lg shadow-xl bg-white" src="https://www.youtube.com/embed/wEsZLwkhPkU?start=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+              </div>
+              <div className="snap-center shrink-0 first:pl-8 last:pr-8">
+                <iframe className="shrink-0 w-80 h-56 md:w-96 md:h-64 rounded-lg shadow-xl bg-white" src="https://www.youtube.com/embed/_hmPiy3Tukw?start=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+              </div>
+              <div className="snap-center shrink-0 first:pl-8 last:pr-8">
+                <iframe className="shrink-0 w-80 h-56 md:w-96 md:h-64 rounded-lg shadow-xl bg-white" src="https://www.youtube.com/embed/ZCVSCOt5J7k?start=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+              </div>
+              <div className="snap-center shrink-0">
+                <div className="shrink-0 w-24s sm:w-48"></div>
               </div>
             </div>
           </div>
@@ -164,7 +228,7 @@ export default function Home() {
       </div>
 
       <div className="relative px-2 lg:px-8">
-          <div className="mx-auto max-w-3xl pt-8 pb-8 sm:pt-18 sm:pb-18">
+          <div className="mx-auto max-w-5xl pt-8 pb-8 sm:pt-18 sm:pb-18">
             <div className="p-4 md:px-16 md:py-4 bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700">
               <div>
                 <h1 className="text-4xl font-serif font-bold tracking-tight sm:text-center sm:text-6xl">
@@ -218,37 +282,49 @@ export default function Home() {
           </div>
       </div>
 
-      <div className="my-8 sm:flex sm:flex-col sm:items-center">
-        <h1 className="text-4xl mb-4 text-center font-serif tracking-tight sm:text-center sm:text-6xl">
-          Bài viết gần đây
-        </h1>
-        <div className="sm:justify-center sm:rounded-xl carousel carousel-center max-w-md md:max-w-5xl p-4 space-x-4 bg-gradient-to-r from-pink-400 to-blue-400">
-          <div className="carousel-item">
-            <div className="card w-64 md:w-96 bg-base-100 shadow-xl">
-              <div className="card-body">
-                <h2 className="card-title">Sứ điệp của Đức Thánh Cha Phanxcô 2022-2023</h2>
-                <p>Sứ điệp của cha, cho các con là những người trẻ, sứ điệp lớn lao mà Giáo hội cưu mang, đó là Chúa Giêsu ...</p>
+      <div className="mt-12 sm:flex sm:flex-col sm:items-center">
+        <div className="sm:justify-center not-prose relative  bg-gradient-to-r from-pink-400 to-blue-400 md:max-w-3xl lg:max-w-5xl  rounded-xl overflow-hidden dark:bg-slate-800/25">
+          <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,#fff,rgba(255,255,255,0.6))] dark:bg-grid-slate-700/25 dark:[mask-image:linear-gradient(0deg,rgba(255,255,255,0.1),rgba(255,255,255,0.5))]" ></div>
+          <h1 className="text-4xl my-4 text-center font-serif tracking-tight sm:text-center sm:text-6xl">
+            Bài viết gần đây
+          </h1>
+          <div className="relative rounded-xl overflow-auto">
+            <div className="my-4 ms:my-12 relative w-full flex gap-6 snap-x overflow-x-auto pb-8">
+              <div className="snap-center shrink-0">
+                <div className="shrink-0 w-2 sm:w-48"></div>
               </div>
-            </div>
-          </div> 
-          <div className="carousel-item">
-            <div className="card w-64 md:w-96 bg-base-100 shadow-xl">
-              <div className="card-body">
-                <h2 className="card-title">Hướng tới một Hội Thánh hiệp hành</h2>
-                <p>Đáp lại lời kêu gọi của Đức Thánh Cha Phanxicô, Hội Thánh Việt Nam tích cực tham gia Thượng Hội Đồng Giám Mục cấp Giáo phận. ...</p>
+              <div className="snap-center shrink-0 first:pl-8 last:pr-8">
+                <div className="card w-64 md:w-96 bg-base-100 shadow-xl">
+                  <div className="card-body">
+                    <h2 className="card-title">Sứ điệp của Đức Thánh Cha Phanxcô 2022-2023</h2>
+                    <p>Sứ điệp của cha, cho các con là những người trẻ, sứ điệp lớn lao mà Giáo hội cưu mang, đó là Chúa Giêsu ...</p>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div> 
-          <div className="carousel-item">
-            <div className="card w-64 md:w-96 bg-base-100 shadow-xl">
-              <div className="card-body">
-                <h2 className="card-title">Toàn cầu hoá</h2>
-                <p>Chúng ta đã bước vào thế kỷ XXI, một thế kỷ được mệnh danh là kỷ nguyên của toàn cầu hoá hay còn gọi là thời đại văn minh trí tuệ. ...</p>
+              <div className="snap-center shrink-0 first:pl-8 last:pr-8">
+                <div className="card w-64 md:w-96 bg-base-100 shadow-xl">
+                  <div className="card-body">
+                    <h2 className="card-title">Hướng tới một Hội Thánh hiệp hành</h2>
+                    <p>Đáp lại lời kêu gọi của Đức Thánh Cha Phanxicô, Hội Thánh Việt Nam tích cực tham gia Thượng Hội Đồng Giám Mục cấp Giáo phận. ...</p>
+                  </div>
+                </div>
+              </div>
+              <div className="snap-center shrink-0 first:pl-8 last:pr-8">
+                <div className="card w-64 md:w-96 bg-base-100 shadow-xl">
+                  <div className="card-body">
+                    <h2 className="card-title">Toàn cầu hoá</h2>
+                    <p>Chúng ta đã bước vào thế kỷ XXI, một thế kỷ được mệnh danh là kỷ nguyên của toàn cầu hoá hay còn gọi là thời đại văn minh trí tuệ. ...</p>
+                  </div>
+                </div>
+              </div>
+              <div className="snap-center shrink-0">
+                <div className="shrink-0 w-24s sm:w-48"></div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      
     </Layout>
   )
 }
