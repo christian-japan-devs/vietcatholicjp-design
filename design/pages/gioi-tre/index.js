@@ -40,7 +40,7 @@ export default function Index() {
     <Layout meta_data={meta_data}>
       <section className="bg-accent-dark mb-8">
           <div className="relative px-2 lg:px-8">
-            <div className="mx-auto lg:mx-16 max-w-8xl bg-cover bg-hero-pattern md:pb-48 lg:pb-48 sm:pb-48">
+            <div className="mx-auto lg:mx-16 max-w-8xl bg-cover bg-hero-youth-event md:pb-48 lg:pb-48 sm:pb-48">
                 <div className="pt-8 pb-8">
                   <div className="flex flex-col  items-center ">
                     <img className="mt-4 p-1 w-36 h-36 md:w-48 md:h-48 lg:w-64 lg:h-64 drop-shadow-2xl rounded-full ring-2 ring-gray-300 dark:ring-gray-500" src="/youth_event/youth-logo-2.jpg" alt="Bordered avatar"/>

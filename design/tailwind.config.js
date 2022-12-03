@@ -7,7 +7,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'hero-pattern': "url('/youth_event/youth-event-1.jpeg')",
+        'hero-youth-event': "url('/youth_event/youth-event-1.jpeg')",
+        'hero-index': "url('/vietcatholicjp-bg.jpeg')",
         'footer-texture': "url('/img/footer-texture.png')",
       }
     },
