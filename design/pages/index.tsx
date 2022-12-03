@@ -10,16 +10,16 @@ export default function Home() {
 
   return (
     <Layout meta_data={meta_data}>
-      <div>
-        <div className="hero sm:min-h-screen" style={{ backgroundImage: `url("/vietcatholicjp-bg.jpeg")` }}>
-          <div className="hero-overlay bg-opacity-50"></div>
-          <div className="hero-content text-center text-neutral-content">
-            <div className="max-w-xl">
-              <h1 className="mb-5 text-3xl sm:text-5xl font-bold">Giáo đoàn công giáo Việt Nam tại Nhật</h1>
-              <p className="mb-5 sm:text-3xl font-bold">在日ヴィエトナム人・カトリック共同体</p>
-            </div>
+      <div className="flex flex-col items-center">
+          <div className="hero justify-center max-w-6xl min-h-screen rounded-xl shadow-lg" style={{ backgroundImage: `url("/vietcatholicjp-bg.jpeg")` }}>
+              
+              <div className="hero-content bg-opacity-50 text-center text-neutral-content">
+                <div className="max-w-xl">
+                  <h1 className="mb-5 text-3xl sm:text-5xl font-bold">Giáo đoàn công giáo Việt Nam tại Nhật</h1>
+                  <p className="mb-5 sm:text-3xl font-bold">在日ヴィエトナム人・カトリック共同体</p>
+                </div>
+              </div>
           </div>
-        </div>
       </div>
       <div className="relative px-2 lg:px-8">
         <div className="mx-auto max-w-3xl pt-4 pb-4 sm:pt-8 sm:pb-8">
