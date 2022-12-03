@@ -3,6 +3,8 @@ import {MetaProps} from '../components/layout/meta'
 import Link from 'next/link'
 import {href_gt_dh,href_pv_gio_le} from '../lib/constants'
 
+import {sample_posts,sample_gospel_video,sample_letter1,sample_letter2} from '../types/sample_data/posts'
+
 const meta_data:MetaProps = {
   title:"Giáo đoàn công giáo Việt Nam tại Nhật",
   description:"Giáo đoàn công giáo Việt Nam tại Nhật",
@@ -16,8 +18,8 @@ export default function Home() {
 
   return (
     <Layout meta_data={meta_data}>
-      <div className="flex flex-col items-center">
-        <div className="justify-center pt-96 mx-2 mt-2 sm:pb-96 sm:pt-2 sm:px-12 lg:mx-12 md:max-w-3xl lg:max-w-6xl item-center bg-hero-index bg-cover bg-center border rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+      <div className="sm:flex sm:flex-col sm:items-center">
+        <div className="sm:justify-center pt-96 mx-2 mt-2 sm:pb-96 sm:pt-2 sm:px-12 lg:mx-12 md:max-w-3xl lg:max-w-6xl item-center bg-hero-index bg-cover bg-center border rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700">
             <div className="backdrop-blur-sm py-2 rounded bg-white/10 sm:backdrop-blur-sm sm:bg-white/5 sm:rounded-2xl">
               <h5 className="mb-2 mt-2 px-12 sm:px-24 text-center text-2xl md:text-5xl font-bold text-gray-100 dark:text-white">Giáo đoàn công giáo Việt Nam tại Nhật</h5>
               <h5 className="mb-2 text-xl text-center text-gray-100 sm:text-3xl dark:text-gray-400">在日ヴィエトナム人・カトリック共同体</h5>
@@ -30,28 +32,39 @@ export default function Home() {
           <div className="p-4 md:px-16 md:py-4 bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700">
             <div>
               <h1 className="text-4xl font-serif font-bold tracking-tight sm:text-center sm:text-6xl">
-              Thư Mục vụ
+                {sample_letter1.title}
               </h1>
+              <div className="mt-2 flex items-center space-x-4">
+                  <div className="flex-shrink-0">
+                      <img className="w-8 h-8 rounded-full" src={sample_letter1.author.image} alt={sample_letter1.title}/>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                      <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
+                          {sample_letter1.author.full_name}
+                      </p>
+                      <p className="text-sm text-gray-500 truncate dark:text-gray-400">
+                          {sample_letter1.author.user?.email}
+                      </p>
+                  </div>
+              </div>
+              <span className="text-sm mt-2 text-gray-500 dark:text-gray-400">{sample_letter1.date}</span>
               <p className="mt-6 text-sm md:text-xl text-justify text-gray-800 dark:text-gray-200 ">
-              Anh chị em rất thân mến,
-              Ngày 09 tháng 10 vừa qua, Đức Thánh Cha Phanxcô đã tuyên phong hiển thánh cho hai chân phước Gioan Baotixita Scalabrini, 
-              Giám Mục sáng lập Dòng Scalabrini và chân phước Artemide Zatti, trợ sĩ Dòng Salesio Don Bosco. 
-              Việc tuyên phong hiển thánh này nói lên ước nguyện của Hội Thánh trong hoàn cảnh hiện nay: thao thức săn sóc cho người di dân tỵ nạn và người nghèo. 
+              {sample_letter1.paragraph_1}
               </p>
               <p className="mt-6 text-sm md:text-xl text-justify text-gray-800 dark:text-gray-200 ">
-              Thánh Scalabrini đã lập ra một hội dòng chuyên môn lo lắng và chăm sóc cho người di dân và tỵ nạn. 
-              Ngày nay, thế giới đang đứng trước làn sóng đông đảo những người, vì hoàn cảnh chính trị, kinh tế, tôn giáo, phải bỏ quê hương, làng xóm, tỵ nạn đến những đất nước khác để may ra có thể có một cuộc sống tốt đẹp hơn. Nơi vùng đất tạm dung, họ phải trực diện với biết bao khó khăn, thách đố về ngôn ngữ, văn hóa, nhà cửa, công việc, và Giáo Hội, đặc biệt qua các tu sĩ dòng Scalabrini, là một khí cụ Chúa dùng để nâng đỡ anh chị em di dân, tỵ nạn.
+              {sample_letter1.paragraph_2}
               </p>
               <div className="mt-8 flex gap-x-4 sm:justify-center">
+              <Link href={"/chia-se/"+(sample_letter1.slug)} legacyBehavior>
                 <a
-                  href="#"
-                  className="inline-block rounded-lg hover:bg-gray-200 px-4 py-1.5 text-base font-semibold leading-7 text-gray-900 ring-1 ring-gray-900/10 hover:ring-gray-900/20"
+                  className="inline-block rounded-lg px-4 py-1.5 text-base font-semibold leading-7 text-gray-900 ring-1 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700 dark:ring-gray-200 ring-gray-900/10 hover:ring-gray-900/20"
                 >
                   Đọc tiếp
                   <span className="text-gray-400" aria-hidden="true">
                     &rarr;
                   </span>
                 </a>
+              </Link>
               </div>
             </div>
             <div className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
@@ -144,47 +157,102 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="my-8 sm:flex sm:flex-col sm:items-center">
-        <h1 className="text-4xl mb-4 text-cyan-800 text-center font-serif font-bold tracking-tight sm:text-center sm:text-6xl">
-          Thông báo
-        </h1>
-        <div className="sm:justify-center sm:rounded-xl carousel carousel-center max-w-md md:max-w-5xl p-4 space-x-4 bg-gradient-to-r from-teal-400 to-cyan-400">
-          <div className="carousel-item">
-            <div className="card w-64 md:w-96 bg-base-100 shadow-xl">
-              <div className="card-body">
-                <h2 className="card-title">Lịch tháng 1, 2023</h2>
-                <p>Xin gửi tới quý cộng đoàn giờ Lễ, sinh hoạt của các cộng đoàn tháng 1 năm 2023 ...</p>
+      <div className="my-12 sm:flex sm:flex-col sm:items-center">
+        <div className="sm:justify-center not-prose relative bg-gradient-to-r from-teal-400 to-cyan-400 md:max-w-3xl lg:max-w-5xl sm:rounded-xl overflow-hidden dark:bg-slate-800/25">
+          <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,#fff,rgba(255,255,255,0.6))] dark:bg-grid-slate-700/25 dark:[mask-image:linear-gradient(0deg,rgba(255,255,255,0.1),rgba(255,255,255,0.5))]" ></div>
+          <h1 className="text-4xl my-4 text-center font-serif tracking-tight sm:text-center sm:text-6xl">
+            Thông báo
+          </h1>
+          <div className="relative rounded-xl overflow-auto">
+            <div className="my-4 ms:my-12 relative w-full flex gap-6 snap-x overflow-x-auto pb-8">
+              <div className="snap-center shrink-0">
+                <div className="shrink-0 w-2 sm:w-24"></div>
+              </div>
+              <div className="snap-center shrink-0 first:pl-8 last:pr-8">
+                <div className="card w-64 md:w-96 bg-base-100 shadow-xl">
+                  <Link href={href_gt_dh} legacyBehavior>
+                    <a>
+                      <div className="card-body">
+                        <h2 className="card-title">Đại hội giới trẻ 2023</h2>
+                        <div className="flex items-center space-x-4">
+                            <div className="flex-shrink-0">
+                                <img className="w-8 h-8 rounded-full" src="/youth_event/father-01.jpg" alt="Neil image"/>
+                            </div>
+                            <div className="flex-1 min-w-0">
+                                <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                    P.M Nguyen Huu Hien
+                                </p>
+                                <p className="text-sm text-gray-500 truncate dark:text-gray-400">
+                                    pmnguyenhuuhien@gmail.com
+                                </p>
+                            </div>
+                        </div>
+                        <span className="text-sm mt-2 text-gray-500 dark:text-gray-400">28/11/2022</span>
+                        <p>Đại hội giới trẻ công giáo Việt Nam tại Nhật Bản lần thứ II, ngày 4 và 5 tháng 5, 2023.</p>
+                      </div>
+                    </a>
+                  </Link>
+                </div>
+              </div>
+              <div className="snap-center shrink-0 first:pl-8 last:pr-8">
+                <div className="card w-64 md:w-96 bg-base-100 shadow-xl">
+                  <div className="card-body">
+                    <h2 className="card-title">Lịch tháng 1, 2023</h2>
+                    <div className="flex items-center space-x-4">
+                        <div className="flex-shrink-0">
+                            <img className="w-8 h-8 rounded-full" src="/youth_event/missa-01.jpg" alt="Neil image"/>
+                        </div>
+                        <div className="flex-1 min-w-0">
+                            <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                Micaer Nguyen Minh Lap
+                            </p>
+                            <p className="text-sm text-gray-500 truncate dark:text-gray-400">
+                               mi_nobito@yahoo.com
+                            </p>
+                        </div>
+                    </div>
+                    <p>Xin gửi tới quý cộng đoàn giờ Lễ, sinh hoạt của các cộng đoàn tháng 1 năm 2023 ...</p>
+                  </div>
+                </div>
+              </div>
+              <div className="snap-center shrink-0 first:pl-8 last:pr-8">
+                <div className="card w-64 md:w-96 bg-base-100 shadow-xl">
+                  <div className="card-body">
+                    <h2 className="card-title">Các lớp học giáo lý</h2>
+                    <div className="flex items-center space-x-4">
+                        <div className="flex-shrink-0">
+                            <img className="w-8 h-8 rounded-full" src="/youth_event/father-01.jpg" alt="Neil image"/>
+                        </div>
+                        <div className="flex-1 min-w-0">
+                            <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                P.M Nguyen Huu Hien
+                            </p>
+                            <p className="text-sm text-gray-500 truncate dark:text-gray-400">
+                                pmnguyenhuuhien@gmail.com
+                            </p>
+                        </div>
+                    </div>
+                    <p>Về việc chuẩn bị để tham dự các lớp giáo lý hôn phối, tân tòng...</p>
+                  </div>
+                </div>
+              </div>
+              <div className="snap-center shrink-0">
+                <div className="shrink-0 w-24s sm:w-48"></div>
               </div>
             </div>
-          </div> 
-          <div className="carousel-item">
-            <div className="card w-64 md:w-96 bg-base-100 shadow-xl">
-              <div className="card-body">
-                <h2 className="card-title">Các lớp học giáo lý</h2>
-                <p>Về việc chuẩn bị để tham dự các lớp giáo lý hôn phối, tân tòng...</p>
-              </div>
-            </div>
-          </div> 
-          <div className="carousel-item">
-            <div className="card w-64 md:w-96 bg-base-100 shadow-xl">
-              <div className="card-body">
-                <h2 className="card-title">Tết 2023</h2>
-                <p>Năm mới 2023 ....</p>
-              </div>
-            </div>
-          </div> 
+          </div>
         </div>
       </div>
 
       <div className="flex flex-col items-center">
-        <div className="justify-center pb-72 mx-2 mt-2 sm:min-w-xl sm:pb-96 sm:pt-2 sm:px-12 lg:mx-12 md:max-w-3xl lg:max-w-5xl item-center bg-hero-youth-event bg-cover bg-center border rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+        <div className="justify-center pb-72 mt-2 sm:min-w-xl sm:pb-96 sm:pt-2 sm:px-12 lg:mx-12 md:max-w-3xl lg:max-w-5xl item-center bg-hero-youth-event bg-cover bg-center border sm:rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
           <div className="flex flex-col items-center backdrop-blur-sm py-2 rounded bg-white/10 sm:backdrop-blur-sm sm:bg-white/5 sm:rounded-2xl">
             <div className="justify-center text-center">
-              <h1 className="mb-5 text-4xl text-gray-100 dark:text-gray-400 sm:text-6xl font-bold">Đại hội giới trẻ</h1>
-              <p className="mb-5 px-12 text-gray-100 dark:text-gray-400 text-xl sm:text-2xl">Đại hội giới trẻ công giáo Việt Nam tại Nhật Bản lần thứ II, ngày 4 và 5 tháng 5, 2023.</p>
+              <h1 className="mb-5 text-4xl text-white dark:text-gray-800 sm:text-6xl font-bold">Đại hội giới trẻ</h1>
+              <p className="mb-5 px-12 text-white dark:text-gray-800 text-xl sm:text-2xl">Đại hội giới trẻ công giáo Việt Nam tại Nhật Bản lần thứ II, ngày 4 và 5 tháng 5, 2023.</p>
               <Link href={href_gt_dh} legacyBehavior>
                 <a
-                      className="inline-block rounded-lg px-2 py-1 text-sm leading-7 text-gray-200 hover:text-gray-600 hover:bg-gray-100 ring-1 ring-gray-200 hover:ring-gray-200"
+                      className="inline-block rounded-lg px-2 py-1 text-sm leading-7 text-white dark:text-gray-800 hover:text-gray-600 hover:bg-gray-100 ring-1 ring-gray-200 hover:ring-gray-200"
                       >Chi tiết
                         <span className="text-gray-200" aria-hidden="true">
                           &rarr;
@@ -207,18 +275,11 @@ export default function Home() {
               <div className="snap-center shrink-0">
                 <div className="shrink-0 w-2 sm:w-48"></div>
               </div>
-              <div className="snap-center shrink-0 first:pl-8 last:pr-8">
-                <iframe className="shrink-0 w-80 h-56 md:w-96 md:h-64 rounded-lg shadow-xl bg-white" src="https://www.youtube.com/embed/ZCVSCOt5J7k?start=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-              </div>
-              <div className="snap-center shrink-0 first:pl-8 last:pr-8">
-                <iframe className="shrink-0 w-80 h-56 md:w-96 md:h-64 rounded-lg shadow-xl bg-white" src="https://www.youtube.com/embed/wEsZLwkhPkU?start=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-              </div>
-              <div className="snap-center shrink-0 first:pl-8 last:pr-8">
-                <iframe className="shrink-0 w-80 h-56 md:w-96 md:h-64 rounded-lg shadow-xl bg-white" src="https://www.youtube.com/embed/_hmPiy3Tukw?start=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-              </div>
-              <div className="snap-center shrink-0 first:pl-8 last:pr-8">
-                <iframe className="shrink-0 w-80 h-56 md:w-96 md:h-64 rounded-lg shadow-xl bg-white" src="https://www.youtube.com/embed/ZCVSCOt5J7k?start=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-              </div>
+              {sample_gospel_video.map((video,idx)=>(
+                <div key={idx} className="snap-center shrink-0 first:pl-8 last:pr-8">
+                  <iframe className="shrink-0 w-80 h-56 md:w-96 md:h-64 rounded-lg shadow-xl bg-white" src={"https://www.youtube.com/embed/"+(video.link_id)+"?start=1"} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                </div>
+              ))}
               <div className="snap-center shrink-0">
                 <div className="shrink-0 w-24s sm:w-48"></div>
               </div>
@@ -232,23 +293,33 @@ export default function Home() {
             <div className="p-4 md:px-16 md:py-4 bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700">
               <div>
                 <h1 className="text-4xl font-serif font-bold tracking-tight sm:text-center sm:text-6xl">
-                THƯ NGỎ
+                {sample_letter2.title}
                 </h1>
-                <h4>tháng 11, 2022</h4>
+                <h4 className="text-xl sm:text-center sm:text-3xl">{sample_letter2.date}</h4>
+                <div className="mt-2 flex items-center space-x-4">
+                  <div className="flex-shrink-0">
+                      <img className="w-8 h-8 rounded-full" src={sample_letter2.author.image} alt={sample_letter2.title}/>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                      <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
+                          {sample_letter2.author.full_name}
+                      </p>
+                      <p className="text-sm text-gray-500 truncate dark:text-gray-400">
+                          {sample_letter2.author.user?.email}
+                      </p>
+                  </div>
+                </div>
                 <p className="mt-6 text-sm md:text-xl text-justify text-gray-800 dark:text-gray-200 ">
-                  Giáo Hội bắt đầu tháng 11 với lễ kính các thánh nam nữ của Thiên Chúa và ngày 02 tháng 11, Giáo Hội đặc biệt cầu nguyện cho các tín hữu đã qua đời, cũng như dành cả tháng 11 để cầu nguyện cho mọi người đã chết. Điều này nói lên xác tín của Hội Thánh về mầu nhiệm các thánh thông công và mầu nhiệm kẻ chết sống lại trong niềm tin vào Đức Kitô Phục Sinh.
+                  {sample_letter2.paragraph_1}
                 </p>
                 <p className="mt-6 text-sm md:text-xl text-justify text-gray-800 dark:text-gray-200 ">
-                Chúng ta, những người lữ hành trên dương thế, chúng ta sẽ có ngày chết. Vì thế, Chúa dạy chúng ta hãy dùng của cải chóng qua để mua lấy Nước Trời, mua lấy những của cải không bị mối mọt trên thiên đàng. Chúng ta hãy lợi dụng thời gian trong tháng 11 này để đặc biệt cầu nguyện cho linh hồn tiên nhân, ông bà, cha mẹ, những người thân yêu của chúng ta và tất cả mọi người đã qua đời. Xin Chúa thương ban cho các linh hồn phần thưởng trên thiên đàng. Các linh hồn đang ở trong luyện tội cũng sẽ cầu nguyện cho chúng ta.
+                  {sample_letter2.paragraph_2}
                 </p>
                 <p className="mt-6 text-sm md:text-xl text-justify text-gray-800 dark:text-gray-200 ">
-                Vào cuối tháng này, chúng ta cũng sẽ bước vào Mùa Vọng. Xin cho chúng ta biết noi gương Mẹ Maria, chuẩn bị tâm hồn thánh thiện, quảng đại đón Chúa Giêsu vào lòng, và đem Ngài đến thăm viếng mọi người chung quanh chúng ta, để Chúa cũng được mọi người nhận biết, yêu mến và tôn kính.
+                  {sample_letter2.paragraph_3}
                 </p>
                 <p className="mt-6 text-sm md:text-xl text-justify text-gray-800 dark:text-gray-200 ">
-                Kính chúc quý cha, qúy tu sĩ nam nữ và tất cả mọi người một tháng 11 bình an, và Mùa Vọng sốt sắng.
-                </p>
-                <p className="mt-6 text-sm md:text-xl text-justify text-gray-800 dark:text-gray-200 ">
-                PVLC
+                  {sample_letter2.paragraph_4}
                 </p>
               </div>
               <div className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
@@ -282,8 +353,8 @@ export default function Home() {
           </div>
       </div>
 
-      <div className="mt-12 sm:flex sm:flex-col sm:items-center">
-        <div className="sm:justify-center not-prose relative  bg-gradient-to-r from-pink-400 to-blue-400 md:max-w-3xl lg:max-w-5xl  rounded-xl overflow-hidden dark:bg-slate-800/25">
+      <div className="my-12 sm:flex sm:flex-col sm:items-center">
+        <div className="sm:justify-center not-prose relative  bg-gradient-to-r from-pink-400 to-blue-400 md:max-w-3xl lg:max-w-5xl sm:rounded-xl overflow-hidden dark:bg-slate-800/25">
           <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,#fff,rgba(255,255,255,0.6))] dark:bg-grid-slate-700/25 dark:[mask-image:linear-gradient(0deg,rgba(255,255,255,0.1),rgba(255,255,255,0.5))]" ></div>
           <h1 className="text-4xl my-4 text-center font-serif tracking-tight sm:text-center sm:text-6xl">
             Bài viết gần đây
@@ -291,32 +362,36 @@ export default function Home() {
           <div className="relative rounded-xl overflow-auto">
             <div className="my-4 ms:my-12 relative w-full flex gap-6 snap-x overflow-x-auto pb-8">
               <div className="snap-center shrink-0">
-                <div className="shrink-0 w-2 sm:w-48"></div>
+                <div className="shrink-0 w-2 sm:w-24"></div>
               </div>
-              <div className="snap-center shrink-0 first:pl-8 last:pr-8">
-                <div className="card w-64 md:w-96 bg-base-100 shadow-xl">
-                  <div className="card-body">
-                    <h2 className="card-title">Sứ điệp của Đức Thánh Cha Phanxcô 2022-2023</h2>
-                    <p>Sứ điệp của cha, cho các con là những người trẻ, sứ điệp lớn lao mà Giáo hội cưu mang, đó là Chúa Giêsu ...</p>
+              {sample_posts.map((post,idx)=>(
+                <div key={idx} className="snap-center shrink-0 first:pl-8 last:pr-8">
+                  <div className="card w-64 md:w-96 bg-base-100 shadow-xl">
+                    <Link href={"/chia-se/"+(post.slug)} legacyBehavior>
+                      <a>
+                        <div className="card-body">
+                          <h2 className="card-title">{post.title}</h2>
+                          <div className="flex items-center space-x-4">
+                              <div className="flex-shrink-0">
+                                  <img className="w-8 h-8 rounded-full" src={post.author.image} alt={post.title}/>
+                              </div>
+                              <div className="flex-1 min-w-0">
+                                  <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                      {post.author.full_name}
+                                  </p>
+                                  <p className="text-sm text-gray-500 truncate dark:text-gray-400">
+                                      {post.author.user?.email}
+                                  </p>
+                              </div>
+                          </div>
+                          <span className="text-sm mt-2 text-gray-500 dark:text-gray-400">{post.date}</span>
+                          <p>{post.excerpt}</p>
+                        </div>
+                      </a>
+                    </Link>
                   </div>
                 </div>
-              </div>
-              <div className="snap-center shrink-0 first:pl-8 last:pr-8">
-                <div className="card w-64 md:w-96 bg-base-100 shadow-xl">
-                  <div className="card-body">
-                    <h2 className="card-title">Hướng tới một Hội Thánh hiệp hành</h2>
-                    <p>Đáp lại lời kêu gọi của Đức Thánh Cha Phanxicô, Hội Thánh Việt Nam tích cực tham gia Thượng Hội Đồng Giám Mục cấp Giáo phận. ...</p>
-                  </div>
-                </div>
-              </div>
-              <div className="snap-center shrink-0 first:pl-8 last:pr-8">
-                <div className="card w-64 md:w-96 bg-base-100 shadow-xl">
-                  <div className="card-body">
-                    <h2 className="card-title">Toàn cầu hoá</h2>
-                    <p>Chúng ta đã bước vào thế kỷ XXI, một thế kỷ được mệnh danh là kỷ nguyên của toàn cầu hoá hay còn gọi là thời đại văn minh trí tuệ. ...</p>
-                  </div>
-                </div>
-              </div>
+              ))}
               <div className="snap-center shrink-0">
                 <div className="shrink-0 w-24s sm:w-48"></div>
               </div>
@@ -324,7 +399,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      
+
     </Layout>
   )
 }

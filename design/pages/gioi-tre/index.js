@@ -43,7 +43,7 @@ export default function Index() {
             <div className="mx-auto lg:mx-16 max-w-8xl bg-cover bg-hero-youth-event md:pb-48 lg:pb-48 sm:pb-48">
                 <div className="pt-8 pb-8">
                   <div className="flex flex-col  items-center ">
-                    <img className="mt-4 p-1 w-36 h-36 md:w-48 md:h-48 lg:w-64 lg:h-64 drop-shadow-2xl rounded-full ring-2 ring-gray-300 dark:ring-gray-500" src="/youth_event/youth-logo-2.jpg" alt="Bordered avatar"/>
+                    <img className="mt-4 p-1 w-36 h-36 md:w-48 md:h-48 lg:w-64 lg:h-64 drop-shadow-2xl rounded-full ring-2 ring-gray-300 dark:ring-gray-500" src="/youth_event/youth-logo-2.jpg" alt="DH-GT-VN"/>
                   </div>
                   <div className="justify-center mt-4 grid grid-flow-col gap-5 text-center auto-cols-max">
                     <div className="flex flex-col mt-4 p-2 backdrop-blur-md bg-white/30 rounded-box text-neutral-content">
