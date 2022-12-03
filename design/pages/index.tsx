@@ -1,26 +1,27 @@
 import Layout from '../components/layout/Layout'
 import {MetaProps} from '../components/layout/meta'
+import Link from 'next/link'
+import {href_gt_dh} from '../lib/constants'
+
 const meta_data:MetaProps = {
-  title:"",
-  description:"string",
-  ogUrl:"",
-  ogImage:""
+  title:"Giáo đoàn công giáo Việt Nam tại Nhật",
+  description:"Giáo đoàn công giáo Việt Nam tại Nhật",
+  ogUrl:"/",
+  ogImage:"/vietcatholicjp-bg.jpeg"
 }
 export default function Home() {
 
   return (
     <Layout meta_data={meta_data}>
       <div className="flex flex-col items-center">
-          <div className="hero justify-center max-w-6xl min-h-screen rounded-xl shadow-lg" style={{ backgroundImage: `url("/vietcatholicjp-bg.jpeg")` }}>
-              
-              <div className="hero-content bg-opacity-50 text-center text-neutral-content">
-                <div className="max-w-xl">
-                  <h1 className="mb-5 text-3xl sm:text-5xl font-bold">Giáo đoàn công giáo Việt Nam tại Nhật</h1>
-                  <p className="mb-5 sm:text-3xl font-bold">在日ヴィエトナム人・カトリック共同体</p>
-                </div>
-              </div>
-          </div>
+        <div className="justify-center pt-96 mx-2 mt-2 sm:pb-96 sm:pt-2 sm:px-12 lg:mx-12 md:max-w-3xl lg:max-w-6xl item-center bg-hero-index bg-cover bg-center border rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+            <div className="backdrop-blur-sm py-2 rounded bg-white/10 sm:backdrop-blur-sm sm:bg-white/5 sm:rounded-2xl">
+              <h5 className="mb-2 mt-2 px-12 sm:px-24 text-center text-2xl md:text-5xl font-bold text-gray-100 dark:text-white">Giáo đoàn công giáo Việt Nam tại Nhật</h5>
+              <h5 className="mb-2 text-xl text-center text-gray-100 sm:text-3xl dark:text-gray-400">在日ヴィエトナム人・カトリック共同体</h5>
+            </div>
+        </div>
       </div>
+
       <div className="relative px-2 lg:px-8">
         <div className="mx-auto max-w-3xl pt-4 pb-4 sm:pt-8 sm:pb-8">
           <div className="p-4 md:px-16 md:py-4 bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700">
@@ -80,11 +81,12 @@ export default function Home() {
           </div>
         </div>
       </div>
+
       <div className="my-8 sm:flex sm:flex-col sm:items-center">
         <h1 className="text-4xl mb-4 text-cyan-800 text-center font-serif font-bold tracking-tight sm:text-center sm:text-6xl">
           Thông báo
         </h1>
-        <div className="sm:justify-center sm:rounded-xl carousel carousel-center max-w-md md:max-w-6xl p-4 space-x-4 bg-gradient-to-r from-teal-400 to-cyan-400">
+        <div className="sm:justify-center sm:rounded-xl carousel carousel-center max-w-md md:max-w-5xl p-4 space-x-4 bg-gradient-to-r from-teal-400 to-cyan-400">
           <div className="carousel-item">
             <div className="card w-64 md:w-96 bg-base-100 shadow-xl">
               <div className="card-body">
@@ -101,57 +103,66 @@ export default function Home() {
               </div>
             </div>
           </div> 
+          <div className="carousel-item">
+            <div className="card w-64 md:w-96 bg-base-100 shadow-xl">
+              <div className="card-body">
+                <h2 className="card-title">Tết 2023</h2>
+                <p>Năm mới 2023 ....</p>
+              </div>
+            </div>
+          </div> 
         </div>
       </div>
-      <div className="hero sm:min-h-screen" style={{ backgroundImage: `url("/youth_event/youth-event-1.jpeg")` }}>
-        <div className="hero-overlay bg-opacity-50"></div>
-        <div className="hero-content text-center text-neutral-content">
-          <div className="max-w-md">
-            <h1 className="mb-5 text-4xl sm:text-6xl font-bold">Đại hội giới trẻ</h1>
-            <p className="mb-5 sm:text-2xl">Đại hội giới trẻ công giáo Việt Nam tại Nhật Bản lần thứ II, ngày 4 và 5 tháng 5, 2023.</p>
-            <a
-                    href="#"
-                    className="inline-block rounded-lg px-2 py-1 text-sm leading-7 text-gray-200 hover:text-gray-300 hover:bg-gray-200 ring-1 ring-gray-200 hover:ring-gray-200"
-                  >
-                    Chi tiết
-                    <span className="text-gray-200" aria-hidden="true">
-                      &rarr;
-                    </span>
-                  </a>
+
+      <div className="flex flex-col items-center">
+        <div className="justify-center pb-72 mx-2 mt-2 sm:min-w-xl sm:pb-96 sm:pt-2 sm:px-12 lg:mx-12 md:max-w-3xl lg:max-w-5xl item-center bg-hero-youth-event bg-cover bg-center border rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+          <div className="flex flex-col items-center backdrop-blur-sm py-2 rounded bg-white/10 sm:backdrop-blur-sm sm:bg-white/5 sm:rounded-2xl">
+            <div className="justify-center text-center">
+              <h1 className="mb-5 text-4xl text-gray-100 dark:text-gray-400 sm:text-6xl font-bold">Đại hội giới trẻ</h1>
+              <p className="mb-5 px-12 text-gray-100 dark:text-gray-400 text-xl sm:text-2xl">Đại hội giới trẻ công giáo Việt Nam tại Nhật Bản lần thứ II, ngày 4 và 5 tháng 5, 2023.</p>
+              <Link href={href_gt_dh} legacyBehavior>
+                <a
+                      className="inline-block rounded-lg px-2 py-1 text-sm leading-7 text-gray-200 hover:text-gray-600 hover:bg-gray-100 ring-1 ring-gray-200 hover:ring-gray-200"
+                      >Chi tiết
+                        <span className="text-gray-200" aria-hidden="true">
+                          &rarr;
+                        </span>
+                </a>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
+
       <div className="my-8 sm:flex sm:flex-col sm:items-center">
         <h1 className="text-4xl mb-4 text-center font-serif tracking-tight sm:text-center sm:text-6xl">
-          Bài viết gần đây
+          Nghe tin mừng mỗi
         </h1>
-        <div className="sm:justify-center sm:rounded-xl carousel carousel-center max-w-md md:max-w-6xl p-4 space-x-4 bg-gradient-to-r from-pink-400 to-blue-400">
+        <div className="sm:justify-center sm:rounded-xl carousel carousel-center max-w-md md:min-w-3xl md:max-w-5xl p-4 space-x-4 bg-gradient-to-r from-pink-400 to-blue-400">
           <div className="carousel-item">
-            <div className="card w-64 md:w-96 bg-base-100 shadow-xl">
+            <div className="card w-80 md:w-96 shadow-xl">
               <div className="card-body">
-                <h2 className="card-title">Sứ điệp của Đức Thánh Cha Phanxcô 2022-2023</h2>
-                <p>Sứ điệp của cha, cho các con là những người trẻ, sứ điệp lớn lao mà Giáo hội cưu mang, đó là Chúa Giêsu ...</p>
+              <iframe className="w-64 h-56 md:w-96 md:h-80" src="https://www.youtube.com/embed/ZCVSCOt5J7k?start=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
               </div>
             </div>
           </div> 
           <div className="carousel-item">
-            <div className="card w-64 md:w-96 bg-base-100 shadow-xl">
+            <div className="card w-80 md:w-96 shadow-xl">
               <div className="card-body">
-                <h2 className="card-title">Hướng tới một Hội Thánh hiệp hành</h2>
-                <p>Đáp lại lời kêu gọi của Đức Thánh Cha Phanxicô, Hội Thánh Việt Nam tích cực tham gia Thượng Hội Đồng Giám Mục cấp Giáo phận. ...</p>
+              <iframe className="w-64 h-56 md:w-96 md:h-80" src="https://www.youtube.com/embed/wEsZLwkhPkU?start=14" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
               </div>
             </div>
-          </div> 
+          </div>
           <div className="carousel-item">
-            <div className="card w-64 md:w-96 bg-base-100 shadow-xl">
+            <div className="card w-80 md:w-96 shadow-xl">
               <div className="card-body">
-                <h2 className="card-title">Toàn cầu hoá</h2>
-                <p>Chúng ta đã bước vào thế kỷ XXI, một thế kỷ được mệnh danh là kỷ nguyên của toàn cầu hoá hay còn gọi là thời đại văn minh trí tuệ. ...</p>
+              <iframe className="w-64 h-56 md:w-96 md:h-80" src="https://www.youtube.com/embed/_hmPiy3Tukw?start=4" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
               </div>
             </div>
           </div>
         </div>
       </div>
+
       <div className="relative px-2 lg:px-8">
           <div className="mx-auto max-w-3xl pt-8 pb-8 sm:pt-18 sm:pb-18">
             <div className="p-4 md:px-16 md:py-4 bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700">
@@ -205,6 +216,38 @@ export default function Home() {
               </div>
             </div>
           </div>
+      </div>
+
+      <div className="my-8 sm:flex sm:flex-col sm:items-center">
+        <h1 className="text-4xl mb-4 text-center font-serif tracking-tight sm:text-center sm:text-6xl">
+          Bài viết gần đây
+        </h1>
+        <div className="sm:justify-center sm:rounded-xl carousel carousel-center max-w-md md:max-w-5xl p-4 space-x-4 bg-gradient-to-r from-pink-400 to-blue-400">
+          <div className="carousel-item">
+            <div className="card w-64 md:w-96 bg-base-100 shadow-xl">
+              <div className="card-body">
+                <h2 className="card-title">Sứ điệp của Đức Thánh Cha Phanxcô 2022-2023</h2>
+                <p>Sứ điệp của cha, cho các con là những người trẻ, sứ điệp lớn lao mà Giáo hội cưu mang, đó là Chúa Giêsu ...</p>
+              </div>
+            </div>
+          </div> 
+          <div className="carousel-item">
+            <div className="card w-64 md:w-96 bg-base-100 shadow-xl">
+              <div className="card-body">
+                <h2 className="card-title">Hướng tới một Hội Thánh hiệp hành</h2>
+                <p>Đáp lại lời kêu gọi của Đức Thánh Cha Phanxicô, Hội Thánh Việt Nam tích cực tham gia Thượng Hội Đồng Giám Mục cấp Giáo phận. ...</p>
+              </div>
+            </div>
+          </div> 
+          <div className="carousel-item">
+            <div className="card w-64 md:w-96 bg-base-100 shadow-xl">
+              <div className="card-body">
+                <h2 className="card-title">Toàn cầu hoá</h2>
+                <p>Chúng ta đã bước vào thế kỷ XXI, một thế kỷ được mệnh danh là kỷ nguyên của toàn cầu hoá hay còn gọi là thời đại văn minh trí tuệ. ...</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </Layout>
   )
