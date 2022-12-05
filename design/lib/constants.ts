@@ -18,6 +18,8 @@ export const href_gt_dh_hd = '/gioi-tre/dai-hoi/huong-dan';
 
 export const href_thong_bao = '/thong-bao';
 
+export const href_chia_se = '/chia-se';
+
 export const href_lien_lac = '/lien-lac';
 
 
@@ -32,7 +34,7 @@ export const navigation = [
     { name: 'Phụng vụ', href: href_pv },
     { name: 'Cộng đoàn', href: href_cd },
     { name: 'Giới Trẻ', href: href_gt},
-    { name: 'Chia sẻ', href: href_thong_bao },
+    { name: 'Chia sẻ', href: href_chia_se },
     { name: 'Thông báo', href: href_thong_bao },
     { name: 'Liên lạc', href: href_lien_lac }
 ]

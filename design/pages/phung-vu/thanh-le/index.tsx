@@ -1,6 +1,8 @@
 
 import Layout from '../../../components/layout/Layout'
 import {MetaProps} from '../../../components/layout/meta'
+import SelectRegions from '../../../components/select/regions'
+import SelectPrefectures from '../../../components/select/prefectures'
 
 const meta_data:MetaProps = {
   title:"",
@@ -27,63 +29,10 @@ export default function Index() {
         <div className="max-w-6xl md:justify-center">
           <div className="flex gap-2">
             <div className="form-control w-full min-w-sm">
-              <label className="label">
-                <span className="label-text">Chọn Giáo phận</span>
-              </label>
-              <select className="select select-bordered">
-                <option disabled selected>Tất cả</option>
-                <option>Sapporo</option>
-                <option>Nigata</option>
-                <option>Saitama</option>
-                <option>Tokyo</option>
-                <option>Nagasaki</option>
-                <option>Fukuoka</option>
-                <option>Hiroshima</option>
-                <option>Yokohama</option>
-                <option>Nagoya</option>
-                <option>Kyoto</option>
-                <option>Oska</option>
-                <option>Oita</option>
-                <option>Kagoshima</option>
-                <option>Naha</option>
-              </select>
+              <SelectRegions/>
             </div>
             <div className="form-control w-full max-w-xs">
-              <label className="label">
-                <span className="label-text">Chọn tỉnh</span>
-              </label>
-              <select className="select select-bordered">
-                <option disabled selected>Tất cả</option>
-                <option disabled selected>Tất cả</option>
-                <option>Hokkaido</option>
-                <option>Akita</option>
-                <option>Saitama</option>
-                <option>Gunma</option>
-                <option>Chiba</option>
-                <option>Tokyo</option>
-                <option>Hyogo</option>
-                <option>Yokohama</option>
-                <option>Wakayama</option>
-                <option>Nagoya</option>
-                <option>Kyoto</option>
-                <option>Oska</option>
-                <option>Oita</option>
-                <option>Kagoshima</option>
-                <option>Naha</option>
-              </select>
-            </div>
-            <div className="form-control w-full max-w-xs">
-              <label className="label">
-                <span className="label-text">Chọn Nhà thờ</span>
-              </label>
-              <select className="select select-bordered">
-                <option disabled selected>Tất cả</option>
-                <option>Tokyo</option>
-                <option>Saitama</option>
-                <option>Osaka</option>
-                <option>Kyoto</option>
-                <option>Nagasaki</option>
-              </select>
+              <SelectPrefectures />
             </div>
           </div>
           {
