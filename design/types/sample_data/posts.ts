@@ -227,3 +227,130 @@ export const post_detail = {
     ],
     date:"11/11/2022"
 }
+
+export const gospel = {
+    title:"CHÚA NHẬT THỨ III MÙA VỌNG",
+    slug:"bai-doc-chua-nhat-thu-3-mua-vong",
+    excerpt:"Thầy có thật là Đấng phải đến không, hay là chúng tôi còn phải đợi ai khác?",
+    content: [
+        {
+            chapter_title:"BÀI ĐỌC I: Is 35, 1-6a.10",
+            slug: "bai-doc-1",
+            paragraphs:[
+                "Chính Thiên Chúa sẽ đến cứu anh em.",
+                "Lời Chúa trong sách Ngôn Sứ Isaia.",
+                "Vui lên nào, hỡi sa mạc và đồng khô cỏ cháy, vùng đất hoang, hãy mừng rỡ trổ bông, hãy tưng bừng nở hoa như khóm huệ, và hân hoan múa nhảy reo hò. Sa mạc được tặng ban ánh huy hoàng của núi Li Băng, vẻ rực rỡ của núi Carmel và đồng bằng Saron. Thiên hạ sẽ nhìn thấy ánh huy hoàng của Đức Chúa, và vẻ rực rỡ của Thiên Chúa chúng ta. Hãy làm cho những bàn tay rã rời nên mạnh mẽ, cho những đầu gối bủn rủn được vững vàng. Hãy nói với những kẻ nhát gan: “Can đảm lên, đừng sợ! Thiên Chúa của anh em đây rồi; sắp tới ngày báo phục, ngày Thiên Chúa thưởng công, phạt tội. Chính Người sẽ đến cứu anh em”.",
+                "Bấy giờ mắt người mù mở ra, tai người điếc nghe được. Bấy giờ kẻ què sẽ nhảy nhót như nai. Miệng lưỡi người câm sẽ reo hò. Những người được Đức Chúa giải thoát sẽ trở về, tiến đến Sion giữa tiếng hò reo, mặt rạng rỡ niềm vui vĩnh cửu. Họ sẽ được hớn hở tươi cười, đau khổ và khóc than sẽ biến mất.",
+                "Đó là Lời Chúa"
+            ]
+        },
+        {
+            chapter_title:"Đáp ca Tv 145",
+            slug: "dap-ca-tv-145",
+            paragraphs:[
+                "Đáp:  Lạy Chúa, xin đến cứu chúng con.",
+                "Xướng: Chúa là Đấng giữ lòng trung tín mãi muôn đời, xử công minh cho người bị áp bức, ban lương thực cho kẻ đói ăn.",
+                "Xướng: Chúa giải phóng những ai tù tội, Chúa mở mắt cho kẻ mù lòa. Chúa cho kẻ bị dìm xuống đứng thẳng lên, Chúa yêu chuộng những người công chính.",
+                "Xướng: Chúa phù trợ những khách ngoại kiều, Ngài nâng đỡ cô nhi quả phụ, nhưng phá vỡ mưu đồ bọn ác nhân. Chúa nắm giữ vương quyền muôn muôn thuở. Sion hỡi, Chúa Trời ngươi hiển trị ngàn đời.",             
+            ]
+        },
+        {
+            chapter_title:"BÀI ĐỌC II: Gc 5, 7-10",
+            slug:"bai-doc-2",
+            paragraphs:[
+                "Anh em hãy bền tâm vững chí, vì ngày Chúa quang lâm đã gần tới.",
+                "Lời Chúa trong thư của thánh Giacôbê tông đồ.",
+                "Thưa anh em, xin anh em cứ kiên nhẫn cho tới ngày Chúa quang lâm. Kìa xem nhà nông, họ kiên nhẫn chờ đợi cho đất trổ sinh hoa màu qúy giá: họ phải đợi cả mưa đầu mùa lẫn mưa cuối mùa. Anh em cũng vậy, hãy kiên nhẫn và bền tâm vững chí, vì ngày Chúa quang lâm đã gần tới. Thưa anh em, anh em đừng phàn nàn kêu trách lẫn nhau, để khỏi bị xét xử. Kìa vị thẩm phán đang đứng ngoài cửa. Thưa anh em, về sức chịu đựng và lòng kiên nhẫn, anh em hãy noi gương các ngôn sứ là những vị đã nói nhân danh Chúa.",
+                "Đó là Lời Chúa",
+            ]
+        },
+        {
+            chapter_title:"TUNG HÔ TIN MỪNG",
+            slug: "tung-ho-tin-mung",
+            paragraphs:[
+                "Halleluia, Halleluia. Thần Khí Chúa ngự trên tôi, sai tôi đi loan báo Tin Mừng cho kẻ nghèo hèn. Halleluia.",
+            ]
+        },{
+            chapter_title:"TIN MỪNG: Mt 3, 1-12",
+            slug: "tin-mung",
+            paragraphs:[
+                "Thầy có thật là Đấng phải đến không, hay là chúng tôi còn phải đợi ai khác?",
+                "Tin Mừng Chúa Giêsu Kitô theo thánh Matthêu.",
+                "Đang ngồi tù, ông Gioan nghe biết những việc Đức Kitô làm, liền sai môn đệ đến hỏi Người rằng: “Thầy có thật là Đấng phải đến không, hay là chúng tôi còn phải đợi ai khác?” Đức Giêsu trả lời: “Các anh cứ về thuật lại cho ông Gioan những điều mắt thấy tai nghe: người mù xem thấy, kẻ què bước đi, người cùi được sạch, kẻ điếc nghe được, người chết trỗi dậy, kẻ nghèo được nghe Tin Mừng, và phúc thay người nào không vấp ngã vì Tôi”.",
+                "Họ đi rồi, Đức Giêsu bắt đầu nói với đám đông về ông Gioan rằng: “Anh em ra xem gì trong hoang địa? Một cây sậy phất phơ trước gió chăng? Thế thì anh em ra xem gì? Một người mặc gấm vóc lụa là chăng? Kìa những kẻ mặc gấm vóc lụa là thì ở trong cung điện nhà vua. Thế thì anh em ra xem gì? Một vị ngôn sứ chăng? Đúng thế đó; mà tôi nói cho anh em biết, đây còn hơn cả ngôn sứ nữa. Chính ông là người Kinh Thánh đã nói tới khi chép rằng: Này Ta sai sứ giả của Ta đi trước mặt Con, Người sẽ dọn đường cho Con đến. Tôi nói thật với anh em: trong số phàm nhân đã lọt lòng mẹ, chưa từng có ai cao trọng hơn ông Gioan Tẩy Giả. Tuy nhiên, kẻ nhỏ nhất trong Nước Trời còn cao trọng hơn ông”.",
+                "Đó là Lời Chúa",
+            ]
+        }
+    ],
+    date:"Ngày 11 tháng 12 năm 2022"
+}
+
+export const gospel_previews = [{
+    title:"CHÚA NHẬT THỨ III MÙA VỌNG",
+    slug:"bai-doc-chua-nhat-thu-3-mua-vong",
+    excerpt:"Thầy có thật là Đấng phải đến không, hay là chúng tôi còn phải đợi ai khác?",
+    date:"Ngày 11 tháng 12 năm 2022"
+},{
+    title:"CHÚA NHẬT THỨ IV MÙA VỌNG",
+    slug:"bai-doc-chua-nhat-thu-4-mua-vong",
+    excerpt:"Đức Giêsu sinh làm con bà Maria. Bà đã thành hôn với ông Giuse, con cháu vua Đavít.",
+    date:"Ngày 18 tháng 12 năm 2022"
+},{
+    title:"LỄ GIÁNG SINH",
+    slug:"bai-doc-le-giang-sinh-dem-24",
+    excerpt:"Hôm nay, Đấng Cứu Độ đã sinh ra cho anh em.",
+    date:"Ngày 24 tháng 12 năm 2022"
+},{
+    title:"LỄ GIÁNG SINH",
+    slug:"bai-doc-le-giang-sinh-ngay-25",
+    excerpt:"Ngôi Lời đã trở nên người phàm và cư ngụ giữa chúng ta.",
+    date:"Ngày 25 tháng 12 năm 2022"
+},
+]
+
+export const gospel_reflect = {
+    title:"Suy niệm Chúa Nhật Thứ III Mùa Vọng",
+    slug:"bai-doc-chua-nhat-thu-3-mua-vong",
+    excerpt:"Mùa Vọng đã bước vào tuần thứ ba với “Chúa Nhật Hồng”, theo cách gọi truyền thống của Giáo hội. Đây là Chúa Nhật của niềm vui, vì ngày Lễ mừng Chúa Giáng sinh đã gần kề...",
+    author:{
+        full_name:"Lm. Antôn Vũ Khánh Tường, SVD.",
+        image:'/youth_event/missa-01.jpg',
+        user:{
+            username:"hoidonggiammucvn",
+            email:"antovukhanhtuong@gmail.com",
+        }
+    },
+    content:[
+            "“Thầy có phải là Đấng phải đến chăng,hay chúng tôi còn phải đợi một Đấng nào khác?”",
+            "Mùa Vọng đã bước vào tuần thứ ba với “Chúa Nhật Hồng”, theo cách gọi truyền thống của Giáo hội. Đây là Chúa Nhật của niềm vui, vì ngày Lễ mừng Chúa Giáng sinh đã gần kề. Áo lễ màu hồng của linh mục chủ tế cũng là để diễn tả niềm vui mừng ấy. Tuy nhiên, nhiều người trong chúng ta có thể sẽ cảm thấy “sốc”, hoặc ngỡ ngàng khi nghe bài Tin Mừng hôm nay. Chẳng có một chút gì gọi là vui mừng, hân hoan. Chẳng thấy màu hồng, mà ngược lại là một màu xám xịt, nếu không muốn nói là một màu đen của hoang mang, bất an khi Gioan Tẩy Giả bị nhốt trong ngục tù và sai các môn đệ của mình đến hỏi Chúa Giê-su: “Thầy có phải là Đấng phải đến chăng, hay chúng tôi còn phải đợi một Đấng nào khác?” ",
+            "Tuần trước, chúng ta thấy Gioan Tẩy Giả được giới thiệu như là một ngôn sứ chuẩn bị cho Đấng Cứu Thế với những lời nói hết sức mạnh mẽ, kêu gọi người ta hoán cải đời sống. Hình ảnh Đấng Cứu Thế ông nói ngôn sứ cho dân chúng là hình ảnh của một Đấng uy quyền và nghiêm minh. “Chính Ðấng ấy sẽ rửa các ngươi trong Chúa Thánh Thần và lửa. Ngài cầm nia trong tay mà sảy lúa của Ngài, rồi thu lúa vào kho, còn rơm thì đốt đi trong lửa không hề tắt”.",
+            "Chúa Giê-su đã đến, nhưng Ngài không thực hiện giống như những gì Gioan đã tiên báo. Ngài không khiến lửa từ trời xuống thiêu đốt những ai không lắng nghe hay chống đối Ngài. Ngài cũng không “cầm nia trong tay để sảy lúa”, để loại trừ bất cứ một ai ra khỏi vòng tay yêu thương mà đón nhận tất cả, nhất là những “phường tội lỗi”. Ngài dạy dỗ, chữa lành, loan báo Tin Mừng yêu thương và mời gọi đổi mới cuộc sống. Gioan lại còn bị tống giam vào ngục tối, khi ông lên tiếng bảo vua Hê-rô-đê không được lấy Hê-rô-đi-a, vợ của người anh là Phi-líp-phê. Trong hoàn cảnh “họa vô đơn chí” như thế, Gioan hoang mang thật sự. Liệu những gì ông tin tưởng và hết lòng trông đợi chỉ là vô ích? Hơn nữa, cũng như vì chu toàn sứ mạng ngôn sứ của mình mà ông đã phải chịu thiệt thân. Bị nhốt trong ngục, nhưng ông vẫn theo dõi hoạt động của Chúa Giê-su. Chờ mãi mà vẫn không thấy Chúa Giê-su có một động thái nào của Đấng “xé mây trời ngự xuống”,làm cho “địch thù nhận biết Thánh Danh”và “chư dân run rẩy”(Is 63:19-64:1). Hay ít ra là Ngài cũng giải cứu ông thoát khỏi cảnh tù đày khốn khổ. Ông nhớ lại, Ngài cũng đã xếp hàng vào dòng người đến xin ông làm phép Thánh tẩy, chẳng có một chút gì tỏ ra vẻ uy quyền của một Đấng sẽ giải thoát dân tộc khỏi tay ngoại bang La Mã. Ông đã sai các môn đệ của mình đến và hỏi thẳng Chúa Giê-su: “Thầy có phải là Đấng phải đến chăng, hay chúng tôi còn phải đợi một Đấng nào khác?”",
+            "Trong cuộc đời, có bao giờ chúng ta hoang mang, nghi ngờ sự hiện diện hay quyền năng của Thiên Chúa? Thiên Chúa là Đấng toàn năng, tại sao lại để cho sự dữ, sự ác hoành hành. Chúa Giê-su là Hoàng tử Bình an, Ngài đến trần gian hơn hai ngàn năm rồi, để đem hòa bình cho nhân loại, vậy mà chiến tranh, xung đột vẫn xảy ra nơi này nơi khác trên thế giới? Con người vẫn thù ghét, bắn giết nhau; tên lửa, vũ khí hạt nhân vẫn là nguy cơ rình rập hòa bình của cả nhân loại hơn tám tỷ người này… Tại sao con người phải đau khổ, phải chết? Nước Trời mà Chúa Giê-su loan báo dường như vẫn còn ở đâu đó rất xa. Những lúc chính bản thân mình gặp phải những thử thách, gian truân; những khi mệt mỏi, chán chường với việc bổn phận; những khi gặp chống đối, thất bại trong đời sống, công việc cũng như khi bước trong đêm đen của đức tin, có khi nào ta tự hỏi như Gioan rằng Tin Mừng là gì? Chúa có phải Đấng con đặt niềm tin tưởng, cậy trông; Chúa có là Đấng Cứu độ của con hay không? Hay con phải chờ Đấng nào khác nữa?",
+            "Đôi khi chúng ta cũng giống như Gioan, đã tự vẽ cho mình một hình ảnh Thiên Chúa cho hợp với cách sống và tư tưởng của mình. Nếu thật sự Thiên Chúa giống hoàn toàn theo những gì chúng ta nghĩ thì có lẽ, đó không còn là Thiên Chúa nữa. Bởi Thiên Chúa thì vượt lên trên những suy nghĩ, tư tưởng của con người. Mùa Vọng là thời gian để chúng ta chuẩn bị và sẵn sàng đón Chúa đến một lần nữa, với những nhận thức và kinh nghiệm đúng về Thiên Chúa, về Đấng Cứu Độ, Tin Mừng, Nước Trời…Chúa Giê-su đón nhận câu chất vấn của Gioan. Ngài không trả lời trực tiếp. Ngài nói với các môn đệ của Gioan là hãy về thuật lại cho ông những gì họ được chứng kiến. Đó là “người mù được thấy, người què đi được, người phong hủi được khỏi, người điếc được nghe, người chết sống lại, và tin mừng được loan báo cho kẻ nghèo khó”. Những lời này của Chúa Giê-su gợi nhớ lại những gì ngôn sứ I-sa-ia đã loan báo và được đọc ở bài đọc một. Đây là những điều sẽ xảy ra khi Đấng Cứu Độ đến. Đây cũng không phải là những hình ảnh quen thuộc với người Do Thái đương thời. Đây là những dấu chỉ cần được đọc và khám phá bằng đức Tin. Nói cách khác, Tin Mừng mời gọi chúng ta mở tai, mở mắt mình để nhận ra sự hiện diện của Thiên Chúa được ẩn giấu đằng sau những điều xem như có vẻ không theo lẽ thường tình, không đúng như “truyền thống”, cũng có khi ở ngay trong những đau khổ, thất vọng, nghi ngờ của chúng ta.",
+            "Để đọc và hiểu được những “dấu chỉ thời đại”, chúng ta cần kiên nhẫn và vững tin vào những điều Thiên Chúa và Hội Thánh dạy. Bài đọc hai, được trích từ thư của Thánh Gia-cô-bê, qua hình ảnh người nông phu kiên nhẫn chờ đợi đến mùa thu hoạch, dạy chúng ta cũng cần kiên nhẫn chờ ngày Chúa đến. Ngày của Chúa chắc chắn là ngày vui mừng, hy vọng. Ngày nay, chúng ta, nhất là các bạn trẻ bị cuốn theo lối sống nhanh, không thể kiên nhẫn chờ đợi. Thức ăn nhanh, tốc độ nhanh, tìm kiếm thông tin nhanh, yêu nhanh, cưới nhanh và rồi cũng chia tay nhanh. Mùa Vọng nhắc nhở chúng ta ý nghĩa của chờ đợi trong kiên nhẫn và yêu thương. Ước gì từng ngày sống và cả cuộc đời của mỗi người chúng ta cũng là một mùa Vọng, không ngừng đặt câu hỏi để tìm kiếm Thiên Chúa, kiên nhẫn để nhận ra Chúa đang thực hiện Thánh ý của Ngài trong đời mình. Nhờ đó, chúng ta sẽ không bi quan thất vọng khi chưa thấy kết quả hay không như lòng mình mong muốn, và nhất là để có thể cậy trông vững vàng vào Chúa Giê-su Ki-tô là Đấng Cứu Độ và là Thiên Chúa của chúng ta. Đây chính là niềm vui, niềm hy vọng sâu xa của Chúa Nhật Hồng và của cả cuộc đời Ki-tô hữu."
+    ],
+    date:"Ngày 11 tháng 12 năm 2022"
+}
+
+export const share_detail = {
+    title:"SỐNG TÂM TÌNH MÙA VỌNG",
+    slug:"song-tam-tinh-mua-vong",
+    excerpt:"Mùa Vọng, ngày xƣa thƣờng gọi là “Mùa Áp” (theo tiếng Latinh là Adventus, từ động từ Advenire, tiếng Anh là Advent, có nghĩa là “đến gần”), với ý nghĩa là Mùa “trông đợi”, “mong chờ”.",
+    author:{
+        full_name:"Lm. Antôn Vũ Khánh Tường, SVD.",
+        image:'/youth_event/missa-01.jpg',
+        user:{
+            username:"hoidonggiammucvn",
+            email:"antovukhanhtuong@gmail.com",
+        }
+    },
+    content:[
+            "Chữ Vọng theo từ điển Hán-Việt có 2 nghĩa:",
+            "Nghĩa thứ nhất 妄 (gồm chữa Nữ và chữ Vô) là Viễn vông, hƣ giả. Chữ Vọng này hiểu là vô vọng. Td: vọng ngữ, vọng chấp, vọng niệm.",
+            "Nghĩa thứ hai 望 (gồm chữ Chủ, chữ Nguyệt[1] và chữ vô) là trông mong, chờ đợi, ngƣỡng mộ. Chữ Vọng này mới là hy vọng. Nó còn có nghĩa là ngƣỡng vọng, ngửa trông lên Trời với lòng mong mỏi. Td: Vọng bái hay Vọng nhựt vào ngày rằm âm lịch.",
+            "Theo truyền thống Giáo Hội, Mùa Vọng có bốn ý nghĩa sau: Mùa kỷ niệm thời gian chuẩn bị đón Chúa Kitô \"đã đến\" lần thứ nhất; Mùa chuẩn bị đón Chúa Kitô \"sẽ đến\" lần thứ hai vào ngày tận thế; Mùa chuẩn bị đón Chúa Kitô \"sẽ đến\" viếng thăm vào cuối đời mỗi ngƣời chúng ta; Mùa chuẩn bị tâm hồn Kitô hữu xứng đáng để mừng Lễ Giáng Sinh sắp tới.",
+            "Mùa Vọng trƣớc tiên là Mùa để chúng ta sống lại lịch sử ơn cứu độ của Đức Kitô trong cuộc đời mình, bắt đầu từ việc dân Do thái mong đợi và chuẩn bị Đấng Messia (Chúa Kitô) đến để \"giải phóng\" họ khỏi ách nô lệ, đặc biệt là nô lệ tội lỗi. Isaia đã loan báo, Gioan Tẩy Giả đã dọn đƣờng, dân chúng cũng đã chịu phép rửa sám hối để đón nhận Đấng Messia.",
+            "Đấng Messia là Đức Kitô đã đến, ban đầu ngƣời ta cũng hồ hỡi đón nhận Ngài, nhƣng rồi thấy Ngài là Đấng không giống nhƣ mình nghĩ, không hành động nhƣ mình mong, không thực hiện những điều nhƣ mình muốn, nên ngƣời ta dần dần bỏ Ngài. Hơn nữa, vì quyền hành và tham vọng, vì kiêu căng và lòng chai dạ đá, nên các vị lãnh đạo tôn giáo muốn khai trừ Ngài.", 
+        ],
+    date:"Ngày 11 tháng 12 năm 2022"
+}
