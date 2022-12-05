@@ -30,7 +30,7 @@ export const sample_posts:PostCard[] = [
         date:"11/11/2022"
     },
     {
-        title:"NGƢỜI CHIẾN THẮNG TRÊN MỌI MẶT TRẬN",
+        title:"Người Chiến Thắng Trên Mọi Mặt Trận",
         slug:"nguoi-chien-thang-tren-moi-mat-tran",
         author:{
             full_name:"Lm. Bosco Dương Trung Tín",
@@ -44,7 +44,7 @@ export const sample_posts:PostCard[] = [
         date:"04/12/2022"
     },
     {
-        title:"LỜI TỎ TÌNH THÁNG MƯỜI HAI",
+        title:"Lời Tỏ Tình Tháng Mười Hai",
         slug:"loi-to-tinh-thang-muoi-hai",
         author:{
             full_name:"Trần Giang",
@@ -58,6 +58,66 @@ export const sample_posts:PostCard[] = [
         date:"01/12/2022"
     },
 ]
+
+export const sample_notices:PostCard[] = [
+    {
+        title:"Đại hội giới trẻ 2023",
+        slug:"dai-hoi-gioi-tre-2023",
+        author:{
+            full_name:"Lm. Joseph Nguyen Thanh Nha",
+            image:'/youth_event/missa-01.jpg',
+            user:{
+                username:"father_joshep_nhasj",
+                email:"josephnhasj@gmail.com",
+            }
+        },
+        excerpt:"Đại hội giới trẻ công giáo Việt Nam tại Nhật Bản lần thứ II, ngày 4 và 5 tháng 5, 2023..",
+        date:"10/12/2022"
+    },
+    {
+        title:"Cộng đoàn Osaka",
+        slug:"lich-hoc-giao-ly-osaka",
+        author:{
+            full_name:"Lm. Micaer Nguyen Minh Lap",
+            image:'/youth_event/missa-01.jpg',
+            user:{
+                username:"father_micaer_nguyen_minh_lap",
+                email:"mi_nobito@yahoo.com",
+            }
+        },
+        excerpt:"Cộng đoàn Oska xin thông báo về việc mở lớp học giáo lý hôn phối tháng 3 năm 2023, vùng Osaka.",
+        date:"08/12/2022"
+    },
+    {
+        title:"Cộng đoàn Aichi",
+        slug:"thong-bao-cong-doan-aichi",
+        author:{
+            full_name:"Lm. Bosco Dương Trung Tín",
+            image:'/youth_event/missa-01.jpg',
+            user:{
+                username:"father_duong_trung_tin",
+                email:"Boscoduongtrungtin@gmail.com",
+            }
+        },
+        excerpt:"Thông báo về việc bầu ban điều hành mới khoá 2023-2025 cộng đoàn Aichi...",
+        date:"04/12/2022"
+    },
+    {
+        title:"Cộng đoàn Tokyo",
+        slug:"thong-bao-cong-doan-tokyo",
+        author:{
+            full_name:"Lm. P.M Nguyen Huu Hien",
+            image:'/youth_event/missa-01.jpg',
+            user:{
+                username:"father_micaer_nguyen_minh_lap",
+                email:"mi_nobito@yahoo.com",
+            }
+        },
+        excerpt:"Cộng đoàn Tokyo xin thông báo về chương trình từ thiện giúp đỡ trẻ em nghèo ở Việt Nam...",
+        date:"08/12/2022"
+    },
+]
+
 
 export const sample_gospel_video = [
     {
@@ -114,4 +174,56 @@ export const sample_letter2={
     paragraph_3:"Vào cuối tháng này, chúng ta cũng sẽ bước vào Mùa Vọng. Xin cho chúng ta biết noi gương Mẹ Maria, chuẩn bị tâm hồn thánh thiện, quảng đại đón Chúa Giêsu vào lòng, và đem Ngài đến thăm viếng mọi người chung quanh chúng ta, để Chúa cũng được mọi người nhận biết, yêu mến và tôn kính.",
     paragraph_4:"Kính chúc quý cha, qúy tu sĩ nam nữ và tất cả mọi người một tháng 11 bình an, và Mùa Vọng sốt sắng.",
     date:"01/12/2022"
+}
+
+export const post_detail = {
+    title:"Hướng tới một Hội Thánh hiệp hành",
+    slug:"huong-toi-mot-giao-hoi-hiep-hanh",
+    excerpt:"Hội Thánh Công giáo tại Việt Nam gồm 27 Giáo phận với số giáo dân 7.294.713 người, chiếm tỉ lệ 7,21% trên tổng dân số tại Việt Nam.",
+    author:{
+        full_name:"HỘI ĐỒNG GIÁM MỤC VIỆT NAM",
+        image:'/youth_event/missa-01.jpg',
+        user:{
+            username:"hoidonggiammucvn",
+            email:"hoidonggiammucvn@gmail.com",
+        }
+    },
+    content: [
+        {
+            chapter_title:"Lời ngỏ",
+            slug: "ban-tong-hop-toan-quoc",
+            paragraphs:[
+                "BẢN TỔNG HỢP TOÀN QUỐCTHƯỢNG HỘI ĐỒNG GIÁM MỤC CẤP GIÁO PHẬN",
+                "“Hướng tới một Hội Thánh hiệp hành: hiệp thông, tham gia, sứ vụ”",
+                "Hội Thánh Công giáo tại Việt Nam gồm 27 Giáo phận với số giáo dân 7.294.713 người, chiếm tỉ lệ 7,21% trên tổng dân số tại Việt Nam. Hai mươi bảy Giáo phận hiện diện trên khắp mọi miền đất nước với những đặc điểm khác nhau: nông thôn hay thành thị; thuần túy người Kinh hoặc vừa có các tín hữu người Kinh vừa có các tín hữu thuộc dân tộc ít người; tùy theo địa bàn, tỉ lệ người Công giáo cao (10% – 30% dân số) hoặc rất thấp (từ 0,3% – 3%).",
+                "Đáp lại lời kêu gọi của Đức Thánh Cha Phanxicô, Hội Thánh Việt Nam tích cực tham gia Thượng Hội Đồng Giám Mục cấp Giáo phận. Theo quyết định của Hội đồng giám mục Việt Nam, 27 Giáo phận trên cả nước đã cử hành Thánh Lễ khai mạc vào Chúa nhật I Mùa Vọng, ngày 28/11/2021. Trong suốt tiến trình hiệp hành này, các cộng đoàn tín hữu thường xuyên cầu nguyện cho Thượng hội đồng được tiến hành cách tốt đẹp trong ánh sáng và sức mạnh của Chúa Thánh Thần. ",
+                "Sau giai đoạn thỉnh ý Dân Chúa, các Giáo phận đã làm bản tổng kết của mỗi Giáo phận và gửi về Văn phòng thư ký Hội đồng giám mục ngày 15/7/2022. Dựa trên những tổng kết của các Giáo phận, Văn phòng đã thực hiện bản Tổng hợp toàn quốc này, được trình bày theo ba phần chính, cũng là ba bước của tiến trình hiệp hành: (1) Gặp gỡ; (2) Lắng nghe; (3) Phân định."
+            ],
+            chapter_summary:""
+        },
+        {
+            chapter_title:"Phần I. GẶP GỠ",
+            slug:"phan-gap-go",
+            paragraphs:[
+                "Để chuẩn bị cho việc tiến hành Thượng Hội Đồng Giám Mục, các Giáo phận đã hình thành Ban linh hoạt giáo phận và huấn luyện các điều phối viên để phục vụ các buổi gặp gỡ thỉnh ý Dân Chúa. Sau Thánh Lễ khai mạc, Ban linh hoạt phổ biến tài liệu và hướng dẫn học hỏi về Thượng Hội Đồng Giám Mục lần thứ XVI để các thành phần Dân Chúa hiểu đúng về bản chất, mục đích và các phương thế thực hiện tiến trình hiệp hành.",
+                "Tiến trình thỉnh ý Dân Chúa được thực hiện qua các buổi gặp gỡ ở nhiều cấp: (1) giáo xứ và các cộng đoàn dòng tu; (2) giáo hạt và các dòng tu; (3) cuối cùng, Giáo phận tiến hành Hội nghị Tiền Thượng Hội Đồng Giám Mục để thống nhất các ý kiến chính và đúc kết thành bản tổng kết của Giáo phận. Ngoài những cuộc gặp gỡ trực tiếp trên, nhiều Giáo phận cũng thỉnh ý Dân Chúa qua các phương tiện truyền thông: gặp gỡ trực tuyến hoặc gửi phiếu thỉnh ý đến các tín hữu.",
+                "Nhìn chung, khoảng 35% các tín hữu đã tham gia vào tiến trình gặp gỡ và thỉnh ý. Họ tham gia cách tích cực, nhiệt tình, đóng góp nhiều ý kiến thiết thực, và mong muốn có thêm những cuộc gặp gỡ thỉnh ý trong tương lai. Họ cảm nhận niềm vui khi tham gia tiến trình hiệp hành vì (1) cảm nhận một luồng gió mới đang thổi vào đời sống Hội Thánh; (2) được lắng nghe và góp ý cho việc xây dựng Hội Thánh; (3) cảm nhận mình thuộc về Hội Thánh cách rõ nét hơn.",
+
+            ],
+            chapter_summary:"Trở ngại lớn của tiến trình thỉnh ý là thời gian có hạn, hơn nữa lại trong giai đoạn dịch Covid-19 nên không thể triển khai đầy đủ hơn."
+        },
+        {
+            chapter_title:"Phần II. LẮNG NGHE",
+            slug:"phan-lang-nghe",
+            paragraphs:[
+                "Có thể tóm kết ý kiến của mọi thành phần Dân Chúa theo một số chủ đề sau.",
+                "1. Hiệp thông",
+                "1.1 Hầu hết mọi người cảm nhận và khẳng định tinh thần hiệp thông giữa mọi thành phần Dân Chúa trong Hội Thánh. Nhiều người ngoài Công giáo cũng đánh giá cao về tinh thần đoàn kết, yêu thương và hiệp nhất của Hội Thánh Công giáo.",
+                "1.2 Tuy nhiên cũng có những hoàn cảnh chưa hiệp thông trọn vẹn với Hội Thánh: anh chị em di dân ngoại kiều cũng như nội địa cảm thấy mình bị bỏ rơi vì không được quan tâm, không biết mình thuộc về đâu, đôi khi có cảm giác bị xua đuổi; các đôi hôn phối đã ly dị và tái hôn thấy mình như ở bên lề Hội Thánh; những người khô khan nguội lạnh hoặc vướng vào các tệ nạn xã hội xa lánh những sinh hoạt trong Hội Thánh.",
+                "1.3 Về những rào cản cho sự hiệp thông, có những lý do khách quan như vì hoàn cảnh phải sống xa giáo xứ nên không tham gia các sinh hoạt và dần xa cách; cũng có lý do chủ quan như não trạng cục bộ địa phương, mặc cảm tự ti về trình độ hoặc khả năng. Các chủ chăn cũng có phần trách nhiệm về điều này: đa số các chủ chăn luôn sẵn sàng đón tiếp, gặp gỡ, lắng nghe mọi thành phần Dân Chúa, nhưng cũng còn một số linh mục ứng xử cách độc đoán, gia trưởng với giáo dân.",
+                "1.4 Trong thời đại ngày nay, các phương tiện truyền thông là phương thế kết nối con người với nhau; tuy nhiên truyền thông cũng có thể bị lạm dụng để gây chia rẽ, hận thù, nghi kỵ, tác động tiêu cực đến đời sống tín hữu. Vì thế cần quan tâm đến đạo đức truyền thông."
+            ]
+        }
+    ],
+    date:"11/11/2022"
 }

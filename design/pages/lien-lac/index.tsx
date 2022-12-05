@@ -1,5 +1,8 @@
 
 import Layout from '../../components/layout/Layout'
+import SelectPrefectures from '../../components/select/prefectures'
+import SelectRegions from '../../components/select/regions'
+
 import {MetaProps} from '../../components/layout/meta'
 
 const meta_data:MetaProps = {
@@ -27,49 +30,10 @@ export default function Index() {
         <div className="max-w-4xl md:justify-centerr">
           <div className="flex gap-2">
             <div className="form-control w-full min-w-sm">
-              <label className="label">
-                <span className="label-text">Chọn Giáo phận</span>
-              </label>
-              <select className="select select-bordered">
-                <option selected>Tất cả</option>
-                <option>Sapporo</option>
-                <option>Nigata</option>
-                <option>Saitama</option>
-                <option>Tokyo</option>
-                <option>Nagasaki</option>
-                <option>Fukuoka</option>
-                <option>Hiroshima</option>
-                <option>Yokohama</option>
-                <option>Nagoya</option>
-                <option>Kyoto</option>
-                <option>Oska</option>
-                <option>Oita</option>
-                <option>Kagoshima</option>
-                <option>Naha</option>
-              </select>
+              <SelectRegions/>
             </div>
             <div className="form-control w-full min-w-xs">
-              <label className="label">
-                <span className="label-text">Chọn Tỉnh</span>
-              </label>
-              <select className="select select-bordered">
-                <option selected>Tất cả</option>
-                <option>Hokkaido</option>
-                <option>Akita</option>
-                <option>Saitama</option>
-                <option>Gunma</option>
-                <option>Chiba</option>
-                <option>Tokyo</option>
-                <option>Hyogo</option>
-                <option>Yokohama</option>
-                <option>Wakayama</option>
-                <option>Nagoya</option>
-                <option>Kyoto</option>
-                <option>Oska</option>
-                <option>Oita</option>
-                <option>Kagoshima</option>
-                <option>Naha</option>
-              </select>
+              <SelectPrefectures/>
             </div>
           </div>
           {father_contact.map((diocese,idx)=>(

@@ -62,7 +62,7 @@ export default function NavBar() {
             <div className="hidden lg:flex lg:justify-center lg:gap-x-12">
               {navigation.map((item) => (
                 <Link key={item.name} href={item.href} legacyBehavior>
-                  <a  className="font-semibold text-gray-900 dark:text-gray-200 dark:hover:text-gray-400 hover:text-gray-900">
+                  <a  className="font-semibold text-gray-900 dark:text-gray-200 dark:hover:text-sky-400 hover:text-sky-500">
                     {item.name}
                   </a>
                 </Link>

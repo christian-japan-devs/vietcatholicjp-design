@@ -1,9 +1,8 @@
 
-import Link from 'next/link'
 import Layout from '../../components/layout/Layout'
-import PostPreviewCard from '../../components/card/postPreview'
 import {MetaProps} from '../../components/layout/meta'
-import {sample_posts,post_detail, sample_letter1} from '../../types/sample_data/posts'
+import Link from 'next/link'
+import {sample_posts,post_detail} from '../../types/sample_data/posts'
 
 const meta_data:MetaProps = {
   title:post_detail.title,
@@ -51,7 +50,30 @@ export default function Index() {
                   </li>
                   {sample_posts.map((post,idx)=>(
                     <li key={idx} className="mt-4">
-                      <PostPreviewCard props={{posts_preview:post}}/>
+                      <div className="w-48 md:w-64 bg-base-100 shadow border rounded-xl">
+                        <Link href={"/chia-se/"+(post.slug)} legacyBehavior>
+                          <a>
+                            <div className="p-4">
+                              <h2 className="card-title text-gray-600 dark:text-gray-200">{post.title}</h2>
+                              <div className="flex items-center space-x-4">
+                                  <div className="flex-shrink-0">
+                                      <img className="w-8 h-8 rounded-full" src={post.author.image} alt={post.title}/>
+                                  </div>
+                                  <div className="flex-1 min-w-0">
+                                      <p className="text-sm font-medium text-gray-600 truncate dark:text-white">
+                                          {post.author.full_name}
+                                      </p>
+                                      <p className="text-sm text-gray-500 truncate dark:text-gray-400">
+                                          {post.author.user?.email}
+                                      </p>
+                                  </div>
+                              </div>
+                              <span className="text-sm mt-2 text-gray-500 dark:text-gray-400">{post.date}</span>
+                              <p>{post.excerpt}</p>
+                            </div>
+                          </a>
+                        </Link>
+                      </div>
                     </li>
                   ))}
                 </ul>
@@ -62,76 +84,37 @@ export default function Index() {
           <main className="flex-auto w-full min-w-0 lg:static lg:max-h-full lg:overflow-visible">
             <div className="flex w-full">
               <div className="flex-auto max-w-4xl min-w-0 pt-6 lg:px-8 lg:pt-8 pb:12 xl:pb-24 lg:pb-16">
-                
-                <div className="relative px-2 lg:px-8">
-                  <div className="mx-auto max-w-5xl pt-4 pb-4 sm:pt-8 sm:pb-8">
-                    <div className="p-4 md:px-16 md:py-4 bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700">
-                      <div>
-                        <h1 className="text-4xl font-serif font-bold tracking-tight sm:text-center sm:text-6xl">
-                          {sample_letter1.title}
-                        </h1>
-                        <div className="mt-2 flex items-center space-x-4">
-                            <div className="flex-shrink-0">
-                                <img className="w-8 h-8 rounded-full" src={sample_letter1.author.image} alt={sample_letter1.title}/>
-                            </div>
-                            <div className="flex-1 min-w-0">
-                                <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
-                                    {sample_letter1.author.full_name}
-                                </p>
-                                <p className="text-sm text-gray-500 truncate dark:text-gray-400">
-                                    {sample_letter1.author.user?.email}
-                                </p>
-                            </div>
-                        </div>
-                        <span className="text-sm mt-2 text-gray-500 dark:text-gray-400">{sample_letter1.date}</span>
-                        <p className="mt-6 text-sm md:text-xl text-justify text-gray-800 dark:text-gray-200 ">
-                        {sample_letter1.paragraph_1}
+                <div className="pb-4 mb-8 border-b border-gray-200 dark:border-gray-800">
+                  <h1 id="title" className="mb-4 md:text-center text-3xl lg:text-4xl font-extrabold tracking-tight text-gray-700 dark:text-white">{post_detail.title}</h1>
+                  <div className="flex items-center space-x-4">
+                    <div className="flex-shrink-0">
+                        <img className="w-8 h-8 rounded-full" src={post_detail.author.image} alt={post_detail.title}/>
+                    </div>
+                    <div className="flex-1 min-w-0">
+                        <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
+                            {post_detail.author.full_name}
                         </p>
-                        <p className="mt-6 text-sm md:text-xl text-justify text-gray-800 dark:text-gray-200 ">
-                        {sample_letter1.paragraph_2}
+                        <p className="text-sm text-gray-500 truncate dark:text-gray-400">
+                            {post_detail.author.user?.email}
                         </p>
-                        <div className="mt-8 flex gap-x-4 sm:justify-center">
-                        <Link href={"/chia-se/"+(sample_letter1.slug)} legacyBehavior>
-                          <a
-                            className="inline-block rounded-lg px-4 py-1.5 text-base font-semibold leading-7 text-gray-900 ring-1 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700 dark:ring-gray-200 ring-gray-900/10 hover:ring-gray-900/20"
-                          >
-                            Đọc tiếp
-                            <span className="text-gray-400" aria-hidden="true">
-                              &rarr;
-                            </span>
-                          </a>
-                        </Link>
-                        </div>
-                      </div>
-                      <div className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
-                        <svg
-                          className="relative left-[calc(50%+3rem)] h-[21.1875rem] max-w-none -translate-x-1/2 sm:left-[calc(50%+36rem)] sm:h-[42.375rem]"
-                          viewBox="0 0 1155 678"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            fill="url(#ecb5b0c9-546c-4772-8c71-4d3f06d544bc)"
-                            fillOpacity=".3"
-                            d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z"
-                          />
-                          <defs>
-                            <linearGradient
-                              id="ecb5b0c9-546c-4772-8c71-4d3f06d544bc"
-                              x1="1155.49"
-                              x2="-78.208"
-                              y1=".177"
-                              y2="474.645"
-                              gradientUnits="userSpaceOnUse"
-                            >
-                              <stop stopColor="#9089FC" />
-                              <stop offset={1} stopColor="#FF80B5" />
-                            </linearGradient>
-                          </defs>
-                        </svg>
-                      </div>
                     </div>
                   </div>
+                  <span className="text-sm mt-4 ml-12 text-gray-500 dark:text-gray-400">{post_detail.date}</span>
+                </div>
+                <div id="phan-gioi-thieu">
+                  {post_detail.content.map((chapter,idx)=>(
+                    <div key={idx}>
+                      <h2 className="relative group my-4 text-lg md:text-xl font-bold">{chapter.chapter_title}
+                        <span id={chapter.slug} className="absolute -top-[140px]"></span>
+                        <a className="ml-2 text-blue-700 opacity-0 transition-opacity dark:text-blue-500 group-hover:opacity-100" href="#leading-paragraph" aria-label="Link to this section: Leading paragraph">
+                          #
+                        </a>
+                      </h2>
+                      {chapter.paragraphs.map((paragraph,idx)=>(
+                         <p key={idx} className="mt-6 text-sm md:text-md text-justify text-gray-800 dark:text-gray-200">{paragraph}</p>
+                      ))}
+                    </div>
+                  ))}
                 </div>
                 
                 <div className="my-12 sm:flex sm:flex-col sm:items-center lg:hidden">
@@ -148,7 +131,7 @@ export default function Index() {
                         {sample_posts.map((post,idx)=>(
                           <div key={idx} className="snap-center shrink-0 first:pl-8 last:pr-8">
                             <div className="card w-64 md:w-96 bg-base-100 shadow-xl">
-                              <Link href={"/chia-se/chi-tiet/"+(post.slug)} legacyBehavior>
+                              <Link href={"/chia-se/"+(post.slug)} legacyBehavior>
                                 <a>
                                   <div className="card-body">
                                     <h2 className="card-title text-gray-700 dark:text-gray-200">{post.title}</h2>
