@@ -27,19 +27,29 @@ export default function Index() {
                       Menu
                     </h5>
                     <li className="border-b border-gray-200 mt-2 pl-4 hover:bg-sky-100 dark:hover:bg-sky-600 rounded-md">
-                      <a href="/phung-vu/thanh-le" className="py-2 transition-colors duration-200 relative block hover:text-gray-900 text-gray-500 dark:text-gray-900 dark:hover:text-white ">Thánh lễ</a>
+                      <Link href="/phung-vu/thanh-le" legacyBehavior>
+                        <a className="py-2 transition-colors duration-200 relative block hover:text-gray-900 text-gray-500 dark:text-gray-900 dark:hover:text-white ">Thánh lễ</a>
+                      </Link>
                     </li>
                     <li className="border-b border-gray-200 mt-2 pl-4 hover:bg-sky-100 dark:hover:bg-sky-600 rounded-md">
-                      <a href="/phung-vu/tin-mung" className="py-2 transition-colors duration-200 relative block hover:text-gray-900 text-gray-500 dark:text-gray-900 dark:hover:text-white ">Tin mừng</a>
+                      <Link href="/phung-vu/tin-mung" legacyBehavior>
+                      <a className="py-2 transition-colors duration-200 relative block hover:text-gray-900 text-gray-500 dark:text-gray-900 dark:hover:text-white ">Tin mừng</a>
+                      </Link>
                     </li>
                     <li className="border-b border-gray-200 mt-2 pl-4 hover:bg-sky-100 dark:hover:bg-sky-600 rounded-md">
-                      <a href="/phung-vu/giao-ly/" className="py-2 transition-colors duration-200 relative block hover:text-gray-900 text-gray-500 dark:text-gray-900 dark:hover:text-white ">Giáo lý</a>
+                      <Link href="/phung-vu/giao-ly/" legacyBehavior>
+                      <a  className="py-2 transition-colors duration-200 relative block hover:text-gray-900 text-gray-500 dark:text-gray-900 dark:hover:text-white ">Giáo lý</a>
+                      </Link>
                     </li >
                     <li className="border-b border-gray-200 mt-2 pl-4 hover:bg-sky-100 dark:hover:bg-sky-600 rounded-md">
-                      <a href="/phung-vu/kinh-cau/" className="py-2 transition-colors duration-200 relative block hover:text-gray-900 text-gray-500 dark:text-gray-900 dark:hover:text-white ">Kinh cầu</a>
+                      <Link href="/phung-vu/kinh-cau/" legacyBehavior>
+                      <a  className="py-2 transition-colors duration-200 relative block hover:text-gray-900 text-gray-500 dark:text-gray-900 dark:hover:text-white ">Kinh cầu</a>
+                      </Link>
                     </li>
                     <li className="border-b border-gray-200 mt-2 pl-4 hover:bg-sky-100 dark:hover:bg-sky-600 rounded-md">
-                      <a href="/phung-vu/nghi-thuc/" className="py-2 transition-colors duration-200 relative block hover:text-gray-900 text-gray-500 dark:text-gray-900 dark:hover:text-white ">Nghi thức</a>
+                      <Link href="/phung-vu/nghi-thuc/" legacyBehavior>
+                      <a className="py-2 transition-colors duration-200 relative block hover:text-gray-900 text-gray-500 dark:text-gray-900 dark:hover:text-white ">Nghi thức</a>
+                      </Link>
                     </li>
                   </li>
                 </ul>
