@@ -3,6 +3,7 @@ import Layout from '../../components/layout/Layout'
 import {MetaProps} from '../../components/layout/meta'
 import Link from 'next/link'
 import {sample_posts,post_detail} from '../../types/sample_data/posts'
+import {chia_se_nav} from '../../lib/constants'
 
 const meta_data:MetaProps = {
   title:post_detail.title,
@@ -25,21 +26,13 @@ export default function Index() {
                     <h5 className="mb-2 text-xl font-semibold tracking-wide text-gray-900 uppercase lg:text-xl dark:text-white">
                       Chủ đề
                     </h5>
-                    <li>
-                      <a href="/chia-se/tong-thu/" data-sidebar-item="" className="py-2 transition-colors duration-200 relative block hover:text-gray-900 text-gray-500 dark:text-gray-400 dark:hover:text-white ">Tông thư</a>
-                    </li>
-                    <li>
-                      <a href="/chia-se/suy-niem/" data-sidebar-item="" className="py-2 transition-colors duration-200 relative block hover:text-gray-900 text-gray-500 dark:text-gray-400 dark:hover:text-white ">Suy niệm</a>
-                    </li>
-                    <li>
-                      <a href="/chia-se/cong-doan/" data-sidebar-item="" className="py-2 transition-colors duration-200 relative block hover:text-gray-900 text-gray-500 dark:text-gray-400 dark:hover:text-white ">Cộng đoàn</a>
-                    </li>
-                    <li>
-                      <a href="/chia-se/gioi-tre/" data-sidebar-item="" className="py-2 transition-colors duration-200 relative block hover:text-gray-900 text-gray-500 dark:text-gray-400 dark:hover:text-white ">Giới trẻ</a>
-                    </li>
-                    <li>
-                      <a href="/chia-se/nhat-ban/" data-sidebar-item="" className="py-2 transition-colors duration-200 relative block hover:text-gray-900 text-gray-500 dark:text-gray-400 dark:hover:text-white ">Nhật Bản</a>
-                    </li>
+                    {chia_se_nav.sub_navi.map((nav,idx)=>(
+                      <li key={idx} className="border-b border-gray-200 mt-2 pl-4 hover:bg-sky-100 dark:hover:bg-sky-600 rounded-md">
+                        <Link href={nav.href} legacyBehavior>
+                        <a className="py-2 transition-colors duration-200 relative block hover:text-gray-900 text-gray-500 dark:text-gray-400 dark:hover:text-white ">{nav.name}</a>
+                        </Link>
+                      </li>
+                    ))}
                   </li>
                 </ul>
                 <ul className="mb-0 list-unstyled">

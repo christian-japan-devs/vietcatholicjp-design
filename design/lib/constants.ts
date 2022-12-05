@@ -5,8 +5,15 @@ export const aboutusDefaultId = 'cl4peo18z2ws40czp3lmdakvg';
 
 
 export const href_pv = '/phung-vu';
+export const href_pv_loi_chua = '/phung-vu/loi-chua';
+export const href_pv_suy_niem = '/phung-vu/suy-niem';
+export const href_pv_loi_nguyen = '/phung-vu/loi-nguyen';
+export const href_pv_kinh_nguyen = '/phung-vu/kinh-nguyen';
+export const href_pv_giao_ly = '/phung-vu/giao-ly';
 export const href_pv_gio_le = '/phung-vu/thanh-le';
-export const href_giao_ly = '/giao-ly';
+export const href_pv_gio_giai_toi = '/phung-vu/lich-giai-toi';
+export const href_pv_viet_nhat = '/phung-vu/song-ngu-viet-nhat';
+export const href_pv_viet_anh = '/phung-vu/song-ngu-viet-anh';
 
 export const href_cd = '/cong-doan';
 
@@ -19,6 +26,11 @@ export const href_gt_dh_hd = '/gioi-tre/dai-hoi/huong-dan';
 export const href_thong_bao = '/thong-bao';
 
 export const href_chia_se = '/chia-se';
+export const href_cs_tong_thu = '/chia-se/tong-thu';
+export const href_cs_tin_tuc = '/chia-se/tin-tuc';
+export const href_cs_cong_doan = '/chia-se/cong-doan';
+export const href_cs_gioi_tre = '/chia-se/gioi-tre';
+export const href_cs_nhat_ban = '/chia-se/nhat-ban';
 
 export const href_lien_lac = '/lien-lac';
 
@@ -33,21 +45,38 @@ export const href_wedding_register = '/register/wedding';
 export const navigation = [
     { name: 'Phụng vụ', href: href_pv },
     { name: 'Cộng đoàn', href: href_cd },
-    { name: 'Giới Trẻ', href: href_gt},
+    { name: 'Giới trẻ', href: href_gt},
     { name: 'Chia sẻ', href: href_chia_se },
     { name: 'Thông báo', href: href_thong_bao },
     { name: 'Liên lạc', href: href_lien_lac }
 ]
 
+export const phung_vu_nav = { 
+    name: 'Phụng Vụ', sub_navi: [
+    {name:'Bài đọc Chúa Nhật', href: href_pv},
+    {name:'Lời Chúa', href: href_pv_loi_chua},
+    {name:'Suy niệm', href: href_pv_suy_niem},
+    {name:'Lời nguyện', href: href_pv_suy_niem},
+    {name:'Giáo lý', href: href_pv_giao_ly},
+    {name:'Kinh nguyện', href: href_pv_kinh_nguyen},
+    {name:'Giờ Lễ', href: href_pv_gio_le},
+    {name:'Giờ giải tội', href: href_pv_gio_giai_toi},
+    {name:'Song Ngữ Việt-Nhật', href: href_pv_viet_nhat},
+    {name:'Song Ngữ Việt-Anh', href: href_pv_viet_anh}
+]}
+
+export const chia_se_nav = { 
+    name: 'Chia sẻ', sub_navi: [
+    {name:'Tông thư', href: href_chia_se},
+    {name:'Tin tức', href: href_cs_tin_tuc},
+    {name:'Cộng đoàn', href: href_cs_cong_doan},
+    {name:'Giới trẻ', href: href_cs_gioi_tre},
+    {name:'Nhật bản', href: href_cs_nhat_ban},
+    ]
+}
+
 export const subNavigation = [
-    { name: 'Phụng vụ', sub_navi: [
-        {name:'Phụng vụ', href: href_pv},
-        {name:'Giờ Lễ', href: href_pv_gio_le},
-        {name:'Giờ giải tội', href: href_pv},
-        {name:'Lời Chúa', href: href_pv},
-        {name:'Suy niệm', href: href_pv},
-        {name:'Lời nguyện', href: href_pv}
-    ]},
+    phung_vu_nav,
     { name: 'Cộng đoàn', sub_navi: [
         {name:'Giới thiệu', href: href_cd}
     ]},
@@ -55,6 +84,7 @@ export const subNavigation = [
         {name:'Giới trẻ', href: href_gt},
         {name:'Đại Hội', href: href_gt_dh}
     ]},
+    chia_se_nav,
     { name: 'Thông báo', sub_navi: [
         {name:'Thông báo', href: href_thong_bao},
         {name:'Tin tức', href: href_thong_bao},
