@@ -37,7 +37,7 @@ export default function Index() {
   }, 1000);
 
   return (
-    <Layout meta_data={meta_data}>
+    <Layout meta_data={meta_data} current_page='youth'>
       <section className="bg-accent-dark mb-8">
           <div className="relative px-2 lg:px-8">
             <div className="mx-auto lg:mx-16 max-w-8xl bg-cover bg-hero-youth-event md:pb-48 lg:pb-48 sm:pb-48">

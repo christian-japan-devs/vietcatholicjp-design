@@ -15,7 +15,7 @@ const meta_data:MetaProps = {
 export default function Index() {
 
   return (
-    <Layout meta_data={meta_data}>
+    <Layout meta_data={meta_data} current_page=''>
       <div className="w-full bg-white">
         <div className="lg:flex px-4 lg:px-8 mx-auto max-w-screen-2xl">
           <aside className="fixed inset-0 z-20 flex-none h-full w-72 lg:static lg:h-auto lg:overflow-y-visible lg:pt-0 lg:w-72 lg:block hidden">

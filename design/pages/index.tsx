@@ -20,7 +20,7 @@ const meta_data:MetaProps = {
 
 export default function Home() {
   return (
-    <Layout meta_data={meta_data}>
+    <Layout meta_data={meta_data} current_page='home'>
       <Hero/> 
       <FirstLetter/>
       <MassSchedule/>

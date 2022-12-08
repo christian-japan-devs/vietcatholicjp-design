@@ -16,14 +16,13 @@ const meta_data:MetaProps = {
 export default function Index() {
 
   return (
-    <Layout meta_data={meta_data}>
+    <Layout meta_data={meta_data} current_page='share'>
       <div className="w-full bg-white dark:bg-gray-900/60">
         <div className="lg:flex px-4 lg:px-8 mx-auto max-w-screen-2xl">
           <aside className="fixed inset-0 z-20 flex-none h-full w-72 lg:static lg:h-auto lg:overflow-y-visible lg:pt-0 lg:w-72 lg:block hidden">
             <div className="overflow-y-auto z-20 h-full scrolling-touch max-w-2xs lg:h-[calc(100vh-3rem)] lg:block lg:sticky top:24 lg:top-28 lg:mr-0">
               <nav className="pt-16 px-1 pl-3 lg:pl-0 lg:pt-2 font-normal text-base lg:text-sm pb-10 lg:pb-20 sticky?lg:h-(screen-18)">
-                <ul className="mb-0 list-unstyled">
-                  <li className="mt-8">
+                <ul className="mb-0 mt-8 list-unstyled">
                     <h5 className="mb-2 text-xl font-semibold tracking-wide text-gray-900 uppercase lg:text-xl dark:text-white">
                       Chủ đề
                     </h5>
@@ -34,7 +33,6 @@ export default function Index() {
                         </Link>
                       </li>
                     ))}
-                  </li>
                 </ul>
               </nav>
             </div>
