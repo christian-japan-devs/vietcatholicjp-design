@@ -6,17 +6,18 @@ import {MetaProps} from './meta'
 type Props = {
     children: React.ReactNode
     meta_data: MetaProps
+    current_page: string
 }
 
 export const siteTitle = 'AnViet'
   
-const Layout = ({ children , meta_data}: Props) => {
+const Layout = ({ children , meta_data, current_page}: Props) => {
     return(
         <div>
             <Meta props={meta_data}/>
             <NavBar/>
             <div>{children}</div>
-            <Footer/>
+            <Footer current_page={current_page}/>
         </div>
     );
 }

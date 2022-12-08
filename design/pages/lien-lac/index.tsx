@@ -17,7 +17,7 @@ import {father_contact} from '../../types/sample_data/father'
 export default function Index() {
 
   return (
-    <Layout meta_data={meta_data}>
+    <Layout meta_data={meta_data} current_page='contact'>
       <section className="max-w-screen-xl md:flex md:flex-col md:items-center my-6 mx-auto px-4">
         <div className="space-y-4 mb-8 text-center">
             <h2 className="text-gray-900  dark:text-gray-200 text-2xl md:text-4xl font-semibold">

@@ -2,6 +2,7 @@
 import Layout from '../../components/layout/Layout'
 import {MetaProps} from '../../components/layout/meta'
 import NavBar from '../../components/layout/navbar'
+import Groups from '../../components/home/groups'
 
 const meta_data:MetaProps = {
   title:"Giáo đoàn công giáo Việt Nam tại Nhật",
@@ -13,7 +14,7 @@ const meta_data:MetaProps = {
 export default function Index() {
 
   return (
-    <Layout meta_data={meta_data}>
+    <Layout meta_data={meta_data} current_page='comunity'>
       <section className="max-w-6xl mt-6 mx-auto px-4 bg-accent-dark">
         <div className="divide-y divide-gray-200 dark:divide-gray-700">
           <div className="space-y-2 pt-6 pb-8 md:space-y-5">
@@ -36,7 +37,7 @@ export default function Index() {
                 </a>
                 <a className="text-sm text-gray-500 transition hover:text-gray-600" target="_blank" rel="noopener noreferrer" href="https://facebook.com">
                   <span className="sr-only">Facebook</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="fill-current text-gray-700 hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-400 h-10 w-10">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="fill-current text-gray-700 hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-400 h-8 w-8">
                     <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
                   </svg>
                 </a>
@@ -49,14 +50,17 @@ export default function Index() {
                 </a>
               </div>
             </div>
-            <div className="prose max-w-none pt-8 pb-8 dark:prose-dark xl:col-span-2">
-              <p>Tails Azimuth is a professor of atmospheric sciences at the Stanford AI Lab. His research interests includes complexity modelling of tailwinds, headwinds and crosswinds.</p>
-              <p>He leads the clean energy group which develops 3D air pollution-climate models, writes differential equation solvers, and manufactures titanium plated air ballons. In his free time he bakes raspberry pi.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.</p>
+            <div className="prose max-w-none text-justify pt-8 pb-8 dark:prose-dark xl:col-span-2">
+              <p>Ở châu Á, Việt Nam là nước đón nhận Tin Mừng khá sớm. Theo sử sách thì vào năm 1533 đã có những nhà truyền giáo đầu tiên tới Việt Nam, và những địa danh đầu tiên đón nhận Tin Mừng: Trà Lũ (giáo xứ Phú Nhai ngày nay), Quần Anh (sau kị húy đổi thành Quần Phương), và Ninh Cường đều là những miền đất thuộc giáo phận Bùi Chu. Từ thế kỷ 17, các thừa sai Dòng Tên, Hội Thừa sai Paris, Dòng Âu Tinh Chân đất, và nhất là Dòng Đa Minh truyền giáo tại đây.
+
+Giáo phận Bùi Chu ngày nay chỉ thuộc địa bàn của sáu huyện và một phần thành phố, ở về phía đông nam giáp biển của tỉnh Nam Định, thuộc đồng bằng Bắc Bộ. Tuy nhiên, trước khi được hình thành như ngày hôm nay, giáo phận Bùi Chu thuộc Địa phận Đàng Ngoài (được thành lập năm 1659). Sau đó, giáo phận Bùi Chu thuộc Địa phận Đông Đàng Ngoài (được tách ra từ địa phận Đàng Ngoài vào năm 1679) rồi Địa phận Trung Đàng Ngoài (được tách ra từ địa phận Đông Đàng Ngoài vào năm 1848).
+
+Vào năm 1936, Tòa Thánh đã tách phần đất tả ngạn sông Hồng của Địa phận Trung để thành lập Giáo phận Thái Bình, phần còn lại của Địa phận Trung là Giáo phận Bùi Chu ngày nay.</p>
             </div>
           </div>
         </div>
       </section>
+      <Groups/>
     </Layout>
   )
 }

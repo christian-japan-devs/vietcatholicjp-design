@@ -16,7 +16,7 @@ import {mass_schedule} from '../../../types/sample_data/mass_schedule'
 export default function Index() {
 
   return (
-    <Layout meta_data={meta_data}>
+    <Layout meta_data={meta_data} current_page='serve'>
       <section className="max-w-screen-4xl md:flex md:flex-col md:items-center my-6 mx-auto px-4">
         <div className="space-y-4 mb-8 justify-center text-center">
             <h2 className="text-gray-900  dark:text-gray-200 text-2xl md:text-6xl font-semibold">

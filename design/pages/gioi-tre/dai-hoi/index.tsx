@@ -13,7 +13,7 @@ const meta_data = {
 export default function Event() {
 
   return (
-    <Layout meta_data={meta_data}>
+    <Layout meta_data={meta_data} current_page='comunity'>
         <section className="max-w-screen-xl items-center mx-auto px-4 bg-gradient-to-b to-pink-600 from-skbg-gray-700y-400 dark:to-gray-700 dark:from-stone-900">
             <div className="space-y-4 flex flex-col items-center">
                 <h2 className="text-gray-100 pt-8 dark:text-gray-200 text-2xl font-semibold">

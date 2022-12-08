@@ -12,7 +12,7 @@ const meta_data:MetaProps = {
 export default function Index() {
 
   return (
-    <Layout meta_data={meta_data}>
+    <Layout meta_data={meta_data} current_page='serve'>
       <section className="max-w-screen-xl items-center my-6 mx-auto px-4">
         <div className="space-y-4 mb-8 text-center">
             <h2 className="text-gray-900  dark:text-gray-200 text-2xl md:text-6xl font-semibold">
