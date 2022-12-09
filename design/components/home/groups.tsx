@@ -1,6 +1,8 @@
 import GroupPreviewCard from '../card/groupPreview'
 import {sample_notices} from '../../types/sample_data/posts'
 import {GroupsType} from '../../types/group'
+import SelectPrefectures from '../select/prefectures'
+import SelectRegions from '../select/regions'
 
 export const group_sample:GroupsType[]= [
     {
@@ -27,16 +29,24 @@ export default function Groups()
                 Cộng đoàn
             </h1>
             <div className="relative rounded-xl overflow-auto">
+            <div className="flex gap-2 mx-4 md:mx-12 lg:mx-24">
+                <div className="form-control w-full min-w-sm">
+                    <SelectRegions/>
+                    </div>
+                    <div className="form-control w-full min-w-xs">
+                    <SelectPrefectures/>
+                    </div>
+                </div>
                 <div className="my-4 ms:my-12 relative w-full flex gap-6 snap-x overflow-x-auto pb-8">
-                <div className="snap-center shrink-0">
-                    <div className="shrink-0 w-2 sm:w-24"></div>
-                </div>
-                {group_sample.map((group,idx)=>(
-                    <GroupPreviewCard key={idx} group_preview={group} />
-                ))}
-                <div className="snap-center shrink-0">
-                    <div className="shrink-0 w-24s sm:w-48"></div>
-                </div>
+                    <div className="snap-center shrink-0">
+                        <div className="shrink-0 w-2 sm:w-24"></div>
+                    </div>
+                    {group_sample.map((group,idx)=>(
+                        <GroupPreviewCard key={idx} group_preview={group} />
+                    ))}
+                    <div className="snap-center shrink-0">
+                        <div className="shrink-0 w-24s sm:w-48"></div>
+                    </div>
                 </div>
             </div>
             </div>

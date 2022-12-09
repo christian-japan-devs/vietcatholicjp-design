@@ -3,12 +3,12 @@ import Link from 'next/link'
 import Layout from '../../components/layout/Layout'
 import PostSidePreviewCard from '../../components/card/postPreviewSide'
 import {MetaProps} from '../../components/layout/meta'
-import {sample_posts,post_detail, share_detail} from '../../types/sample_data/posts'
+import {sample_posts, share_detail} from '../../types/sample_data/posts'
 import {chia_se_nav} from '../../lib/constants'
 
 const meta_data:MetaProps = {
-  title:post_detail.title,
-  description:post_detail.excerpt,
+  title:share_detail.title,
+  description:share_detail.excerpt,
   ogUrl:"",
   ogImage:""
 }
@@ -18,8 +18,8 @@ export default function Index() {
   return (
     <Layout meta_data={meta_data} current_page='share'>
       <div className="w-full bg-white dark:bg-gray-900/60">
-        <div className="lg:flex px-4 lg:px-8 mx-auto max-w-screen-2xl">
-          <aside className="fixed inset-0 z-20 flex-none h-full w-72 lg:static lg:h-auto lg:overflow-y-visible lg:pt-0 lg:w-72 lg:block hidden">
+        <div className="lg:flex px-4 xl:px-8 mx-auto max-w-screen-2xl">
+          <aside className="fixed inset-0 z-20 flex-none h-full lg:w-48 xl:w-72 lg:static lg:h-auto lg:overflow-y-visible lg:pt-0 lg:block hidden">
             <div className="overflow-y-auto z-20 h-full scrolling-touch max-w-2xs lg:h-[calc(100vh-3rem)] lg:block lg:sticky top:24 lg:top-28 lg:mr-0">
               <nav className="pt-16 px-1 pl-3 lg:pl-0 lg:pt-2 font-normal text-base lg:text-sm pb-10 lg:pb-20 sticky?lg:h-(screen-18)">
                 <ul className="mb-0 mt-8 list-unstyled">
@@ -40,7 +40,7 @@ export default function Index() {
           <div className="fixed inset-0 z-10 bg-gray-900/50 dark:bg-gray-900/60 hidden" id="sidebarBackdrop"></div>
           <main className="flex-auto w-full min-w-0 lg:static lg:max-h-full lg:overflow-visible">
             <div className="flex w-full">
-              <div className="flex-auto max-w-4xl min-w-0 pt-6 lg:px-8 lg:pt-8 pb:12 xl:pb-24 lg:pb-16">
+              <div className="flex-auto max-w-4xl min-w-0 pt-6 lg:px-2 xl:px-8 lg:pt-8 pb:12 xl:pb-24 lg:pb-16">
                 
                 <div className="relative px-2 lg:px-8">
                   <div className="mx-auto max-w-5xl pt-4 pb-4 sm:pt-8 sm:pb-8">
@@ -120,9 +120,9 @@ export default function Index() {
                   </div>
                 </div>
               </div>
-              <div className="flex-none hidden w-80 mr-8 xl:text-sm lg:block">
+              <div className="flex-none hidden lg:w-80 xl:w-80 lg:mr-2 xl:mr-8 xl:text-sm lg:block">
                 <div className="flex overflow-y-auto sticky top-28 flex-col justify-between pt-10 pb-6 h-[calc(100vh-5rem)]">
-                  <div className="px-8">
+                  <div className="lg:px-2 xl:px-4">
                     <h5 className="text-slate-900 font-semibold mb-4 text-sm leading-6 dark:text-slate-100">Gần đây</h5>
                     <ul className="text-slate-700 dark:text-white text-sm leading-6">
                       {sample_posts.map((post,idx)=>(

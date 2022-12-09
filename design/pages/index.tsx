@@ -8,6 +8,7 @@ import Notice from '../components/home/notice'
 import PriorityNotice from '../components/home/priority_notice'
 import SecondLetter from '../components/home/letter2'
 import RecentPost from '../components/home/recent_post'
+import Groups from '@/components/home/groups'
 import ContactUs from '../components/home/contactus'
 import {MetaProps} from '../components/layout/meta'
 
@@ -29,6 +30,7 @@ export default function Home() {
       <VideoPostCast/>
       <SecondLetter/>
       <RecentPost/>
+      <Groups/>
       <ContactUs/>
     </Layout>
   )
