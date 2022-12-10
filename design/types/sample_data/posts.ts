@@ -354,3 +354,28 @@ export const share_detail = {
         ],
     date:"Ngày 11 tháng 12 năm 2022"
 }
+
+export const notice_detail = {
+    title:"Đại hội giới trẻ 2023",
+    slug:"dai-hoi-gioi-tre-2023",
+    author:{
+        full_name:"Lm. Joseph Nguyen Thanh Nha",
+        image:'/youth_event/missa-01.jpg',
+        user:{
+            username:"father_joshep_nhasj",
+            email:"josephnhasj@gmail.com",
+        }
+    },
+    excerpt:"Đại hội giới trẻ công giáo Việt Nam tại Nhật Bản lần thứ II, ngày 4 và 5 tháng 5, 2023..",
+    content:[
+        "Đại hội giới trẻ công giáo Việt Nam tại Nhật Bản lần thứ II, ngày 4 và 5 tháng 5, 2023..",
+        "Công bố Đại Hội Giới Trẻ Công Giáo Việt Nam tại Nhật lần II",
+        "Kính thưa toàn thể quý ông bà, anh chị em, các bạn trẻ Công Giáo đang sinh sống và làm việc tại Nhật,",
+        "Được sự đồng ý của quý cha, quý tu sĩ trong cuộc họp gia đình linh mục tu sĩ Việt Nam tại Nhật ngày 24/11/2022 vừa qua và tất cả các trưởng nhóm của các nhóm Giới Trẻ Công Giáo Việt Nam trên toàn nước Nhật.",
+        "ĐẠI HỘI GIỚI TRẺ TOÀN QUỐC lần II sẽ được chính thức diễn ra vào 2 ngày: Thời gian: vào Tuần Lễ Vàng ngày 4/5/2023 (thứ năm) và 5/5/2023 (thứ sáu). ",
+        "Địa Điểm: Nhà Tĩnh Tâm Dòng Thánh Tâm Susono, thuộc tỉnh Shizuoka, Nhật Bản.",
+        "Như vậy, sau gần 2 năm bị trì hoãn do dịch bệnh, Đại Hội Toàn Quốc đã được chính thức công bố tổ chức. Đây cũng là một hồng ân lớn lao cho tất cả chúng ta, những người con xa xứ đang mưu sinh tại nước Nhật này.",
+        "Cầu xin Thiên Chúa chúc phúc và ban ơn cho chúng ta có một kỳ Đại Hội Toàn Quốc thành công. Chúng con xin chân thành cảm ơn quý cha, quý tu sĩ và các anh chị trưởng nhóm đã thống nhất, để chúng con có dịp quy tụ lại với nhau một lần nữa để chia sẻ, tôn vinh niềm tin vào Đức Kitô.",
+    ],
+    date:"Ngày 11 tháng 12 năm 2022"
+}
