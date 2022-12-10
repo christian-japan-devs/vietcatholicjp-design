@@ -23,7 +23,7 @@ export default function Index() {
           <div className="items-start space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0">
             <div className="flex flex-col items-center pt-8">
               <span>
-                <img alt="" aria-hidden="true" src="/VCJ-50-50.jpg"/>
+                <img className="justify-center" alt="" aria-hidden="true" src="/viet-catholicjp-312.svg"/>
               </span>
               <h3 className="pt-4 pb-2 text-2xl font-bold leading-8 tracking-tight">VietCatholicJapan</h3>
               <div className="text-gray-800 text-xl dark:text-gray-400">Giáo đoàn công giáo Việt Nam tại Nhật</div>
@@ -50,7 +50,7 @@ export default function Index() {
                 </a>
               </div>
             </div>
-            <div className="prose max-w-none text-justify pt-8 pb-8 dark:prose-dark xl:col-span-2">
+            <div className="prose max-w-none text-md text-justify pt-8 pb-8 dark:prose-dark xl:col-span-2">
               <p>Ở châu Á, Việt Nam là nước đón nhận Tin Mừng khá sớm. Theo sử sách thì vào năm 1533 đã có những nhà truyền giáo đầu tiên tới Việt Nam, và những địa danh đầu tiên đón nhận Tin Mừng: Trà Lũ (giáo xứ Phú Nhai ngày nay), Quần Anh (sau kị húy đổi thành Quần Phương), và Ninh Cường đều là những miền đất thuộc giáo phận Bùi Chu. Từ thế kỷ 17, các thừa sai Dòng Tên, Hội Thừa sai Paris, Dòng Âu Tinh Chân đất, và nhất là Dòng Đa Minh truyền giáo tại đây.
 
 Giáo phận Bùi Chu ngày nay chỉ thuộc địa bàn của sáu huyện và một phần thành phố, ở về phía đông nam giáp biển của tỉnh Nam Định, thuộc đồng bằng Bắc Bộ. Tuy nhiên, trước khi được hình thành như ngày hôm nay, giáo phận Bùi Chu thuộc Địa phận Đàng Ngoài (được thành lập năm 1659). Sau đó, giáo phận Bùi Chu thuộc Địa phận Đông Đàng Ngoài (được tách ra từ địa phận Đàng Ngoài vào năm 1679) rồi Địa phận Trung Đàng Ngoài (được tách ra từ địa phận Đông Đàng Ngoài vào năm 1848).

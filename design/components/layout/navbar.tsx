@@ -10,7 +10,7 @@ export default function NavBar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <div className="border pb-2 border-b-slate-300 dark:bg-slate-800">
+    <div className="border-b pb-2 border-b-slate-400 dark:border-b-slate-300 dark:bg-slate-800">
       <div className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
         <svg
           className="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]"
@@ -45,7 +45,7 @@ export default function NavBar() {
               <Link href="/" legacyBehavior>
                 <a  className="-m-1.5 mb-2 p-1.5 xl:ml-12 xl:mb-4">
                   <span className="sr-only">VietCatholicJapan</span>
-                  <img className="h-8" src="/vietcatholicjp-icon.svg" alt="" />
+                  <img className="h-8" src="/viet-catholicjp-256.svg" alt="vietcatholicjp" />
                 </a>
               </Link>
             </div>
@@ -112,8 +112,8 @@ export default function NavBar() {
                     <span className="sr-only">VietCatholicJapan</span>
                     <img
                       className="h-8"
-                      src="/vietcatholicjp-icon.svg"
-                      alt=""
+                      src="/viet-catholicjp-256.svg"
+                      alt="vietcatholicjp"
                     />
                   </a>
                 </div>
