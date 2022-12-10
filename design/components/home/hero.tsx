@@ -11,7 +11,7 @@ export default function Hero()
         <div className="block items-start sm:hidden space-y-2">
           <div className="flex flex-col items-center my-4">
             <span>
-              <img className="justify-center" alt="" aria-hidden="true" src="/viet-catholicjp-312.svg"/>
+              <img className="justify-center shadow-xl" alt="" aria-hidden="true" src="/viet-catholicjp-312.svg"/>
             </span>
             <h3 className="pt-4 pb-2 text-2xl leading-8 text-gray-800 dark:text-gray-400 tracking-tight">VietCatholicJapan</h3>
             <div className="text-gray-800 px-8 text-center font-bold text-3xl dark:text-gray-200">Giáo đoàn công giáo Việt Nam tại Nhật</div>

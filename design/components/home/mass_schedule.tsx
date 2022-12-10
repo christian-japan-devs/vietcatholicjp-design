@@ -4,6 +4,7 @@ import {mass_home_schedule} from '../../types/sample_data/mass_schedule'
 
 export default function MassSchedule(){
     return(
+      <div className="relative px-2 lg:px-8">
       <div className="max-w-5xl lg:min-w-5xl bg-white border p-4 border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 md:flex md:flex-col md:items-center my-6 mx-auto px-4">
         <div className="space-y-4 mb-8 justify-center text-center">
             <h1 className="text-2xl font-serif font-bold tracking-tight sm:text-center sm:text-4xl">
@@ -61,6 +62,7 @@ export default function MassSchedule(){
                 </table>
               </div>
         </div>
+      </div>
       </div>
     )
 }
