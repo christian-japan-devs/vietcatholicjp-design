@@ -17,7 +17,7 @@ type Props = {
 export const siteTitle = 'AnViet'
   
 const Layout = ({ children , meta_data, current_page}: Props) => {
-    let [isOpen, setIsOpen] = useState(true)
+    let [isOpen, setIsOpen] = useState(false)
 
     function closeModal() {
         setIsOpen(false)
