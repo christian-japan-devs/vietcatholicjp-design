@@ -60,26 +60,21 @@ const Layout = ({ children , meta_data, current_page}: Props) => {
                         leaveFrom="opacity-100 scale-100"
                         leaveTo="opacity-0 scale-95"
                     >
-                        <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
-                        <div className="flex justify-end px-1 pt-1">
-                            <button onClick={closeModal} className="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-1.5" type="button">
-                                <svg className="swap-on fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512"><polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49"/></svg>
-                            </button>
-                        </div>
-                        <Dialog.Title
-                            as="h3"
-                            className="text-lg font-medium leading-6 text-gray-900"
-                        >
+                        <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white dark:bg-slate-800 p-6 text-left align-middle shadow-xl transition-all">
+                        <div className="flex justify-between px-1 pt-1">
                             <Link href="/" legacyBehavior>
                                 <a className="flex items-center">
-                                    <img src="/viet-catholicjp-256.svg" className="mr-3 h-6 sm:h-9" alt="Viet Catholic Japan" />
+                                    <img src="/viet-catholicjp-256.svg" className="mr-3 h-8 sm:h-10" alt="Viet Catholic Japan" />
                                     <span className="self-center text-md md:text-xl font-semibold whitespace-nowrap dark:text-white">VietCatholicJapan</span>
                                 </a>
                             </Link>
-                        </Dialog.Title>
+                            <button onClick={closeModal} className="inline-flex text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-1.5" type="button">
+                                <svg className="swap-on fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512"><polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49"/></svg>
+                            </button>
+                        </div>
                         <div className="mt-2">
                             <label htmlFor="my-drawer" className="drawer-overlay"></label>
-                            <ul className="menu p-4 w-80 bg-base-100 text-base-content">
+                            <ul className="menu p-4 w-80  text-base-content">
                             {subNavigation.map((navi,index) => (
                             <li key={index}>
                             <Disclosure>
