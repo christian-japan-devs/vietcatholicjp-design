@@ -31,9 +31,12 @@ const Layout = ({ children , meta_data, current_page}: Props) => {
             <Meta props={meta_data}/>
             <NavBar/>
             <div className="z-0">{children}</div>
-            <label onClick={openModal} className="btn btn-circle flex sm:hidden fixed z-10 bottom-2 right-2">
-                <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512"><path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z"/></svg>
+            <label onClick={openModal} className="btn btn-circle backdrop-blur-sm bg-white/20 border-none flex sm:hidden fixed z-10 bottom-2 right-2">
+                <svg className="fill-current text-gray-800 hover:text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512"><path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z"/></svg>
             </label>
+            <a href="#top" className="btn btn-circle backdrop-blur-sm bg-white/20 border-none flex sm:hidden fixed z-10 bottom-14 right-2">
+                <ChevronUpIcon className="h-8 w-8 text-gray-800 hover:text-white"/>
+            </a>
             <Footer current_page={current_page}/>
             <Transition appear show={isOpen} as={Fragment}>
                 <Dialog as="div" className="relative z-10" onClose={closeModal}>

@@ -1,4 +1,5 @@
 
+import { useState } from 'react'
 import Layout from '../../components/layout/Layout'
 import {MetaProps} from '../../components/layout/meta'
 import Link from 'next/link'
@@ -13,6 +14,8 @@ const meta_data:MetaProps = {
 }
 
 export default function Index() {
+
+  const [isPlay,setIsPlay] = useState(false)
 
   return (
     <Layout meta_data={meta_data} current_page='serve'>
@@ -39,27 +42,99 @@ export default function Index() {
           <div className="fixed inset-0 z-10 bg-gray-900/50 dark:bg-gray-900/60 hidden" id="sidebarBackdrop"></div>
           <main className="flex-auto w-full min-w-0 lg:static lg:max-h-full lg:overflow-visible">
             <div className="flex w-full">
-              <div className="flex-auto max-w-4xl min-w-0 pt-6 lg:px-4 lg:pt-8 pb:12 xl:pb-24 lg:pb-16">
+              <div className="mx-auto flex-auto max-w-4xl min-w-0 pt-6 lg:px-4 lg:pt-8 pb:12 xl:pb-24 lg:pb-16">
                 <div className="relative px-2 lg:px-8">
                   <div className="mx-auto max-w-5xl pt-4 pb-4 sm:pt-8 sm:pb-8">
                     <div className="p-4 md:px-16 md:py-4 bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700">
                       <h1 id="title" className="my-4 text-center text-4xl lg:text-4xl font-extrabold tracking-tight text-gray-700 dark:text-white">{gospel.title}</h1>
                       <h4 className="text-lg mt-4 text-center text-gray-700 dark:text-gray-400">{gospel.date}</h4>
-                     <div>
-                        {gospel.content.map((chapter,idx)=>(
-                          <div key={idx}>
-                            <h2 className="relative group my-4 text-lg md:text-xl font-bold">{chapter.chapter_title}
-                              <span id={chapter.slug} className="absolute -top-[140px]"></span>
-                              <a className="ml-2 text-blue-700 opacity-0 transition-opacity dark:text-blue-500 group-hover:opacity-100" href="#leading-paragraph" aria-label="Link to this section: Leading paragraph">
-                                #
-                              </a>
-                            </h2>
-                            {chapter.paragraphs.map((paragraph,idx)=>(
-                              <p key={idx} className="mt-6 text-sm md:text-md text-justify text-gray-800 dark:text-gray-200">{paragraph}</p>
-                            ))}
+                      <div className="space-y-2 mt-4">
+                        <div className="relative">
+                          <div className="bg-slate-100 dark:bg-slate-700 rounded-full overflow-hidden">
+                            <div className="bg-cyan-500 dark:bg-cyan-400 w-1/2 h-2" role="progressbar" aria-label="music progress" aria-valuenow={2240} aria-valuemin={0} aria-valuemax={4550}></div>
                           </div>
-                        ))}
+                          <div className="ring-cyan-500 dark:ring-cyan-400 ring-2 absolute left-1/2 top-1/2 w-4 h-4 -mt-2 -ml-2 flex items-center justify-center bg-white rounded-full shadow">
+                            <div className="w-1.5 h-1.5 bg-cyan-500 dark:bg-cyan-400 rounded-full ring-1 ring-inset ring-slate-900/5"></div>
+                          </div>
+                        </div>
+                        <div className="flex justify-between text-sm leading-6 font-medium tabular-nums">
+                          <div className="text-cyan-500 dark:text-slate-100">05:00</div>
+                          <div className="text-slate-500 dark:text-slate-400">10:50</div>
+                        </div>
                       </div>
+                      <div className="mb-8 bg-slate-50 text-slate-500 dark:bg-slate-600 dark:text-slate-200 rounded-xl flex items-center">
+                        <div className="flex-auto flex items-center justify-evenly">
+                          <button type="button" aria-label="Add to favorites">
+                            <svg width="24" height="24">
+                              <path d="M7 6.931C7 5.865 7.853 5 8.905 5h6.19C16.147 5 17 5.865 17 6.931V19l-5-4-5 4V6.931Z" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </button>
+                          <button type="button" className="hidden sm:block lg:hidden xl:block" aria-label="Previous">
+                            <svg width="24" height="24" fill="none">
+                              <path d="m10 12 8-6v12l-8-6Z" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M6 6v12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </button>
+                          <button type="button" aria-label="Rewind 10 seconds">
+                            <svg width="24" height="24" fill="none">
+                              <path d="M6.492 16.95c2.861 2.733 7.5 2.733 10.362 0 2.861-2.734 2.861-7.166 0-9.9-2.862-2.733-7.501-2.733-10.362 0A7.096 7.096 0 0 0 5.5 8.226" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M5 5v3.111c0 .491.398.889.889.889H9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </button>
+                        </div>
+                        <button onClick={()=>setIsPlay(!isPlay)} type="button" className="bg-white text-slate-900 dark:bg-slate-100 dark:text-slate-700 flex-none -my-2 mx-auto w-14 h-14 sm:w-20 sm:h-20 rounded-full ring-1 ring-slate-900/5 shadow-md flex items-center justify-center" aria-label="Pause">
+                          {isPlay?<svg className="hidden sm:block" width="30" height="32" fill="currentColor">
+                            <rect x="6" y="4" width="4" height="24" rx="2" />
+                            <rect x="20" y="4" width="4" height="24" rx="2" />
+                          </svg>:<svg className="hidden sm:block" width="30" height="32" fill="currentColor">
+                            <rect x="10" y="4" width="3" height="27" rx="1" />
+                            <rect className="-rotate-45" x="3" y="11" width="3" height="20" rx="1"/>
+                            <rect className="rotate-45" x="29" y="-6" width="3" height="20" rx="1"/>
+                          </svg>
+                          }
+                          {isPlay?<svg className="flex sm:hidden" width="30" height="32" fill="currentColor">
+                            <rect x="9" y="8" width="2" height="18" rx="1" />
+                            <rect x="19" y="8" width="2" height="18" rx="1" />
+                          </svg>:<svg className="flex sm:hidden" width="30" height="32" fill="currentColor">
+                            <rect x="10" y="7" width="2" height="20" rx="1" />
+                            <rect className="-rotate-45" x="2" y="12" width="2" height="16" rx="1"/>
+                            <rect className="rotate-45" x="26" y="-4" width="2" height="16" rx="1"/>
+                          </svg>
+                          }
+                        </button>
+                        <div className="flex-auto flex items-center justify-evenly">
+                          <button type="button" aria-label="Skip 10 seconds">
+                            <svg width="24" height="24" fill="none">
+                              <path d="M17.509 16.95c-2.862 2.733-7.501 2.733-10.363 0-2.861-2.734-2.861-7.166 0-9.9 2.862-2.733 7.501-2.733 10.363 0 .38.365.711.759.991 1.176" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M19 5v3.111c0 .491-.398.889-.889.889H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </button>
+                          <button type="button" className="hidden sm:block lg:hidden xl:block" aria-label="Next">
+                            <svg width="24" height="24" fill="none">
+                              <path d="M14 12 6 6v12l8-6Z" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M18 6v12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </button>
+                          <button type="button" className="rounded-lg text-xs leading-6 font-semibold px-2 ring-2 ring-inset ring-slate-500 text-slate-500 dark:text-slate-100 dark:ring-0 dark:bg-slate-500">
+                            1x
+                          </button>
+                        </div>
+                      </div>
+                      <div>
+                          {gospel.content.map((chapter,idx)=>(
+                            <div key={idx}>
+                              <h2 className="relative group my-4 text-lg md:text-xl font-bold">{chapter.chapter_title}
+                                <span id={chapter.slug} className="absolute -top-[140px]"></span>
+                                <a className="ml-2 text-blue-700 opacity-0 transition-opacity dark:text-blue-500 group-hover:opacity-100" href="#leading-paragraph" aria-label="Link to this section: Leading paragraph">
+                                  #
+                                </a>
+                              </h2>
+                              {chapter.paragraphs.map((paragraph,idx)=>(
+                                <p key={idx} className="mt-6 text-sm md:text-md text-justify text-gray-800 dark:text-gray-200">{paragraph}</p>
+                              ))}
+                            </div>
+                          ))}
+                        </div>
                     </div>
                   </div>
                 </div>
