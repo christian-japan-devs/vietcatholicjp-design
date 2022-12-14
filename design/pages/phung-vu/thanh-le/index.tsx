@@ -11,7 +11,7 @@ const meta_data:MetaProps = {
   ogImage:""
 }
 
-import {mass_schedule} from '../../../types/sample_data/mass_schedule'
+import {mass_full_schedule} from '../../../types/sample_data/mass_schedule'
 
 export default function Index() {
 
@@ -36,7 +36,7 @@ export default function Index() {
             </div>
           </div>
           {
-            mass_schedule.map((masses,idx)=>(
+            mass_full_schedule.map((masses,idx)=>(
               <div key={idx} className="overflow-x-auto mt-8 relative dark:bg-slate-900 dark:border rounded shadow-md sm:rounded-lg">
                 <h3 className='text-gray-800 mt-2 text-center text-xl dark:text-gray-200 font-semibold'>{masses.title}</h3>
                 <h5 className='text-gray-800 mt-2 text-center text-md dark:text-gray-200 font-semibold'>Ngày {masses.date}</h5>
