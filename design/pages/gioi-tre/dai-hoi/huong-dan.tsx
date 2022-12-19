@@ -1,6 +1,12 @@
 import { useState } from 'react'
 import NavBar from '../../../components/layout/navbar'
 
+const meta_data = {
+    title:"",
+    description:"",
+    ogUrl:"",
+    ogImage:""
+}
 
 export default function Event() {
 

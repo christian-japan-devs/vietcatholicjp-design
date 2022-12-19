@@ -30,11 +30,12 @@ function Signin({ providers }) {
       <Layout meta_data={meta_data} current_page='account'>
         <div className="relative mt-4 overflow-hidden pt-4 pb-16">
         <img src='/viet-catholicjp-312.svg' alt='' className='absolute -top-[1rem] left-1/2 -ml-[30rem] w-[140.125rem] sm:w-[163.125rem] max-w-none sm:-ml-[67.5rem]'/>
-          <div className='flex items-center justify-center relative mx-auto mt-16 w-full max-w-container grid-cols-1 sm:mt-16 sm:px-6 lg:px-8 xl:mt-32'>
+          <div className='flex items-center justify-center relative mx-auto mt-4 w-full max-w-container grid-cols-1 sm:mt-8 sm:px-6 lg:px-8 xl:mt-16'>
             <div className='p-4 w-full max-w-sm shadow-2xl bg-white rounded-lg border border-gray-200 sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700'>
-              <div>
-                  <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
-                    Đăng nhập
+              <div className="flex items-center">
+                  <img src="/viet-catholicjp-312.svg" className="mr-3 h-24 sm:h-32" alt="Viet Catholic Japan" />
+                  <h2 className='text-center text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-200'>
+                  Đăng nhập
                   </h2>
               </div>
               <form className="space-y-6 mt-4" onSubmit={handleSubmit}>

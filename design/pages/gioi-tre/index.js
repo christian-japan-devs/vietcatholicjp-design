@@ -75,15 +75,16 @@ export default function Index() {
                     </div>
                   </div>
                   <div className="mt-8 mb-12 flex gap-x-4 justify-center">
-                    <a
-                      href="#"
-                      className="inline-block rounded-lg backdrop-blur-md bg-white/30 px-4 py-1.5 md:py-4 text-sm md:text-2xl font-semibold leading-7 text-white shadow-sm ring-1 ring-gray-200 hover:bg-pink-700 hover:ring-pinnk-700"
-                    >
-                      Đăng ký
-                      <span className="ml-2 text-blue-400" aria-hidden="true">
-                        &rarr;
-                      </span>
-                    </a>
+                    <Link  href="/gioi-tre/dai-hoi/dang-ky" legacyBehavior>
+                      <a
+                        className="inline-block rounded-lg backdrop-blur-md bg-white/30 px-4 py-1.5 md:py-4 text-sm md:text-2xl font-semibold leading-7 text-white shadow-sm ring-1 ring-gray-200 hover:bg-pink-700 hover:ring-pinnk-700"
+                      >
+                        Đăng ký
+                        <span className="ml-2 text-blue-400" aria-hidden="true">
+                          &rarr;
+                        </span>
+                      </a>
+                    </Link>
                     <Link  href="/gioi-tre/dai-hoi" legacyBehavior>
                       <a
                         className="inline-block rounded-lg backdrop-blur-md bg-white/30 px-4 py-1.5 md:py-4 text-sm md:text-2xl font-semibold leading-7 text-white shadow-sm ring-1 ring-gray-200 hover:bg-pink-700 hover:ring-pinnk-700"
