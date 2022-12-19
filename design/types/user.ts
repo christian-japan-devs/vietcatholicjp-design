@@ -1,4 +1,3 @@
-
 import {ChurchType,ProvinceType} from './church'
 
 export type User = {

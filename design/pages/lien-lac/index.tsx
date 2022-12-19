@@ -1,5 +1,6 @@
 
 import Layout from '../../components/layout/Layout'
+import React, { useState } from 'react'
 import SelectPrefectures from '../../components/select/prefectures'
 import SelectRegions from '../../components/select/regions'
 
@@ -15,7 +16,18 @@ const meta_data:MetaProps = {
 import {father_contact} from '../../types/sample_data/father'
 
 export default function Index() {
+  const [selectedRegion, setSelectedRegion] = useState('all')
+  const [selectedPerfecture, setSelectedPerfecture] = useState('all')
 
+  const selectRegionChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    const value = event.target.value;
+    setSelectedRegion(value);
+  };
+
+  const selectPerfectureChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    const value = event.target.value;
+    setSelectedPerfecture(value);
+  };
   return (
     <Layout meta_data={meta_data} current_page='contact'>
       <section className="max-w-screen-xl md:flex md:flex-col md:items-center my-6 mx-auto px-4">
@@ -30,10 +42,10 @@ export default function Index() {
         <div className="max-w-4xl md:justify-centerr">
           <div className="flex gap-2">
             <div className="form-control w-full min-w-sm">
-              <SelectRegions/>
+                <SelectRegions onChange={selectRegionChange}/>
             </div>
             <div className="form-control w-full min-w-xs">
-              <SelectPrefectures/>
+                <SelectPrefectures selectedRegion={selectedRegion} onChange={selectPerfectureChange}/>
             </div>
           </div>
           {father_contact.map((diocese,idx)=>(

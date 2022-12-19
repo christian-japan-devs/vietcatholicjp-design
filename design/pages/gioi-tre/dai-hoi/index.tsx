@@ -73,37 +73,6 @@ export default function Event() {
                     </Tab.Group>
                 </div>
             </div>
-            <div className="w-full max-w-3xl shadow-md rounded-xl items-center py-4 px-2 sm:px-4 bg-gradient-to-b to-pink-600 from-sky-500 bg-gray-700y-400 dark:to-gray-700 dark:from-stone-900">
-                <h2 className="text-gray-100 text-center my-4 dark:text-gray-200 text-2xl lg:text-4xl font-semibold">
-                    CHƯƠNG TRÌNH ĐẠI HỘI
-                </h2>
-                <Tab.Group>
-                    <Tab.List className="flex space-x-1 rounded-xl bg-blue-900/20 p-1">
-                        {youth_day_programs.map((program, idx)=>(
-                            <Tab key={idx} onClick={()=>setSelectedTab(idx)} className={"w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-blue-700 ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2 "+(selected_tab===idx?'bg-white shadow':'text-blue-100 hover:bg-white/[0.12] hover:text-white')}>{program.title}</Tab>
-                        ))}
-                    </Tab.List>
-                    <Tab.Panels>
-                        {youth_day_programs.map((program, idx)=>(
-                            <Tab.Panel key={idx}>
-                                <div className='mt-8 py-2 px-4 backdrop-blur-md bg-white/30 rounded-box'>
-                                    <h2 className="text-gray-100 mb-4 text-center dark:text-gray-200 text-2xl font-semibold">{program.date}
-                                    </h2>
-                                    <ol className="relative border-l border-gray-200 dark:border-gray-800">
-                                        {program.details.map((detail,idx)=>(
-                                            <li key={idx} className="mb-6 ml-4">
-                                                <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-800"></div>
-                                                <time className="text-lg font-normal text-gray-100 dark:text-gray-200">{detail.from_time} - {detail.to_time}</time>
-                                                <Disclosure className="mt-4" title={detail.content.title} content={detail.content.detail}/>
-                                            </li>
-                                        ))}
-                                    </ol>
-                                </div>
-                            </Tab.Panel>
-                        ))}
-                    </Tab.Panels>
-                </Tab.Group>
-            </div>
             <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-2">
             </div>
         </section>

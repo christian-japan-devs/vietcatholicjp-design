@@ -34,6 +34,8 @@ export const href_cs_nhat_ban = '/chia-se/nhat-ban';
 
 export const href_lien_lac = '/lien-lac';
 
+export const href_signup = '/account/signup'
+export const href_signin = '/account/signin'
 
 export const href_registration = '/register';
 export const href_mass_register = '/register/mass';
