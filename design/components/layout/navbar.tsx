@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import {navigation, subNavigation} from '../../lib/constants'
+import {navigation, subNavigation, href_signin} from '../../lib/constants'
 import { Disclosure } from '@headlessui/react'
 import { ChevronUpIcon } from '@heroicons/react/20/solid'
 import Link from 'next/link'
@@ -69,12 +69,13 @@ export default function NavBar() {
               ))}
             </div>
             <div className="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-end">
-              <a
-                href="#"
-                className="inline-block rounded-lg px-3 py-1.5 text-sm font-semibold leading-6 text-gray-900 shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20 dark:text-gray-200 dark:hover:text-gray-400"
-              >
-                Log in
-              </a>
+                <Link href={href_signin} legacyBehavior>
+                <a
+                  className="inline-block rounded-lg px-3 py-1.5 text-sm font-semibold leading-6 text-gray-900 hover:text-sky-500 shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20 dark:text-gray-200 dark:hover:text-gray-400"
+                >
+                  Đăng nhập
+                </a>
+              </Link>
             </div>
           </nav>
           <Dialog as="div" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
@@ -160,12 +161,13 @@ export default function NavBar() {
                     ))}
                   </div>
                   <div className="py-6">
-                    <a
-                      href="#"
-                      className="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-6 dark:text-gray-200 hover:text-gray-200 text-gray-900 hover:bg-gray-400/10"
-                    >
-                      Log in
-                    </a>
+                    <Link href={href_signin} legacyBehavior>
+                      <a
+                        className="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-6 dark:text-gray-200 hover:text-blue-500 text-gray-900 hover:bg-gray-400/10"
+                      >
+                        Đăng nhập
+                      </a>
+                    </Link>
                   </div>
                 </div>
               </div>

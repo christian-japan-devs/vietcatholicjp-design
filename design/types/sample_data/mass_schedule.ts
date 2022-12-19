@@ -33,7 +33,7 @@ export const mass_schedule = [
         "time":"19:30",
         "father":"Cha Nhã SJ",
         "church_name":"Đại học Sophia",
-        "province":"Yotsuya, Tokyo"
+        "province":"Tokyo"
       },
       {
         "time":"21:30",
@@ -48,7 +48,7 @@ export const mass_schedule = [
         "time":"10:00",
         "father":"Cha Nhã SJ",
         "church_name":"Đại học Sophia",
-        "province":"Yotsuya, Tokyo"
+        "province":"Tokyo"
       },
       {
         "time":"11:00",
@@ -136,7 +136,7 @@ export const mass_home_full_schedule = [
       "time":"15:00",
       "father":"Cha Minh Toàn SJ",
       "church_name":"Inhaxio",
-      "province":"Yotsuya, Tokyo"
+      "province":"Tokyo"
     },{
       "time":"15:00",
       "father":"",
@@ -235,7 +235,7 @@ export const mass_full_schedule = [
       "time":"19:30",
       "father":"Cha Nhã SJ",
       "church_name":"Đại học Sophia",
-      "province":"Yotsuya, Tokyo"
+      "province":"Tokyo"
     },
     {
       "time":"21:30",
@@ -250,7 +250,7 @@ export const mass_full_schedule = [
       "time":"10:00",
       "father":"Cha Nhã SJ",
       "church_name":"Đại học Sophia",
-      "province":"Yotsuya, Tokyo"
+      "province":"Tokyo"
     },
     {
       "time":"11:00",
@@ -282,7 +282,7 @@ export const mass_full_schedule = [
       "time":"13:00",
       "father":"Cha Điềm SVD",
       "church_name":"Komaki",
-      "province":"Aichi-Ken"
+      "province":"Aichi"
     },{
       "time":"13:00",
       "father":"Cha Nhã SJ",
@@ -297,7 +297,7 @@ export const mass_full_schedule = [
       "time":"14:00",
       "father":"Cha Thủy SDB",
       "church_name":"Oratorio",
-      "province":"Chofu, Tokyo"
+      "province":"Tokyo"
     },{
       "time":"14:00",
       "father":"Cha Thành",
@@ -412,7 +412,7 @@ export const mass_full_schedule = [
       "time":"15:00",
       "father":"Cha Nhã SJ",
       "church_name":"Inhaxio",
-      "province":"Yotsuya, Tokyo"
+      "province":"Tokyo"
     },{
       "time":"15:00",
       "father":"Cha Thuyên CM",

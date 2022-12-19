@@ -1,7 +1,12 @@
+import React, { useState, useEffect } from 'react'
 import SelectPrefectures from '../select/prefectures'
-
 export default function ContactUs()
 {
+    const [selectedPerfecture, setSelectedPerfecture] = useState('all')
+    const selectPerfectureChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    const value = event.target.value;
+    setSelectedPerfecture(value);
+    };
     return(
         <div className="relative px-2 lg:px-8">
             <div className="mx-auto max-w-5xl pt-8 pb-8 sm:pt-18 sm:pb-18">
@@ -21,7 +26,7 @@ export default function ContactUs()
                                     <input type="name" id="name" className="input  bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Nguyễn Văn A" required/>
                                 </div>
                                 <div className="form-control w-full max-w-xs">
-                                    <SelectPrefectures/>
+                                    <SelectPrefectures selectedRegion='all' onChange={selectPerfectureChange}/>
                                 </div>
                             </div>
                             <div className="mb-6">

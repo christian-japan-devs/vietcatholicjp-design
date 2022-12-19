@@ -1,5 +1,5 @@
+import React, { useState } from 'react'
 import GroupPreviewCard from '../card/groupPreview'
-import {sample_notices} from '../../types/sample_data/posts'
 import {GroupsType} from '../../types/group'
 import SelectPrefectures from '../select/prefectures'
 import SelectRegions from '../select/regions'
@@ -21,6 +21,19 @@ export const group_sample:GroupsType[]= [
 
 export default function Groups()
 {
+    const [selectedRegion, setSelectedRegion] = useState('all')
+  const [selectedPerfecture, setSelectedPerfecture] = useState('all')
+
+  const selectRegionChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    const value = event.target.value;
+    setSelectedRegion(value);
+  };
+
+  const selectPerfectureChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    const value = event.target.value;
+    setSelectedPerfecture(value);
+  };
+
     return(
         <div className="my-12 sm:flex sm:flex-col sm:items-center">
             <div className="sm:justify-center not-prose relative bg-gradient-to-r from-teal-400 to-cyan-400 md:max-w-3xl lg:max-w-5xl sm:rounded-xl overflow-hidden dark:bg-slate-800/25">
@@ -29,12 +42,12 @@ export default function Groups()
                 Cộng đoàn
             </h1>
             <div className="relative rounded-xl overflow-auto">
-            <div className="flex gap-2 mx-4 md:mx-12 lg:mx-24">
-                <div className="form-control w-full min-w-sm">
-                    <SelectRegions/>
+                <div className="flex gap-2 mx-4 md:mx-12 lg:mx-24">
+                    <div className="form-control w-full min-w-sm">
+                        <SelectRegions onChange={selectRegionChange}/>
                     </div>
                     <div className="form-control w-full min-w-xs">
-                    <SelectPrefectures/>
+                        <SelectPrefectures selectedRegion={selectedRegion} onChange={selectPerfectureChange}/>
                     </div>
                 </div>
                 <div className="my-4 ms:my-12 relative w-full flex gap-6 snap-x overflow-x-auto pb-8">
