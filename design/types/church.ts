@@ -4,13 +4,13 @@ export type ChurchType = {
     name:string,
     name_jp: string,
     name_jp_hira: string,
-    description:string,
+    introduction:string,
     image:string,
     phone?:string,
     email?:string,
-    web_url?:string,
+    url?:string,
     address:string,
-    map_url:string,
+    google_map_link:string,
     province: ProvinceType,
 }
 
@@ -30,28 +30,34 @@ export type MonasteryType = {
     map_url:string,
 }
 
-//Tỉnh
-export type ProvinceType = {
+//
+export type CountryType = {
+    id:string,
+    name:string,
+    kanji: string,
+}
+
+//Vung
+export type RegionType = {
     id: string,
     name: string,
-    name_jp: string,
-    name_jp_hira: string,
-    diocese: DioceseType
+    kanji: string,
+    country: CountryType
 }
 
 //Giáo phận
 export type DioceseType = {
     id: string,
     name: string,
-    name_jp: string,
-    name_jp_hira: string,
-    country: CountryType
+    kanji: string,
+    region: RegionType
 }
 
-//
-export type CountryType = {
-    id:string,
-    name:string,
-    name_jp: string,
-    name_jp_hira: string,
+//Tỉnh
+export type ProvinceType = {
+    id: string,
+    name: string,
+    kanji: string,
+    region: RegionType,
+    diocese?: DioceseType
 }

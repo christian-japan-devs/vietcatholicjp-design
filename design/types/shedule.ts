@@ -1,3 +1,7 @@
+import { GospelType } from "./gospel"
+import {Father} from './user'
+import {ChurchType, ProvinceType} from './church'
+
 export type EventType = {
     id: string,
     event_date: string,
@@ -11,4 +15,22 @@ export type EventType = {
     event_start_register_day: string,
     event_end_register_day: string,
     event_language: string
+}
+
+export type MassDateSchedule = {
+    id?: string,
+    date: string,
+    title: string,
+    slug?: string,
+    gospel?: GospelType
+    time_schedule: MassTimeSchedule[]
+}
+
+export type MassTimeSchedule = {
+    id: string,
+    time: string,
+    father: Father,
+    church: ChurchType,
+    province: ProvinceType,
+    notes: string
 }

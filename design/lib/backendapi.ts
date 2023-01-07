@@ -5,6 +5,44 @@ export const makeUrl = (endpoint: string) : string => {
 }
 
 /**
+ * Letter
+ */
+export async function getLetterForHome(lang: string){
+    let headers = {
+        'Content-Type': 'application/json',
+    };
+    const res = await fetch(makeUrl("/api/letter/?type=home&lang="+lang), {
+        method: 'GET',
+        headers: headers
+    })
+    const json = await res.json()
+    if(json.errors) {
+        console.error(json.errors)
+        throw new Error('Failed to fetch API')
+    }
+    return json
+}
+
+/**
+ * Mass Schedule
+ */
+
+export async function getMassScheduleForHome(lang: string){
+    let headers = {
+        'Content-Type': 'application/json',
+    };
+    const res = await fetch(makeUrl("/api/massschedule/?type=home&lang="+lang), {
+        method: 'GET',
+        headers: headers
+    })
+    const json = await res.json()
+    if(json.errors) {
+        console.error(json.errors)
+        throw new Error('Failed to fetch API')
+    }
+    return json
+}
+/**
  * About us
  */
 

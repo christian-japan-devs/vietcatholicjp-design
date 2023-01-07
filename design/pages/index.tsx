@@ -1,3 +1,5 @@
+import type { NextPage } from 'next'
+import React, { useState, useEffect } from 'react'
 import Layout from '../components/layout/Layout'
 import Hero from '../components/home/hero'
 import FirstLetter from '../components/home/letter'
@@ -10,6 +12,10 @@ import RecentPost from '../components/home/recent_post'
 import Groups from '../components/home/groups'
 import ContactUs from '../components/home/contactus'
 import {MetaProps} from '../components/layout/meta'
+import {makeUrl} from '../lib/backendapi'
+import {LetterType} from '../types/letter'
+import {MassDateSchedule} from '../types/shedule'
+import {getLetterForHome} from '../lib/backendapi'
 
 const meta_data:MetaProps = {
   title:"Giáo đoàn công giáo Việt Nam tại Nhật",
@@ -18,12 +24,41 @@ const meta_data:MetaProps = {
   ogImage:"/vietcatholicjp-bg.jpeg"
 }
 
-export default function Home() {
+interface Props {
+  letter: LetterType,
+}
+
+const Home: NextPage<Props> = ({ letter }) => {
+
+  const [massScheduleHome, setMassScheduleHome] = useState<MassDateSchedule>({
+    title:"",
+    date:"",
+    time_schedule:[]
+  })
+
+  useEffect(()=>{
+    let headers = {
+      'Content-Type': 'application/json',
+    };
+    fetch(makeUrl("/api/massschedule/?type=home"),{
+        method: 'GET',
+        headers: headers
+      })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data)
+        if(data.status=='ok'){
+          console.log(data)
+          setMassScheduleHome(data.mass_schedules)
+          }
+    })
+  },[])
+
   return (
     <Layout meta_data={meta_data} current_page='home'>
       <Hero/> 
-      <FirstLetter/>
-      <MassSchedule/>
+      <FirstLetter letter={letter}/>
+      <MassSchedule schedule={massScheduleHome}/>
       <Notice/>
       <PriorityNotice/>
       <VideoPostCast/>
@@ -34,3 +69,10 @@ export default function Home() {
     </Layout>
   )
 }
+
+export async function getStaticProps() {
+  const data = await getLetterForHome('vi')
+  return { props: {letter: data,}}
+}
+
+export default Home

@@ -1,16 +1,22 @@
+import type { NextPage } from 'next';
 import Link from 'next/link'
 import {href_pv_gio_le} from '../../lib/constants'
-import {mass_home_schedule} from '../../types/sample_data/mass_schedule'
+import {MassDateSchedule} from '../../types/shedule'
 
-export default function MassSchedule(){
+
+type Props = {
+  schedule: MassDateSchedule
+}
+
+const MassSchedule: NextPage<Props> = ({schedule}) => {
     return(
       <div className="relative px-2 lg:px-8">
       <div className="max-w-5xl lg:min-w-5xl bg-white border p-4 border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 md:flex md:flex-col md:items-center my-6 mx-auto px-4">
         <div className="space-y-4 mb-8 justify-center text-center">
             <h1 className="text-2xl font-serif font-bold tracking-tight sm:text-center sm:text-4xl">
-              {mass_home_schedule.title}
+              {schedule.title}
             </h1>
-            <h3 className='text-gray-800 mt-2 text-center text-2xl sm:text-3xl dark:text-gray-200 font-semibold'>Ngày {mass_home_schedule.date}</h3>
+            <h3 className='text-gray-800 mt-2 text-center text-2xl sm:text-3xl dark:text-gray-200 font-semibold'>Ngày {schedule.date}</h3>
         </div>
         <div className="max-w-5xl lg:min-w-5xl md:justify-center">
           <div className="flex flex-col items-center">
@@ -42,19 +48,19 @@ export default function MassSchedule(){
                         </tr>
                     </thead>
                     <tbody>
-                      {mass_home_schedule.time_schedule.map((mass,idx)=>(
+                      {schedule.time_schedule.map((mass,idx)=>(
                         <tr key={idx} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                             <td className="py-4 px-6">
                               {mass.time}
                             </td>
                             <td className="py-4 px-6">
-                              {mass.father}
+                              {mass.father.user.full_name}
                             </td>
                             <td className="py-4 px-6">
-                              {mass.church_name}
+                            <a href={mass.church.google_map_link} target="_blank" className="link link-primary">{mass.church.name}</a>
                             </td>
                             <td className="py-4 px-6">
-                              {mass.province}
+                              {mass.province.name}
                             </td>
                         </tr>
                       ))}
@@ -66,3 +72,5 @@ export default function MassSchedule(){
       </div>
     )
 }
+
+export default MassSchedule

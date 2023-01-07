@@ -3,12 +3,15 @@ import MyDisclosure from '../../components/Disclosure'
 import Image from 'next/image'
 import { useState } from 'react'
 import Layout from '../../components/layout/Layout'
+import RecentPost from '../../components/home/recent_post'
+import {notice_detail} from '../../types/sample_data/posts'
+import Groups from '../../components/home/groups'
 import {MetaProps} from '../../components/layout/meta'
 import Link from 'next/link'
 
 const meta_data = {
-  title:"",
-  description:"string",
+  title:notice_detail.title,
+  description:notice_detail.excerpt,
   ogUrl:"",
   ogImage:""
 }
@@ -100,30 +103,38 @@ export default function Index() {
             </div>
             </div>
       </section>
-      <section className="bg-accent-dark mb-8 border-t border-steel-200">
-        <div className="space-y-4 flex flex-col items-center">
-            <h2 className="text-gray-800 pt-8 dark:text-gray-200 text-2xl font-semibold">
-                ĐẠI HỘI GIỚI TRẺ
-            </h2>
-            <h2 className="text-gray-800 pt-2 dark:text-gray-200 text-2xl font-semibold">
-                VIỆT NAM TẠI NHẬT LẦN I
-            </h2>
+      <div className="relative px-2 lg:px-8">
+        <div className="mx-auto max-w-5xl pt-4 pb-4 sm:pt-8 sm:pb-8">
+          <div className="p-4 md:px-16 md:py-4 bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700">
+            <div>
+              <h1 className="text-2xl my-4 font-serif font-bold tracking-tight sm:text-center sm:text-4xl">
+                {notice_detail.title}
+              </h1>
+              <div className="mt-2 flex items-center space-x-4">
+                  <div className="flex-shrink-0">
+                      <img className="w-8 h-8 rounded-full" src={notice_detail.author.image} alt={notice_detail.title}/>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                      <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
+                          {notice_detail.author.full_name}
+                      </p>
+                      <p className="text-sm text-gray-500 truncate dark:text-gray-400">
+                          {notice_detail.author.user?.email}
+                      </p>
+                  </div>
+              </div>
+              <span className="text-sm mt-2 text-gray-500 dark:text-gray-400">{notice_detail.date}</span>
+              {notice_detail.content.map((paragraph,idx)=>(
+                <p key={idx} className="mt-6 text-sm md:text-md text-justify text-gray-800 dark:text-gray-200 ">
+                {paragraph}
+                </p>
+              ))}
+            </div>
+          </div>
         </div>
-        <div className="mt-8 mb-16 md:px-24 md:my-24 grid grid-flow-col grid-rows-2 grid-cols-2 md:gap-8">
-          <div className="transform scale-110 -rotate-6">
-            <img className='rounded-lg' src="/youth_event/pray-02.jpg" alt="" loading="lazy"/>
-          </div>
-          <div className="transform md:scale-100 rotate-6">
-            <img className='rounded-lg' src="/youth_event/sinh-hoat.jpg" alt="" loading="lazy"/>
-          </div>
-          <div className="transform translate-y-6 -rotate-6">
-            <img className='rounded-lg' src="/youth_event/youth-dance.jpg" alt="" loading="lazy"/>
-          </div>
-          <div className="row-start-1 col-start-2 rotate-6 transform ">
-            <img className='rounded-lg' src="/youth_event/group-04.jpg" alt="" loading="lazy"/>
-          </div>
-        </div>
-      </section>
+      </div>
+      <RecentPost/>
+      <Groups/>
     </Layout>
   )
 }
