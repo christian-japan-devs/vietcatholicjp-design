@@ -3,6 +3,7 @@ import {ChurchType,ProvinceType} from './church'
 export type User = {
     username:string,
     email:string,
+    saint_name?: string,
     full_name?: string,
     image?: string,
     is_staff?: boolean,
