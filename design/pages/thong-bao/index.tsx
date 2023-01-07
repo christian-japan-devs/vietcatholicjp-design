@@ -77,7 +77,7 @@ export default function Index() {
                   <div className="sm:justify-center not-prose relative  bg-gradient-to-r from-pink-400 to-blue-400 md:max-w-2xl lg:max-w-4xl sm:rounded-xl overflow-hidden dark:bg-slate-800/25">
                     <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,#fff,rgba(255,255,255,0.6))] dark:bg-grid-slate-700/25 dark:[mask-image:linear-gradient(0deg,rgba(255,255,255,0.1),rgba(255,255,255,0.5))]" ></div>
                     <h1 className="text-4xl my-4 text-center font-serif tracking-tight sm:text-center sm:text-6xl">
-                      Thong bao gần đây
+                      Thông báo gần đây
                     </h1>
                     <div className="relative rounded-xl overflow-auto">
                       <div className="my-4 ms:my-12 relative w-full flex gap-6 snap-x overflow-x-auto pb-8">

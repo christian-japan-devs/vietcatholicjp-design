@@ -12,7 +12,7 @@ const meta_data = {
   ogImage:"/vietcatholicjp-bg.jpeg"
 }
 
-const SignUp: NextPage = () => {
+const Profile: NextPage = () => {
     let [username, setUsername] = useState<string>('')
     let [email, setEmail] = useState<string>('')
     let [password, setPassword] = useState<string>('')
@@ -117,7 +117,7 @@ const SignUp: NextPage = () => {
         <div className='relative mt-8 overflow-hidden pt-4 pb-12'>
           <img src='/viet-catholicjp-312.svg' alt='' className='absolute -top-[1rem] left-1/2 -ml-[60rem] w-[163.125rem] max-w-none sm:-ml-[67.5rem]'/>
           <div className='flex items-center justify-center relative mx-auto mt-4 w-full max-w-container grid-cols-1 sm:mt-12 sm:px-6 lg:px-8 xl:mt-24'>
-            <div className='p-4 mx-2 w-full max-w-sm shadow-2xl bg-white rounded-lg border border-gray-200 sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700'>
+            <div className='p-4 w-full max-w-sm shadow-2xl bg-white rounded-lg border border-gray-200 sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700'>
               <div className="flex items-center">
                   <img src="/viet-catholicjp-312.svg" className="mr-3 h-24 sm:h-32" alt="Viet Catholic Japan" />
                   <h2 className='text-center text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-200'>
@@ -127,11 +127,11 @@ const SignUp: NextPage = () => {
               <form className='space-y-6 mt-4' onSubmit={handleSubmit}>
                   <div>
                       <label htmlFor='username' className='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300'>Tên tài khoản đăng nhập</label>
-                      <input type='text' name='username' id='username' value={username} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setUsername(e.target.value)} className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white' placeholder='Viết liền không dấu' required/>
+                      <input type='text' name='username' id='username' value={username} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setUsername(e.target.value)} className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white' placeholder='Viết liền không khoản trắng' required/>
                   </div>
                   <div>
                       <label htmlFor='email' className='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300'>Địa chỉ email</label>
-                      <input type='email' name='email' id='email' value={email} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)} className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white' placeholder='abc@gmail.com' required/>
+                      <input type='email' name='email' id='email' value={email} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)} className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white' placeholder='name@gmail.com' required/>
                   </div>
                   <div>
                       <label htmlFor='password' className='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300'>Mật khẩu</label>
@@ -205,4 +205,4 @@ const SignUp: NextPage = () => {
     </>
   )
 }
-export default SignUp
+export default Profile

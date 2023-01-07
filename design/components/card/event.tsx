@@ -12,9 +12,9 @@ export default function EventCard({event,onSubmit}: Props ){
             <div className="">
                 <img className="rounded-t-lg" src={event.image} alt={event.title} />
             </div>
-            <div className="p-5">
+            <div className="flex flex-col p-5 items-center">
                 <h2 className="mt-2 top-2 z-10 text-center text-3xl md:text-3xl font-bold tracking-tight dark:text-cyan-400 text-cyan-700">{event.title}</h2>
-                <div className="flex space-x-4 my-4 items-center">
+                <div className="flex space-x-4 mt-4 items-center">
                     <div className="flex flex-col place-items-center">
                         từ ngày
                         <h5 className="text-center my-1 font-medium text-xl  text-red-700 dark:text-gray-400">{event.from_date_time}</h5>

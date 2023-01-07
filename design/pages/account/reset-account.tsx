@@ -52,23 +52,24 @@ const ResetAccount: NextPage = ({}) => {
   return (
     <>
         <Layout meta_data={meta_data} current_page='account'>
-        <div className='relative -mt-[10.75rem] overflow-hidden pt-[5.75rem] pb-16'>
-            <img src='/beams-home@95.jpg' alt='' className='absolute -top-[1rem] left-1/2 -ml-[40rem] w-[163.125rem] max-w-none sm:-ml-[67.5rem]'/>
-            <div className='flex items-center justify-center relative mx-auto mt-16 w-full max-w-container grid-cols-1 sm:mt-20 sm:px-6 lg:px-8 xl:mt-32'>
-            <div className='p-4 w-full max-w-sm bg-white rounded-lg border border-gray-200 shadow-md sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700'>
-                <div>
-                    <h2 className='mt-6 text-center text-3xl font-bold tracking-tight text-gray-900'>
-                    Đổi mật khẩu
+        <div className='relative mt-8 overflow-hidden pt-4 pb-12'>
+            <img src='/viet-catholicjp-312.svg' alt='' className='absolute -top-[1rem] left-1/2 -ml-[60rem] w-[163.125rem] max-w-none sm:-ml-[67.5rem]'/>
+            <div className='flex items-center justify-center relative mx-auto mt-4 w-full max-w-container grid-cols-1 sm:mt-12 sm:px-6 lg:px-8 xl:mt-24'>
+                <div className='p-4 mx-2 w-full max-w-sm shadow-2xl bg-white rounded-lg border border-gray-200 sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700'>
+                <div className="flex items-center">
+                    <img src="/viet-catholicjp-312.svg" className="mr-3 h-24 sm:h-32" alt="Viet Catholic Japan" />
+                    <h2 className='text-center text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-200'>
+                        Đổi mật khẩu
                     </h2>
                 </div>
-                <form className='space-y-6 mt-4' onSubmit={handleSubmit}>
-                    <div>
-                        <label htmlFor='email' className='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300'>Địa chỉ email được dùng để đăng ký</label>
-                        <input type='email' name='email' id='email' value={email} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)} className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white' placeholder='name@gmail.com' required/>
-                    </div>
-                    <button type='submit' className='w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'>Gửi yêu cầu</button>
-                </form>
-            </div>
+                    <form className='space-y-6 mt-4' onSubmit={handleSubmit}>
+                        <div>
+                            <label htmlFor='email' className='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300'>Địa chỉ email đã được dùng để đăng ký</label>
+                            <input type='email' name='email' id='email' value={email} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)} className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white' placeholder='abc@gmail.com' required/>
+                        </div>
+                        <button type='submit' className='w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'>Gửi yêu cầu</button>
+                    </form>
+                </div>
             </div>
         </div>
         <div>

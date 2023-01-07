@@ -182,7 +182,7 @@ const MyAccount: NextPage = () => {
               Thông tin cá nhân
             </h2>
             <h3 className="text-gray-600 text-xl font-semibold">
-              Trung tâm An Việt, nhà thờ Thánh Inhaxiô
+              Giáo đoàn công giáo Việt Nam tại Nhật Bản
             </h3>
           </div>
           <div className="flex flex-col mt-8 items-center">
