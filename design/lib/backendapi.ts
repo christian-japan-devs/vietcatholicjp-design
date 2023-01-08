@@ -23,6 +23,38 @@ export async function getLetterForHome(lang: string){
     return json
 }
 
+export async function getAllLetterWithSlug(){
+    let headers = {
+        'Content-Type': 'application/json',
+    };
+    const res = await fetch(makeUrl("/api/letter/?type=slug"), {
+        method: 'GET',
+        headers: headers
+    })
+    const json = await res.json()
+    if(json.errors) {
+        console.error(json.errors)
+        throw new Error('Failed to fetch API')
+    }
+    return json
+}
+
+export async function getLetterAndMores(slug:string){
+    let headers = {
+        'Content-Type': 'application/json',
+    };
+    const res = await fetch(makeUrl("/api/letter/"+slug+"/"), {
+        method: 'GET',
+        headers: headers
+    })
+    const json = await res.json()
+    if(json.errors) {
+        console.error(json.errors)
+        throw new Error('Failed to fetch API')
+    }
+    return json
+}
+
 /**
  * Mass Schedule
  */
