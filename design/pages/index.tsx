@@ -16,6 +16,7 @@ import {MetaProps} from '../components/layout/meta'
 import {makeUrl} from '../lib/backendapi'
 import {LetterType} from '../types/letter'
 import {NoticeType} from '../types/notice'
+import {VideoPostCastType} from '../types/letter'
 import {MassDateSchedule} from '../types/shedule'
 import {getLetterForHome} from '../lib/backendapi'
 
@@ -34,6 +35,7 @@ const Home: NextPage<Props> = ({ letter }) => {
   const [isOpen, setIsOpen] = useState(false)
   const audio_link = "https://embed.podcasts.apple.com/jp/podcast/ch%C3%BAa-nh%E1%BA%ADt-iii-th%C6%B0%E1%BB%9Dng-ni%C3%AAn/id1663661785?i=1000593022578"
   const [announcements, setAnnouncements] = useState<NoticeType[]>([])
+  const [videoLinks, setVideoLinks] = useState<VideoPostCastType[]>([])
   const [massScheduleHome, setMassScheduleHome] = useState<MassDateSchedule>({
     title:"",
     date:"",
@@ -61,7 +63,16 @@ const Home: NextPage<Props> = ({ letter }) => {
     .then((res) => res.json())
     .then((data) => {
       setAnnouncements(data)
-  })
+    })
+    fetch(makeUrl("/api/videolinks/?type=slug"),{
+      method: 'GET',
+      headers: headers
+    })
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data)
+      setVideoLinks(data)
+    })
   },[])
 
   function closeModal() {
@@ -78,7 +89,7 @@ const Home: NextPage<Props> = ({ letter }) => {
       <MassSchedule schedule={massScheduleHome} gospel_link={audio_link}/>
       <Notice announcements={announcements}/>
       <PriorityNotice/>
-      <VideoPostCast/>
+      <VideoPostCast videoLinks={videoLinks}/>
       <SecondLetter/>
       <RecentPost/>
       <Groups/>
