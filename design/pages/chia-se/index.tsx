@@ -10,7 +10,7 @@ const meta_data:MetaProps = {
   title:share_detail.title,
   description:share_detail.excerpt,
   ogUrl:"",
-  ogImage:""
+  ogImage:"/vietcatholicjp-share.jpg"
 }
 
 export default function Index() {

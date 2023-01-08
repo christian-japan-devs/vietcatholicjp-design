@@ -5,10 +5,10 @@ import Disclosure from '../../../components/Disclosure'
 import Layout from '../../../components/layout/Layout'
 import {youth_day_programs} from '../../../types/sample_data/youthday'
 const meta_data = {
-    title:"",
-    description:"string",
+    title:"Đại hội giới trẻ tại Nhật bản",
+    description:"Đại hội giới trẻ công giáo Việt Nam tại Nhật Bản lần thứ 2 tháng 5 năm 2023.",
     ogUrl:"",
-    ogImage:""
+    ogImage:"/youth_event/youth-event-1.jpeg"
 }
 
 export default function Event() {

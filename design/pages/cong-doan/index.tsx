@@ -8,7 +8,7 @@ const meta_data:MetaProps = {
   title:"Giáo đoàn công giáo Việt Nam tại Nhật",
   description:"Giới thiệu về giáo đoàn công giáo Việt Nam tại Nhật",
   ogUrl:"/cong-doan",
-  ogImage:"/VCJ-50-50.jpg"
+  ogImage:"/vietcatholicjp-share.jpg"
 }
 
 export default function Index() {
