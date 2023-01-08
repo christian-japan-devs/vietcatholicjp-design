@@ -1,8 +1,12 @@
+import type { NextPage } from 'next'
 import NoticePreviewCard from '../card/noticePreview'
 import {sample_notices} from '../../types/sample_data/posts'
+import {NoticeType} from '../../types/notice'
+type Props = {
+    announcements: NoticeType[]
+}
 
-export default function Notice()
-{
+const Notices: NextPage<Props> = ({announcements}) => {
     return(
         <div className="my-12 sm:flex sm:flex-col sm:items-center">
             <div className="sm:justify-center not-prose relative bg-gradient-to-r from-teal-400 to-cyan-400 md:max-w-3xl lg:max-w-5xl sm:rounded-xl overflow-hidden dark:bg-slate-800/25">
@@ -15,7 +19,7 @@ export default function Notice()
                 <div className="snap-center shrink-0">
                     <div className="shrink-0 w-2 sm:w-24"></div>
                 </div>
-                {sample_notices.map((notice,idx)=>(
+                {announcements.map((notice,idx)=>(
                     <NoticePreviewCard key={idx} props={{posts_preview:notice}} />
                 ))}
                 <div className="snap-center shrink-0">
@@ -27,3 +31,5 @@ export default function Notice()
         </div>
     )
 }
+
+export default Notices

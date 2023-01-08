@@ -8,10 +8,11 @@ import {MassDateSchedule,MassTimeSchedule} from '../../types/shedule'
 import SelectPrefectures from '../select/prefectures'
 
 type Props = {
-  schedule: MassDateSchedule
+  schedule: MassDateSchedule,
+  gospel_link?:string,
 }
 
-const MassSchedule: NextPage<Props> = ({schedule}) => {
+const MassSchedule: NextPage<Props> = ({schedule,gospel_link}) => {
   const [isOpen, setIsOpen] = useState(false)
   const [massTime, setMassTime] = useState<MassTimeSchedule>()
   const [selectedPerfecture, setSelectedPerfecture] = useState('all')
@@ -37,6 +38,11 @@ const MassSchedule: NextPage<Props> = ({schedule}) => {
             {schedule.title}
           </h1>
           <h3 className='text-gray-800 mt-2 text-center text-2xl sm:text-3xl dark:text-gray-200 font-semibold'>Ngày {formatDate(new Date(schedule.date),0,"dd-mm-yyyy")}</h3>
+          {gospel_link&&
+            <div className="mt-8 justify-center items-start h-full max-h-full w-full max-w-full border-gray-200 dark:border-gray-700">
+                <iframe className="w-full h-full" src={gospel_link} title="Vietcatholicjp"></iframe>
+            </div>
+          }
       </div>
       <div className="max-w-5xl lg:min-w-5xl md:justify-center">
         <div className="flex flex-col items-center">

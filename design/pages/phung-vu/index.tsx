@@ -48,9 +48,11 @@ export default function Index() {
                     <div className="p-4 md:px-16 md:py-4 bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700">
                       <h1 id="title" className="my-4 text-center text-4xl lg:text-4xl font-extrabold tracking-tight text-gray-700 dark:text-white">{gospel.title}</h1>
                       <h4 className="text-lg mt-4 text-center text-gray-700 dark:text-gray-400">{gospel.date}</h4>
-                      <div className="mt-8 justify-center items-start h-full max-h-full w-full max-w-full border-gray-200 dark:border-gray-700">
-                          <iframe className="w-full h-[200px]" src="https://embed.podcasts.apple.com/jp/podcast/ch%C3%BAa-nh%E1%BA%ADt-iii-th%C6%B0%E1%BB%9Dng-ni%C3%AAn/id1663659046?i=1000593019193" frameBorder="0" marginHeight={0} marginWidth={0}>Loading…</iframe>
-                      </div>
+                      {gospel.audio_link&&
+                        <div className="mt-8 justify-center items-start h-full max-h-full w-full max-w-full border-gray-200 dark:border-gray-700">
+                            <iframe className="w-full h-full" src={gospel.audio_link} title="Vietcatholicjp"></iframe>
+                        </div>
+                      }
                       <div>
                           {gospel.content.map((chapter,idx)=>(
                             <div key={idx}>
@@ -74,7 +76,7 @@ export default function Index() {
                   <div className="mx-auto max-w-5xl pt-8 pb-8 sm:pt-18 sm:pb-18">
                     <div className="p-4 md:px-16 md:py-4 bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700">
                       <div>
-                      <h1 className="text-3xl mt-4 font-serif font-bold tracking-tight text-center sm:text-4xl">{gospel_reflect.title}
+                        <h1 className="text-3xl mt-4 font-serif font-bold tracking-tight text-center sm:text-4xl">{gospel_reflect.title}
                           <span id={gospel_reflect.slug} className="absolute -top-[140px]"></span>
                           <a className="ml-2 text-blue-700 opacity-0 transition-opacity dark:text-blue-500 group-hover:opacity-100" href="#leading-paragraph" aria-label="Link to this section: Leading paragraph">
                             #
@@ -94,6 +96,11 @@ export default function Index() {
                               </p>
                           </div>
                         </div>
+                        {gospel_reflect.audio_link&&
+                        <div className="mt-8 justify-center items-start h-full max-h-full w-full max-w-full border-gray-200 dark:border-gray-700">
+                            <iframe className="w-full h-full" src={gospel_reflect.audio_link} title="Vietcatholicjp"></iframe>
+                        </div>
+                        }
                         {gospel_reflect.content.map((reflect,idx)=>(
                           <p key={idx} className="mt-6 text-sm md:text-md text-justify text-gray-800 dark:text-gray-200 ">
                           {reflect}

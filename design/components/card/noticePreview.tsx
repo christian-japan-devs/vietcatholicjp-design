@@ -1,9 +1,9 @@
 import Link from 'next/link'
-
-import {PostCard} from '../../types/post'
+import {NoticeType} from '../../types/notice'
+import {getDateFromDateByHour} from '../../lib/helper'
 
 type NoticePreviewProps = {
-    posts_preview: PostCard
+    posts_preview: NoticeType
 }
 
 export default function NoticePreviewCard({ props }: { props: NoticePreviewProps }){
@@ -23,11 +23,11 @@ export default function NoticePreviewCard({ props }: { props: NoticePreviewProps
                                         {props.posts_preview.author.full_name}
                                     </p>
                                     <p className="text-sm text-gray-500 truncate dark:text-gray-400">
-                                        {props.posts_preview.author.user?.email}
+                                        {props.posts_preview.author.email}
                                     </p>
                                 </div>
                             </div>
-                            <span className="text-sm mt-4 text-gray-500 dark:text-gray-400">{props.posts_preview.date}</span>
+                            <span className="text-sm mt-4 text-gray-500 dark:text-gray-400">{getDateFromDateByHour(props.posts_preview.created_on,0)}</span>
                             <p className="text-justify mt-2 text-sm">{props.posts_preview.excerpt}</p>
                         </div>
                     </a>

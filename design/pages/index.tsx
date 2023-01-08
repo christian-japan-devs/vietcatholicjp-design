@@ -15,9 +15,9 @@ import { Dialog, Transition } from '@headlessui/react'
 import {MetaProps} from '../components/layout/meta'
 import {makeUrl} from '../lib/backendapi'
 import {LetterType} from '../types/letter'
+import {NoticeType} from '../types/notice'
 import {MassDateSchedule} from '../types/shedule'
 import {getLetterForHome} from '../lib/backendapi'
-import {getDateFromDateByHour} from '../lib/helper'
 
 const meta_data:MetaProps = {
   title:"Giáo đoàn công giáo Việt Nam tại Nhật",
@@ -32,6 +32,8 @@ interface Props {
 
 const Home: NextPage<Props> = ({ letter }) => {
   const [isOpen, setIsOpen] = useState(false)
+  const audio_link = "https://embed.podcasts.apple.com/jp/podcast/ch%C3%BAa-nh%E1%BA%ADt-iii-th%C6%B0%E1%BB%9Dng-ni%C3%AAn/id1663661785?i=1000593022578"
+  const [announcements, setAnnouncements] = useState<NoticeType[]>([])
   const [massScheduleHome, setMassScheduleHome] = useState<MassDateSchedule>({
     title:"",
     date:"",
@@ -52,6 +54,14 @@ const Home: NextPage<Props> = ({ letter }) => {
           setMassScheduleHome(data.mass_schedules)
         }
     })
+    fetch(makeUrl("/api/announcement/?type=short"),{
+      method: 'GET',
+      headers: headers
+    })
+    .then((res) => res.json())
+    .then((data) => {
+      setAnnouncements(data)
+  })
   },[])
 
   function closeModal() {
@@ -65,8 +75,8 @@ const Home: NextPage<Props> = ({ letter }) => {
     <Layout meta_data={meta_data} current_page='home'>
       <Hero/> 
       <FirstLetter readMore={openModal} letter={letter}/>
-      <MassSchedule schedule={massScheduleHome}/>
-      <Notice/>
+      <MassSchedule schedule={massScheduleHome} gospel_link={audio_link}/>
+      <Notice announcements={announcements}/>
       <PriorityNotice/>
       <VideoPostCast/>
       <SecondLetter/>
