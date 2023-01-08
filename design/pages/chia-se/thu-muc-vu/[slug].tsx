@@ -49,7 +49,7 @@ export async function getStaticPaths(){
 const letters: NextPage<Props> = ({ letter, recentlyPostedLetter }) => {
     meta_data.title = letter.title
     meta_data.description = letter.excerpt
-    meta_data.ogImage = letter.image?meta_data.ogImage:"/vietcatholicjp-share.jpg"
+    meta_data.ogImage = letter.imageUrl?meta_data.ogImage:"/vietcatholicjp-share.jpg"
   return (
     <Layout meta_data={meta_data} current_page='share'>
       <div className="w-full bg-white">

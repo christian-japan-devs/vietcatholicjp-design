@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import React, { Fragment,useState, useEffect } from 'react'
 import Layout from '../components/layout/Layout'
-import Hero from '../components/home/hero'
+import Hero from '../components/home/hero1'
 import FirstLetter from '../components/home/letter'
 import MassSchedule from '../components/home/mass_schedule'
 import VideoPostCast from '../components/home/video_postcast'
