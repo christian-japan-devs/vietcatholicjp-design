@@ -15,7 +15,7 @@ export type LetterType = {
 export type VideoPostCastType = {
     id: string
     title: string
-    author?: User
+    slug: string
     excerpt?: string
     youtube_url: string
     created_on?: string
