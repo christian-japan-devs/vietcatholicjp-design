@@ -9,7 +9,7 @@ const meta_data:MetaProps = {
   title:"",
   description:"string",
   ogUrl:"",
-  ogImage:""
+  ogImage:"/vietcatholicjp-share.jpg"
 }
 
 import {mass_full_schedule} from '../../../types/sample_data/mass_schedule'

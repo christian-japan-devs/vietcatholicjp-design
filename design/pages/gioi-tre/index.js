@@ -13,7 +13,7 @@ const meta_data = {
   title:notice_detail.title,
   description:notice_detail.excerpt,
   ogUrl:"",
-  ogImage:""
+  ogImage:"/vietcatholicjp-share.jpg"
 }
 
 export default function Index() {

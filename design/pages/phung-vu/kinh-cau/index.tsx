@@ -6,7 +6,7 @@ const meta_data:MetaProps = {
   title:"",
   description:"string",
   ogUrl:"",
-  ogImage:""
+  ogImage:"/vietcatholicjp-share.jpg"
 }
 
 export default function Index() {
