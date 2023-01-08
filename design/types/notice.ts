@@ -1,9 +1,10 @@
 import {ChurchType} from './church'
+import {User} from './user';
 
 export type NoticeType = {
     title: string
     slug?: string
-    image?: string
+    image_url?: string
     excerpt:string
     content:string
     start_date_time?: string
@@ -13,6 +14,8 @@ export type NoticeType = {
     register_link?: string
     address?: string
     map_link: string
+    author: User
+    created_on:string
 }
 
 export type MassNotice = {

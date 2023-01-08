@@ -11,3 +11,12 @@ export type LetterType = {
     image_url: string
     content: string
 }
+
+export type VideoPostCastType = {
+    id: string
+    title: string
+    author?: User
+    excerpt?: string
+    youtube_url: string
+    created_on?: string
+}

@@ -229,8 +229,9 @@ export const post_detail = {
 }
 
 export const gospel = {
-    title:"CHÚA NHẬT THỨ III MÙA VỌNG",
+    title:"CHÚA NHẬT III THƯỜNG NIÊN",
     slug:"bai-doc-chua-nhat-thu-3-mua-vong",
+    audio_link:"https://embed.podcasts.apple.com/jp/podcast/ch%C3%BAa-nh%E1%BA%ADt-iii-th%C6%B0%E1%BB%9Dng-ni%C3%AAn/id1663661785?i=1000593022578&l=en",
     excerpt:"Thầy có thật là Đấng phải đến không, hay là chúng tôi còn phải đợi ai khác?",
     content: [
         {
@@ -282,7 +283,7 @@ export const gospel = {
             ]
         }
     ],
-    date:"Ngày 11 tháng 12 năm 2022"
+    date:"Ngày 22 tháng 01 năm 2023"
 }
 
 export const gospel_previews = [{
@@ -309,27 +310,28 @@ export const gospel_previews = [{
 ]
 
 export const gospel_reflect = {
-    title:"Suy niệm Chúa Nhật Thứ III Mùa Vọng",
+    title:"Suy niệm Lời Chúa: CHÚA NHẬT II THƯỜNG NIÊN",
     slug:"bai-doc-chua-nhat-thu-3-mua-vong",
+    audio_link:"https://embed.podcasts.apple.com/us/podcast/suy-ni%E1%BB%87m-l%E1%BB%9Di-ch%C3%BAa-ch%C3%BAa-nh%E1%BA%ADt-ii-th%C6%B0%E1%BB%9Dng-ni%C3%AAn/id1663659046?i=1000593024953",
     excerpt:"Mùa Vọng đã bước vào tuần thứ ba với “Chúa Nhật Hồng”, theo cách gọi truyền thống của Giáo hội. Đây là Chúa Nhật của niềm vui, vì ngày Lễ mừng Chúa Giáng sinh đã gần kề...",
     author:{
-        full_name:"Lm. Antôn Vũ Khánh Tường, SVD.",
+        full_name:"Lm. Fx. Trần Văn Hoài, OFM Conv.",
         image:'/youth_event/missa-01.jpg',
         user:{
             username:"hoidonggiammucvn",
-            email:"antovukhanhtuong@gmail.com",
+            email:"tranvanhoai@yahoo.com",
         }
     },
     content:[
-            "“Thầy có phải là Đấng phải đến chăng,hay chúng tôi còn phải đợi một Đấng nào khác?”",
-            "Mùa Vọng đã bước vào tuần thứ ba với “Chúa Nhật Hồng”, theo cách gọi truyền thống của Giáo hội. Đây là Chúa Nhật của niềm vui, vì ngày Lễ mừng Chúa Giáng sinh đã gần kề. Áo lễ màu hồng của linh mục chủ tế cũng là để diễn tả niềm vui mừng ấy. Tuy nhiên, nhiều người trong chúng ta có thể sẽ cảm thấy “sốc”, hoặc ngỡ ngàng khi nghe bài Tin Mừng hôm nay. Chẳng có một chút gì gọi là vui mừng, hân hoan. Chẳng thấy màu hồng, mà ngược lại là một màu xám xịt, nếu không muốn nói là một màu đen của hoang mang, bất an khi Gioan Tẩy Giả bị nhốt trong ngục tù và sai các môn đệ của mình đến hỏi Chúa Giê-su: “Thầy có phải là Đấng phải đến chăng, hay chúng tôi còn phải đợi một Đấng nào khác?” ",
-            "Tuần trước, chúng ta thấy Gioan Tẩy Giả được giới thiệu như là một ngôn sứ chuẩn bị cho Đấng Cứu Thế với những lời nói hết sức mạnh mẽ, kêu gọi người ta hoán cải đời sống. Hình ảnh Đấng Cứu Thế ông nói ngôn sứ cho dân chúng là hình ảnh của một Đấng uy quyền và nghiêm minh. “Chính Ðấng ấy sẽ rửa các ngươi trong Chúa Thánh Thần và lửa. Ngài cầm nia trong tay mà sảy lúa của Ngài, rồi thu lúa vào kho, còn rơm thì đốt đi trong lửa không hề tắt”.",
-            "Chúa Giê-su đã đến, nhưng Ngài không thực hiện giống như những gì Gioan đã tiên báo. Ngài không khiến lửa từ trời xuống thiêu đốt những ai không lắng nghe hay chống đối Ngài. Ngài cũng không “cầm nia trong tay để sảy lúa”, để loại trừ bất cứ một ai ra khỏi vòng tay yêu thương mà đón nhận tất cả, nhất là những “phường tội lỗi”. Ngài dạy dỗ, chữa lành, loan báo Tin Mừng yêu thương và mời gọi đổi mới cuộc sống. Gioan lại còn bị tống giam vào ngục tối, khi ông lên tiếng bảo vua Hê-rô-đê không được lấy Hê-rô-đi-a, vợ của người anh là Phi-líp-phê. Trong hoàn cảnh “họa vô đơn chí” như thế, Gioan hoang mang thật sự. Liệu những gì ông tin tưởng và hết lòng trông đợi chỉ là vô ích? Hơn nữa, cũng như vì chu toàn sứ mạng ngôn sứ của mình mà ông đã phải chịu thiệt thân. Bị nhốt trong ngục, nhưng ông vẫn theo dõi hoạt động của Chúa Giê-su. Chờ mãi mà vẫn không thấy Chúa Giê-su có một động thái nào của Đấng “xé mây trời ngự xuống”,làm cho “địch thù nhận biết Thánh Danh”và “chư dân run rẩy”(Is 63:19-64:1). Hay ít ra là Ngài cũng giải cứu ông thoát khỏi cảnh tù đày khốn khổ. Ông nhớ lại, Ngài cũng đã xếp hàng vào dòng người đến xin ông làm phép Thánh tẩy, chẳng có một chút gì tỏ ra vẻ uy quyền của một Đấng sẽ giải thoát dân tộc khỏi tay ngoại bang La Mã. Ông đã sai các môn đệ của mình đến và hỏi thẳng Chúa Giê-su: “Thầy có phải là Đấng phải đến chăng, hay chúng tôi còn phải đợi một Đấng nào khác?”",
-            "Trong cuộc đời, có bao giờ chúng ta hoang mang, nghi ngờ sự hiện diện hay quyền năng của Thiên Chúa? Thiên Chúa là Đấng toàn năng, tại sao lại để cho sự dữ, sự ác hoành hành. Chúa Giê-su là Hoàng tử Bình an, Ngài đến trần gian hơn hai ngàn năm rồi, để đem hòa bình cho nhân loại, vậy mà chiến tranh, xung đột vẫn xảy ra nơi này nơi khác trên thế giới? Con người vẫn thù ghét, bắn giết nhau; tên lửa, vũ khí hạt nhân vẫn là nguy cơ rình rập hòa bình của cả nhân loại hơn tám tỷ người này… Tại sao con người phải đau khổ, phải chết? Nước Trời mà Chúa Giê-su loan báo dường như vẫn còn ở đâu đó rất xa. Những lúc chính bản thân mình gặp phải những thử thách, gian truân; những khi mệt mỏi, chán chường với việc bổn phận; những khi gặp chống đối, thất bại trong đời sống, công việc cũng như khi bước trong đêm đen của đức tin, có khi nào ta tự hỏi như Gioan rằng Tin Mừng là gì? Chúa có phải Đấng con đặt niềm tin tưởng, cậy trông; Chúa có là Đấng Cứu độ của con hay không? Hay con phải chờ Đấng nào khác nữa?",
-            "Đôi khi chúng ta cũng giống như Gioan, đã tự vẽ cho mình một hình ảnh Thiên Chúa cho hợp với cách sống và tư tưởng của mình. Nếu thật sự Thiên Chúa giống hoàn toàn theo những gì chúng ta nghĩ thì có lẽ, đó không còn là Thiên Chúa nữa. Bởi Thiên Chúa thì vượt lên trên những suy nghĩ, tư tưởng của con người. Mùa Vọng là thời gian để chúng ta chuẩn bị và sẵn sàng đón Chúa đến một lần nữa, với những nhận thức và kinh nghiệm đúng về Thiên Chúa, về Đấng Cứu Độ, Tin Mừng, Nước Trời…Chúa Giê-su đón nhận câu chất vấn của Gioan. Ngài không trả lời trực tiếp. Ngài nói với các môn đệ của Gioan là hãy về thuật lại cho ông những gì họ được chứng kiến. Đó là “người mù được thấy, người què đi được, người phong hủi được khỏi, người điếc được nghe, người chết sống lại, và tin mừng được loan báo cho kẻ nghèo khó”. Những lời này của Chúa Giê-su gợi nhớ lại những gì ngôn sứ I-sa-ia đã loan báo và được đọc ở bài đọc một. Đây là những điều sẽ xảy ra khi Đấng Cứu Độ đến. Đây cũng không phải là những hình ảnh quen thuộc với người Do Thái đương thời. Đây là những dấu chỉ cần được đọc và khám phá bằng đức Tin. Nói cách khác, Tin Mừng mời gọi chúng ta mở tai, mở mắt mình để nhận ra sự hiện diện của Thiên Chúa được ẩn giấu đằng sau những điều xem như có vẻ không theo lẽ thường tình, không đúng như “truyền thống”, cũng có khi ở ngay trong những đau khổ, thất vọng, nghi ngờ của chúng ta.",
-            "Để đọc và hiểu được những “dấu chỉ thời đại”, chúng ta cần kiên nhẫn và vững tin vào những điều Thiên Chúa và Hội Thánh dạy. Bài đọc hai, được trích từ thư của Thánh Gia-cô-bê, qua hình ảnh người nông phu kiên nhẫn chờ đợi đến mùa thu hoạch, dạy chúng ta cũng cần kiên nhẫn chờ ngày Chúa đến. Ngày của Chúa chắc chắn là ngày vui mừng, hy vọng. Ngày nay, chúng ta, nhất là các bạn trẻ bị cuốn theo lối sống nhanh, không thể kiên nhẫn chờ đợi. Thức ăn nhanh, tốc độ nhanh, tìm kiếm thông tin nhanh, yêu nhanh, cưới nhanh và rồi cũng chia tay nhanh. Mùa Vọng nhắc nhở chúng ta ý nghĩa của chờ đợi trong kiên nhẫn và yêu thương. Ước gì từng ngày sống và cả cuộc đời của mỗi người chúng ta cũng là một mùa Vọng, không ngừng đặt câu hỏi để tìm kiếm Thiên Chúa, kiên nhẫn để nhận ra Chúa đang thực hiện Thánh ý của Ngài trong đời mình. Nhờ đó, chúng ta sẽ không bi quan thất vọng khi chưa thấy kết quả hay không như lòng mình mong muốn, và nhất là để có thể cậy trông vững vàng vào Chúa Giê-su Ki-tô là Đấng Cứu Độ và là Thiên Chúa của chúng ta. Đây chính là niềm vui, niềm hy vọng sâu xa của Chúa Nhật Hồng và của cả cuộc đời Ki-tô hữu."
+            "“Lạy Chúa, này con xin đến … ”",
+            "Mến chào quý ông bà và anh chị em, ",
+            "Con xin mƣợn lời của Thánh Phao-lô Tông đồ mà chúng ta vừa nghe trong Bài đọc 2, “Nguyện chúc cho anh em đƣợc ân sủng và bình an của Thiên Chúa Cha chúng ta, và của Chúa Giêsu Kitô.”",
+            "",
+            "",
+            "",
+            "",
     ],
-    date:"Ngày 11 tháng 12 năm 2022"
+    date:"Ngày 15 tháng 01 năm 2023"
 }
 
 export const share_detail = {
@@ -368,8 +370,7 @@ export const notice_detail = {
     },
     excerpt:"Đại hội giới trẻ công giáo Việt Nam tại Nhật Bản lần thứ II, ngày 4 và 5 tháng 5, 2023..",
     content:[
-        "Đại hội giới trẻ công giáo Việt Nam tại Nhật Bản lần thứ II, ngày 4 và 5 tháng 5, 2023..",
-        "Công bố Đại Hội Giới Trẻ Công Giáo Việt Nam tại Nhật lần II",
+        "Công bố Đại Hội Giới Trẻ Công Giáo Việt Nam tại Nhật lần II, ngày 4 và 5 tháng 5, 2023.",
         "Kính thưa toàn thể quý ông bà, anh chị em, các bạn trẻ Công Giáo đang sinh sống và làm việc tại Nhật,",
         "Được sự đồng ý của quý cha, quý tu sĩ trong cuộc họp gia đình linh mục tu sĩ Việt Nam tại Nhật ngày 24/11/2022 vừa qua và tất cả các trưởng nhóm của các nhóm Giới Trẻ Công Giáo Việt Nam trên toàn nước Nhật.",
         "ĐẠI HỘI GIỚI TRẺ TOÀN QUỐC lần II sẽ được chính thức diễn ra vào 2 ngày: Thời gian: vào Tuần Lễ Vàng ngày 4/5/2023 (thứ năm) và 5/5/2023 (thứ sáu). ",
