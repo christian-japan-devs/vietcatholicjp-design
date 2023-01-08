@@ -96,7 +96,7 @@ const MassSchedule: NextPage<Props> = ({schedule}) => {
                         {mass.father.user.full_name}
                       </td>
                       <td className="py-4 px-6">
-                      <a href={mass.church.google_map_link} className="hover:text-gray-500" target="_blank">{mass.church.name}</a>
+                        {mass.church.name}
                       </td>
                       <td className="py-4 px-6">
                         {mass.province.name}

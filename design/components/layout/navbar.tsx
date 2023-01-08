@@ -44,7 +44,7 @@ export default function NavBar() {
             <div className="flex lg:min-w-0 lg:flex-1" aria-label="Global">
               <Link href="/" legacyBehavior>
                 <a className="flex items-center">
-                    <img src="/viet-catholicjp-256.svg" className="mr-3 h-6 sm:h-9" alt="Viet Catholic Japan" />
+                    <img src="/viet-catholicjp-128.svg" className="mr-3 h-6 sm:h-9" alt="Viet Catholic Japan" />
                     <span className="self-center text-md md:text-xl font-semibold whitespace-nowrap dark:text-white">VietCatholicJapan</span>
                 </a>
               </Link>
@@ -111,7 +111,7 @@ export default function NavBar() {
                 <div>
                   <Link href="/" legacyBehavior>
                     <a className="flex items-center">
-                        <img src="/viet-catholicjp-256.svg" className="mr-3 h-6 sm:h-9" alt="Viet Catholic Japan" />
+                        <img src="/viet-catholicjp-128.svg" className="mr-3 h-6 sm:h-9" alt="Viet Catholic Japan" />
                         <span className="self-center text-md md:text-xl font-semibold whitespace-nowrap dark:text-white">VietCatholicJapan</span>
                     </a>
                   </Link>

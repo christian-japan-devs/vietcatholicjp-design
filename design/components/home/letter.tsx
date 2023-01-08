@@ -17,6 +17,7 @@ const FirstLetter: NextPage<Props> = ({letter,readMore}) => {
               <h1 className="text-3xl font-serif font-bold tracking-tight sm:text-center sm:text-4xl">
                 {letter.title}
               </h1>
+              
               <div className="mt-2 flex items-center space-x-4">
                   <div className="flex-shrink-0">
                       <img className="w-8 h-8 rounded-full" src={letter.author.image} alt={letter.title}/>
