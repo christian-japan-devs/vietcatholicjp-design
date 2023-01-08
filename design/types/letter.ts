@@ -8,6 +8,6 @@ export type LetterType = {
     cover_image: string
     author: User
     excerpt: string
-    imageUrl: string
+    image_url: string
     content: string
 }

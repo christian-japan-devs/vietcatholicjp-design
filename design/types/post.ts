@@ -29,7 +29,7 @@ type PostType = {
   cover_image: string
   author: Profile
   excerpt: string
-  image: string
+  image_url: string
   content: string
 }
 

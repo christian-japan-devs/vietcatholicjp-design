@@ -48,77 +48,8 @@ export default function Index() {
                     <div className="p-4 md:px-16 md:py-4 bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700">
                       <h1 id="title" className="my-4 text-center text-4xl lg:text-4xl font-extrabold tracking-tight text-gray-700 dark:text-white">{gospel.title}</h1>
                       <h4 className="text-lg mt-4 text-center text-gray-700 dark:text-gray-400">{gospel.date}</h4>
-                      <div className="space-y-2 mt-4">
-                        <div className="relative">
-                          <div className="bg-slate-100 dark:bg-slate-700 rounded-full overflow-hidden">
-                            <div className="bg-cyan-500 dark:bg-cyan-400 w-1/2 h-2" role="progressbar" aria-label="music progress" aria-valuenow={2240} aria-valuemin={0} aria-valuemax={4550}></div>
-                          </div>
-                          <div className="ring-cyan-500 dark:ring-cyan-400 ring-2 absolute left-1/2 top-1/2 w-4 h-4 -mt-2 -ml-2 flex items-center justify-center bg-white rounded-full shadow">
-                            <div className="w-1.5 h-1.5 bg-cyan-500 dark:bg-cyan-400 rounded-full ring-1 ring-inset ring-slate-900/5"></div>
-                          </div>
-                        </div>
-                        <div className="flex justify-between text-sm leading-6 font-medium tabular-nums">
-                          <div className="text-cyan-500 dark:text-slate-100">05:00</div>
-                          <div className="text-slate-500 dark:text-slate-400">10:50</div>
-                        </div>
-                      </div>
-                      <div className="mb-8 bg-slate-50 text-slate-500 dark:bg-slate-600 dark:text-slate-200 rounded-xl flex items-center">
-                        <div className="flex-auto flex items-center justify-evenly">
-                          <button type="button" aria-label="Add to favorites">
-                            <svg width="24" height="24">
-                              <path d="M7 6.931C7 5.865 7.853 5 8.905 5h6.19C16.147 5 17 5.865 17 6.931V19l-5-4-5 4V6.931Z" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                          </button>
-                          <button type="button" className="hidden sm:block lg:hidden xl:block" aria-label="Previous">
-                            <svg width="24" height="24" fill="none">
-                              <path d="m10 12 8-6v12l-8-6Z" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                              <path d="M6 6v12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                          </button>
-                          <button type="button" aria-label="Rewind 10 seconds">
-                            <svg width="24" height="24" fill="none">
-                              <path d="M6.492 16.95c2.861 2.733 7.5 2.733 10.362 0 2.861-2.734 2.861-7.166 0-9.9-2.862-2.733-7.501-2.733-10.362 0A7.096 7.096 0 0 0 5.5 8.226" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                              <path d="M5 5v3.111c0 .491.398.889.889.889H9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                          </button>
-                        </div>
-                        <button onClick={()=>setIsPlay(!isPlay)} type="button" className="bg-white text-slate-900 dark:bg-slate-100 dark:text-slate-700 flex-none -my-2 mx-auto w-14 h-14 sm:w-20 sm:h-20 rounded-full ring-1 ring-slate-900/5 shadow-md flex items-center justify-center" aria-label="Pause">
-                          {isPlay?<svg className="hidden sm:block" width="30" height="32" fill="currentColor">
-                            <rect x="6" y="4" width="4" height="24" rx="2" />
-                            <rect x="20" y="4" width="4" height="24" rx="2" />
-                          </svg>:<svg className="hidden sm:block" width="30" height="32" fill="currentColor">
-                            <rect x="10" y="4" width="3" height="27" rx="1" />
-                            <rect className="-rotate-45" x="3" y="11" width="3" height="20" rx="1"/>
-                            <rect className="rotate-45" x="29" y="-6" width="3" height="20" rx="1"/>
-                          </svg>
-                          }
-                          {isPlay?<svg className="flex sm:hidden" width="30" height="32" fill="currentColor">
-                            <rect x="9" y="8" width="2" height="18" rx="1" />
-                            <rect x="19" y="8" width="2" height="18" rx="1" />
-                          </svg>:<svg className="flex sm:hidden" width="30" height="32" fill="currentColor">
-                            <rect x="10" y="7" width="2" height="20" rx="1" />
-                            <rect className="-rotate-45" x="2" y="12" width="2" height="16" rx="1"/>
-                            <rect className="rotate-45" x="26" y="-4" width="2" height="16" rx="1"/>
-                          </svg>
-                          }
-                        </button>
-                        <div className="flex-auto flex items-center justify-evenly">
-                          <button type="button" aria-label="Skip 10 seconds">
-                            <svg width="24" height="24" fill="none">
-                              <path d="M17.509 16.95c-2.862 2.733-7.501 2.733-10.363 0-2.861-2.734-2.861-7.166 0-9.9 2.862-2.733 7.501-2.733 10.363 0 .38.365.711.759.991 1.176" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                              <path d="M19 5v3.111c0 .491-.398.889-.889.889H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                          </button>
-                          <button type="button" className="hidden sm:block lg:hidden xl:block" aria-label="Next">
-                            <svg width="24" height="24" fill="none">
-                              <path d="M14 12 6 6v12l8-6Z" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                              <path d="M18 6v12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                          </button>
-                          <button type="button" className="rounded-lg text-xs leading-6 font-semibold px-2 ring-2 ring-inset ring-slate-500 text-slate-500 dark:text-slate-100 dark:ring-0 dark:bg-slate-500">
-                            1x
-                          </button>
-                        </div>
+                      <div className="mt-8 justify-center items-start h-full max-h-full w-full max-w-full border-gray-200 dark:border-gray-700">
+                          <iframe className="w-full h-[200px]" src="https://embed.podcasts.apple.com/jp/podcast/ch%C3%BAa-nh%E1%BA%ADt-iii-th%C6%B0%E1%BB%9Dng-ni%C3%AAn/id1663659046?i=1000593019193" frameBorder="0" marginHeight={0} marginWidth={0}>Loading…</iframe>
                       </div>
                       <div>
                           {gospel.content.map((chapter,idx)=>(
