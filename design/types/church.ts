@@ -2,8 +2,7 @@
 export type ChurchType = {
     id:string,
     name:string,
-    name_jp: string,
-    name_jp_hira: string,
+    kanji: string,
     introduction:string,
     image:string,
     phone?:string,

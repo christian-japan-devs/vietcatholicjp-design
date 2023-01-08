@@ -5,9 +5,10 @@ import {getDateFromDateByHour} from '../../lib/helper'
 
 type Props = {
   letter: LetterType
+  readMore: () => void
 }
 
-const FirstLetter: NextPage<Props> = ({letter}) => {
+const FirstLetter: NextPage<Props> = ({letter,readMore}) => {
     return(
     <div className="relative px-2 lg:px-8">
         <div className="mx-auto max-w-5xl pt-4 pb-4 sm:pt-8 sm:pb-8">
@@ -34,8 +35,9 @@ const FirstLetter: NextPage<Props> = ({letter}) => {
               {letter.excerpt}
               </p>
               <div className="mt-8 flex gap-x-4 sm:justify-center">
-              <Link href={"/chia-se/thu-muc-vu/"+(letter.slug)} legacyBehavior>
+                <Link href={"/chia-se/thu-muc-vu/"+letter.slug} legacyBehavior>
                 <a
+                  //onClick={readMore}
                   className="inline-block rounded-lg px-4 py-1.5 text-sm font-semibold leading-7 text-gray-900 ring-1 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700 dark:ring-gray-200 ring-gray-900/10 hover:ring-gray-900/20"
                 >
                   Đọc tiếp
@@ -43,7 +45,7 @@ const FirstLetter: NextPage<Props> = ({letter}) => {
                     &rarr;
                   </span>
                 </a>
-              </Link>
+                </Link>
               </div>
             </div>
           </div>
