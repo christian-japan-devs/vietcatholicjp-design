@@ -1,18 +1,19 @@
-import {Profile} from './user'
+import {User} from './user'
+import {ChurchType, ProvinceType} from './church'
 
 export type GroupsType = {
-    id?:string,
+    id:string,
     name:string,
+    name_jp?:string,
+    image: string,
     slug:string,
-    description?:string,
-    image:string,
+    introduction?:string,
     phone?:string,
     email?:string,
-    facebook_url?:string,
-    facebook_name?:string,
-    province:string,
-    area:string,
+    url?:string,
+    province?:ProvinceType,
+    church?: ChurchType,
     address?:string,
-    map_url?:string,
-    leader?: Profile
+    google_map_link?:string,
+    leader?: User
 }

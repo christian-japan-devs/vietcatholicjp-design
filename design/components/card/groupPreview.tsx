@@ -18,10 +18,9 @@ export default function GroupPreviewCard({group_preview}:PostPreviewProps){
                             <h2 className="card-title">
                                 {group_preview.name}
                             </h2>
-                            <p>{group_preview.description}</p>
                             <div className="card-actions justify-end">
-                            <div className="badge badge-outline">{group_preview.area}</div> 
-                            <div className="badge badge-outline">{group_preview.province}</div>
+                            <div className="badge badge-outline">{group_preview.province?.name}</div> 
+                            <div className="badge badge-outline">{group_preview.church?.name}</div>
                             </div>
                         </div>
                     </div>

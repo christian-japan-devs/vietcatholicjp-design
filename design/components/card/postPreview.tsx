@@ -27,7 +27,7 @@ export default function PostPreviewCard({ props }: { props: PostPreviewProps }){
                             </p>
                             </div>
                         </div>
-                        <span className="text-sm mt-2 text-gray-500 dark:text-gray-400">{props.posts_preview.date}</span>
+                        <span className="text-sm mt-2 text-gray-500 dark:text-gray-400">{props.posts_preview.created_on}</span>
                         <p className="text-justify mt-2 text-sm">{props.posts_preview.excerpt}</p>
                     </div>
                     </a>
