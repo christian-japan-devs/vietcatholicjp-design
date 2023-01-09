@@ -115,7 +115,7 @@ const Home: NextPage<Props> = ({}) => {
     <Layout meta_data={meta_data} current_page='home'>
       <Hero/> 
       <LetterView post={letter}/>
-      <MassSchedule schedule={massScheduleHome} gospel_link={massScheduleHome.gospel?.audio_link}/>
+      <MassSchedule schedule={massScheduleHome} gospel_link={massScheduleHome.audio_link}/>
       <Notice announcements={announcements}/>
       <PriorityNotice/>
       <VideoPostCast videoLinks={videoLinks}/>
