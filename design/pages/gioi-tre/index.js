@@ -1,11 +1,12 @@
 
 import MyDisclosure from '../../components/Disclosure'
 import Image from 'next/image'
-import { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Layout from '../../components/layout/Layout'
 import RecentPost from '../../components/home/recent_post'
 import {notice_detail} from '../../types/sample_data/posts'
 import Groups from '../../components/home/groups'
+import {GroupsType} from '../../types/group'
 import {MetaProps} from '../../components/layout/meta'
 import Link from 'next/link'
 
@@ -21,6 +22,7 @@ export default function Index() {
   const [vhour, setVHour] = useState(0)
   const [vminute, setVMinute] = useState(0)
   const [vsecond, setVSecond] = useState(0)
+  //const [groups, setGroups] = useState<GroupsType[]>([])
 
   var countDownDate = new Date("May 4, 2023 06:00:00").getTime();
   var x = setInterval(function() {
@@ -134,7 +136,6 @@ export default function Index() {
         </div>
       </div>
       <RecentPost/>
-      <Groups/>
     </Layout>
   )
 }
