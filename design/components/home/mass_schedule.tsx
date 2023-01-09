@@ -62,50 +62,50 @@ const MassSchedule: NextPage<Props> = ({schedule,gospel_link}) => {
           <table className="w-full min-w-5xl max-w-screen-lg mt-2 text-sm text-left text-gray-700 dark:text-gray-200">
               <thead className="text-xs text-gray-900 bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                   <tr>
-                      <th scope="col" className="py-3 px-6">
+                      <th scope="col" className="py-2 px-3 sm:py-4 sm:px-6">
                           Giờ lễ
                       </th>
-                      <th scope="col" className="py-3 px-6">
-                          Cha
-                      </th>
-                      <th scope="col" className="py-3 px-6">
+                      <th scope="col" className="py-2 px-3 sm:py-4 sm:px-6">
                           Nhà thờ
                       </th>
-                      <th scope="col" className="py-3 px-6">
+                      <th scope="col" className="py-2 px-3 sm:py-4 sm:px-6">
                         Tỉnh
+                      </th>
+                      <th scope="col" className="py-2 px-3 sm:py-4 sm:px-6">
+                          Cha
                       </th>
                   </tr>
               </thead>
               <tbody>
               {selectedPerfecture=='all'?schedule.time_schedule.map((mass,idx)=>(
                 <tr key={idx} onClick={()=>openModal(mass)} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                  <td className="py-4 px-6">
-                    {mass.time}
+                  <td className="py-2 px-3 sm:py-4 sm:px-6">
+                    {(mass.time).substr(0, 5)}
                   </td>
-                  <td className="py-4 px-6">
-                    {mass.father.user.full_name}
-                  </td>
-                  <td className="py-4 px-6">
+                  <td className="py-2 px-3 sm:py-4 sm:px-6">
                     {mass.church.name}
                   </td>
-                  <td className="py-4 px-6">
+                  <td className="py-2 px-3 sm:py-4 sm:px-6">
                     {mass.province.name}
+                  </td>
+                  <td className="py-2 px-3 sm:py-4 sm:px-6">
+                    {mass.father.user.full_name}
                   </td>
                 </tr>
               )):
                 schedule.time_schedule.filter(timesch => timesch.province.name===selectedPerfecture).map((mass,idx)=>(
                   <tr key={idx} onClick={()=>openModal(mass)} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                      <td className="py-4 px-6">
+                      <td className="py-2 px-3 sm:py-4 sm:px-6">
                         {mass.time}
                       </td>
-                      <td className="py-4 px-6">
-                        {mass.father.user.full_name}
-                      </td>
-                      <td className="py-4 px-6">
+                      <td className="py-2 px-3 sm:py-4 sm:px-6">
                         {mass.church.name}
                       </td>
-                      <td className="py-4 px-6">
+                      <td className="py-2 px-3 sm:py-4 sm:px-6">
                         {mass.province.name}
+                      </td>
+                      <td className="py-2 px-3 sm:py-4 sm:px-6">
+                        {mass.father.user.full_name}
                       </td>
                   </tr>
                 ))}

@@ -23,7 +23,7 @@ export default function PostPreviewCard({ props }: { props: PostPreviewProps }){
                                 {props.posts_preview.author.full_name}
                             </p>
                             <p className="text-sm text-gray-500 truncate dark:text-gray-400">
-                                {props.posts_preview.author.user?.email}
+                                {props.posts_preview.author.email}
                             </p>
                             </div>
                         </div>

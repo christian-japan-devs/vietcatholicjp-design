@@ -1,4 +1,4 @@
-import {Profile} from './user';
+import {User} from './user';
 
 interface SEO { 
   title: string
@@ -17,7 +17,7 @@ export interface Post {
 export interface PostCard {
   title: string
   slug: string
-  author: Profile
+  author: User
   excerpt: string
   date: string
 }
@@ -27,7 +27,7 @@ type PostType = {
   title: string
   created_on: string
   cover_image: string
-  author: Profile
+  author: User
   excerpt: string
   image_url: string
   content: string

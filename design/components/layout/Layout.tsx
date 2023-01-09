@@ -14,7 +14,7 @@ type Props = {
     current_page: string
 }
 
-export const siteTitle = 'AnViet'
+export const siteTitle = 'vietcatholicjp'
   
 const Layout = ({ children , meta_data, current_page}: Props) => {
     let [isOpen, setIsOpen] = useState(false)
