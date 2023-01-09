@@ -48,10 +48,10 @@ const PostView: NextPage<Props> = ({post,readMore}) => {
                   </div>
               </div>
               <span className="text-sm mt-4 text-gray-500 dark:text-gray-400">{getDateFromDateByHour(post.post_meta.created_on,0)}</span>
-              {post.post_meta.audio_link&&
+              {post.post_meta.audio_link?
                   <div className="mt-8 justify-center items-start h-full max-h-full w-full max-w-full border-gray-200 dark:border-gray-700">
                       <iframe className="w-full h-full" src={post.post_meta.audio_link} title="Vietcatholicjp"></iframe>
-                  </div>
+                  </div>:""
               }
               <div className="my-2">
                   {

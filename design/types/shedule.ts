@@ -22,7 +22,7 @@ export type MassDateSchedule = {
     date: string,
     title: string,
     slug?: string,
-    gospel?: GospelType
+    audio_link?: string
     time_schedule: MassTimeSchedule[]
 }
 
