@@ -1,8 +1,9 @@
 
 import Layout from '../../components/layout/Layout'
+import React, { useState, useEffect } from 'react'
 import {MetaProps} from '../../components/layout/meta'
-import NavBar from '../../components/layout/navbar'
 import Groups from '../../components/home/groups'
+import {GroupsType} from '../../types/group'
 
 const meta_data:MetaProps = {
   title:"Giáo đoàn công giáo Việt Nam tại Nhật",
@@ -12,7 +13,7 @@ const meta_data:MetaProps = {
 }
 
 export default function Index() {
-
+  const [groups, setGroups] = useState<GroupsType[]>([])
   return (
     <Layout meta_data={meta_data} current_page='comunity'>
       <section className="max-w-6xl mt-6 mx-auto px-4 bg-accent-dark">
@@ -60,7 +61,7 @@ Vào năm 1936, Tòa Thánh đã tách phần đất tả ngạn sông Hồng c�
           </div>
         </div>
       </section>
-      <Groups/>
+      <Groups groups={groups}/>
     </Layout>
   )
 }

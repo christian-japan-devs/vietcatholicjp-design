@@ -104,7 +104,7 @@ export default function Index() {
                                             </p>
                                         </div>
                                     </div>
-                                    <span className="text-sm mt-2 text-gray-500 dark:text-gray-400">{post.date}</span>
+                                    <span className="text-sm mt-2 text-gray-500 dark:text-gray-400">{post.created_on}</span>
                                     <p>{post.excerpt}</p>
                                   </div>
                                 </a>

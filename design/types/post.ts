@@ -15,22 +15,30 @@ export interface Post {
 }
 
 export interface PostCard {
+  id?:string
   title: string
   slug: string
   author: User
+  image_url?:string
   excerpt: string
-  date: string
+  audio_link?:string
+  created_on: string
+  number_readed?: number
+  number_shared?: number
+}
+
+export interface PostChapter {
+  id?:string
+  chapter_title: string
+  slug: string
+  content: string
+  image?:string
+  chapter_summary?: string
 }
 
 type PostType = {
-  slug: string
-  title: string
-  created_on: string
-  cover_image: string
-  author: User
-  excerpt: string
-  image_url: string
-  content: string
+  post_meta: PostCard
+  content: PostChapter[]
 }
 
 export default PostType

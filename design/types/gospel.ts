@@ -4,6 +4,7 @@ export type GospelType = {
   title: string
   slug: string
   date: string
+  audio_link?:string
   first_reading?: string
   second_reading?: string
   halelluia?: string;

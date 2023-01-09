@@ -1,13 +1,13 @@
 import Link from 'next/link'
 
-import {PostCard} from '../../types/post'
+import {NoticeType} from '../../types/notice'
 import {getDateFromDateByHour} from '../../lib/helper'
 
 type PostPreviewProps = {
-    posts_preview: PostCard
+    posts_preview: NoticeType
 }
 
-export default function PostSidePreviewCard({ props }: { props: PostPreviewProps }){
+export default function NoticeSidePreviewCard({ props }: { props: PostPreviewProps }){
     return (
         <div className="w-48 md:w-64 bg-base-100 shadow border rounded-xl">
             <Link href={"/chia-se/chi-tiet/"+(props.posts_preview.slug)} legacyBehavior>

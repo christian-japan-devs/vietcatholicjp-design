@@ -20,18 +20,18 @@ const FirstLetter: NextPage<Props> = ({letter,readMore}) => {
               
               <div className="mt-2 flex items-center space-x-4">
                   <div className="flex-shrink-0">
-                      <img className="w-8 h-8 rounded-full" src={letter.author.image} alt={letter.title}/>
+                      <img className="w-8 h-8 rounded-full" src={letter.author?.image} alt={letter.title}/>
                   </div>
                   <div className="flex-1 min-w-0">
                       <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
-                      {letter.author.saint_name} {letter.author.full_name}
+                      {letter.author?.saint_name} {letter.author?.full_name}
                       </p>
                       <p className="text-sm text-gray-500 truncate dark:text-gray-400">
-                          {letter.author.email}
+                          {letter.author?.email}
                       </p>
                   </div>
               </div>
-              <span className="text-sm mt-4 text-gray-500 dark:text-gray-400">{getDateFromDateByHour(letter.created_on,0)}</span>
+              <span className="text-sm mt-4 text-gray-500 dark:text-gray-400">{getDateFromDateByHour(letter.created_on?letter.created_on:"2023-01-01",0)}</span>
               <p className="mt-6 text-sm md:text-md text-justify text-gray-800 dark:text-gray-200 ">
               {letter.excerpt}
               </p>

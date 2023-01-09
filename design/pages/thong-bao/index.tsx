@@ -1,20 +1,45 @@
 
+import type { NextPage } from 'next'
 import Link from 'next/link'
+import React, { useState, useEffect } from 'react'
 import Layout from '../../components/layout/Layout'
-import PostSidePreviewCard from '../../components/card/postPreviewSide'
+import NoticeSidePreviewCard from '../../components/card/noticesPreviewSide'
 import {MetaProps} from '../../components/layout/meta'
-import {sample_notices, notice_detail} from '../../types/sample_data/posts'
 import {chia_se_nav} from '../../lib/constants'
+import {NoticeType} from '../../types/notice'
+import {makeUrl} from '../../lib/backendapi'
+import {getDateFromDateByHour} from '../../lib/helper'
 
 const meta_data:MetaProps = {
-  title:notice_detail.title,
-  description:notice_detail.excerpt,
+  title:"",
+  description:"",
   ogUrl:"",
   ogImage:"/vietcatholicjp-share.jpg"
 }
 
-export default function Index() {
+const Index: NextPage = () => {
+  const [announcements, setAnnouncements] = useState<NoticeType[]>([])
+  const [announcement, setAnnouncement] = useState<NoticeType>()
 
+  useEffect(()=>{
+    let headers = {
+      'Content-Type': 'application/json',
+    };
+    fetch(makeUrl("/api/announcement/?type=index"),{
+      method: 'GET',
+      headers: headers
+    })
+    .then((res) => res.json())
+    .then((data) => {
+      if(data.status === 'ok'){
+        setAnnouncements(data.announcements)
+        setAnnouncement(data.announcement)
+      }
+    })
+    meta_data.title = announcement?.title?announcement?.title:''
+    meta_data.description = announcement?.excerpt?announcement?.excerpt:''
+    meta_data.ogImage = announcement?.image_url?announcement?.image_url:''
+  },[])
   return (
     <Layout meta_data={meta_data} current_page='share'>
       <div className="w-full bg-white dark:bg-gray-900/60">
@@ -41,37 +66,33 @@ export default function Index() {
           <main className="flex-auto w-full min-w-0 lg:static lg:max-h-full lg:overflow-visible">
             <div className="flex w-full">
               <div className="flex-auto max-w-4xl min-w-0 pt-6 lg:px-2 xl:px-8 lg:pt-8 pb:12 xl:pb-24 lg:pb-16">
-                
+                {announcement&&
                 <div className="relative px-2 lg:px-8">
                   <div className="mx-auto max-w-5xl pt-4 pb-4 sm:pt-8 sm:pb-8">
                     <div className="p-4 md:px-16 md:py-4 bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700">
                       <div>
                         <h1 className="text-2xl my-4 font-serif font-bold tracking-tight sm:text-center sm:text-4xl">
-                          {notice_detail.title}
+                          {announcement.title}
                         </h1>
                         <div className="mt-2 flex items-center space-x-4">
                             <div className="flex-shrink-0">
-                                <img className="w-8 h-8 rounded-full" src={notice_detail.author.image} alt={notice_detail.title}/>
+                                <img className="w-8 h-8 rounded-full" src={announcement.author.image} alt={announcement.title}/>
                             </div>
                             <div className="flex-1 min-w-0">
                                 <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
-                                    {notice_detail.author.full_name}
+                                    {announcement.author.full_name}
                                 </p>
                                 <p className="text-sm text-gray-500 truncate dark:text-gray-400">
-                                    {notice_detail.author.user?.email}
+                                    {announcement.author.email}
                                 </p>
                             </div>
                         </div>
-                        <span className="text-sm mt-2 text-gray-500 dark:text-gray-400">{notice_detail.date}</span>
-                        {notice_detail.content.map((paragraph,idx)=>(
-                          <p key={idx} className="mt-6 text-sm md:text-md text-justify text-gray-800 dark:text-gray-200 ">
-                          {paragraph}
-                          </p>
-                        ))}
+                        <span className="text-sm mt-2 text-gray-500 dark:text-gray-400">{getDateFromDateByHour(announcement.created_on,0)}</span>
+                        <div id="post_content" className="my-4 space-y-2" dangerouslySetInnerHTML={{ __html: announcement.content?announcement.content:"" }} />
                       </div>
                     </div>
                   </div>
-                </div>
+                </div>}
                 
                 <div className="my-12 sm:flex sm:flex-col sm:items-center lg:hidden">
                   <div className="sm:justify-center not-prose relative  bg-gradient-to-r from-pink-400 to-blue-400 md:max-w-2xl lg:max-w-4xl sm:rounded-xl overflow-hidden dark:bg-slate-800/25">
@@ -84,7 +105,7 @@ export default function Index() {
                         <div className="snap-center shrink-0">
                           <div className="shrink-0 w-2 sm:w-24"></div>
                         </div>
-                        {sample_notices.map((post,idx)=>(
+                        {announcements.map((post,idx)=>(
                           <div key={idx} className="snap-center shrink-0 first:pl-8 last:pr-8">
                             <div className="card w-64 md:w-96 bg-base-100 shadow-xl">
                               <Link href={"/chia-se/chi-tiet/"+(post.slug)} legacyBehavior>
@@ -104,7 +125,7 @@ export default function Index() {
                                             </p>
                                         </div>
                                     </div>
-                                    <span className="text-sm mt-2 text-gray-500 dark:text-gray-400">{post.date}</span>
+                                    <span className="text-sm mt-2 text-gray-500 dark:text-gray-400">{getDateFromDateByHour(post.created_on,0)}</span>
                                     <p>{post.excerpt}</p>
                                   </div>
                                 </a>
@@ -125,9 +146,9 @@ export default function Index() {
                   <div className="lg:px-2 xl:px-4">
                     <h5 className="text-slate-900 font-semibold mb-4 text-sm leading-6 dark:text-slate-100">Gần đây</h5>
                     <ul className="text-slate-700 dark:text-white text-sm leading-6">
-                      {sample_notices.map((post,idx)=>(
+                      {announcements.map((post,idx)=>(
                         <li key={idx} className="mt-4">
-                          <PostSidePreviewCard props={{posts_preview:post}}/>
+                          <NoticeSidePreviewCard props={{posts_preview:post}}/>
                         </li>
                       ))}
                     </ul>
@@ -141,3 +162,5 @@ export default function Index() {
     </Layout>
   )
 }
+
+export default Index

@@ -11,7 +11,7 @@ export const sample_posts = [
             email:"pmnguyenhuuhien@gmail.com",
         },
         excerpt:"Sứ điệp của cha, cho các con là những người trẻ, sứ điệp lớn lao mà Giáo hội cưu mang, đó là Chúa Giêsu ...",
-        date:"11/11/2022"
+        created_on:"11/11/2022"
     },
     {
         title:"Hướng tới một Hội Thánh hiệp hành",
@@ -23,7 +23,7 @@ export const sample_posts = [
             email:"mi_nobito@yahoo.com",
         },
         excerpt:"Đáp lại lời kêu gọi của Đức Thánh Cha Phanxicô, Hội Thánh Việt Nam tích cực tham gia Thượng Hội Đồng Giám Mục cấp Giáo phận....",
-        date:"11/11/2022"
+        created_on:"11/11/2022"
     },
     {
         title:"Người Chiến Thắng Trên Mọi Mặt Trận",
@@ -35,7 +35,7 @@ export const sample_posts = [
             email:"Boscoduongtrungtin@gmail.com",
         },
         excerpt:"“Sách Thánh có thể dạy anh nên người khôn ngoan để được ơn cứu độ nhờ tin vào Đức Giê-su Ki-tô” (2Tm 3,15). Chúng ta đã được nghe...",
-        date:"04/12/2022"
+        created_on:"04/12/2022"
     },
     {
         title:"Lời Tỏ Tình Tháng Mười Hai",
@@ -47,7 +47,7 @@ export const sample_posts = [
             email:"tranggiang@gmail.com",
         },
         excerpt:"Bỏ lại cái se lạnh của mùa thu lá rụng, hàng cây dọc dãy phố đổ bóng không chiếc lá, trời chập chững bƣớc vào đông....",
-        date:"01/12/2022"
+        created_on:"01/12/2022"
     },
 ]
 

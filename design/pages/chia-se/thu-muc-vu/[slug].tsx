@@ -48,7 +48,7 @@ export async function getStaticPaths(){
 
 const letters: NextPage<Props> = ({ letter, recentlyPostedLetter }) => {
     meta_data.title = letter.title
-    meta_data.description = letter.excerpt
+    meta_data.description = letter.excerpt?letter.excerpt:""
     meta_data.ogImage = letter.image_url?meta_data.ogImage:"/vietcatholicjp-share.jpg"
   return (
     <Layout meta_data={meta_data} current_page='share'>
@@ -84,14 +84,14 @@ const letters: NextPage<Props> = ({ letter, recentlyPostedLetter }) => {
                               <h2 className="card-title text-gray-600 dark:text-gray-200">{post.title}</h2>
                               <div className="flex items-center space-x-4">
                                   <div className="flex-shrink-0">
-                                      <img className="w-8 h-8 rounded-full" src={post.author.image} alt={post.title}/>
+                                      <img className="w-8 h-8 rounded-full" src={post.author?.image} alt={post.title}/>
                                   </div>
                                   <div className="flex-1 min-w-0">
                                       <p className="text-sm font-medium text-gray-600 truncate dark:text-white">
-                                          {post.author.full_name}
+                                          {post.author?.full_name}
                                       </p>
                                       <p className="text-sm text-gray-500 truncate dark:text-gray-400">
-                                          {post.author.email}
+                                          {post.author?.email}
                                       </p>
                                   </div>
                               </div>
@@ -116,18 +116,18 @@ const letters: NextPage<Props> = ({ letter, recentlyPostedLetter }) => {
                     <h1 id="title" className="mb-4 md:text-center text-3xl lg:text-4xl font-extrabold tracking-tight text-gray-700 dark:text-white">{letter.title}</h1>
                     <div className="mt-2 flex items-center space-x-4">
                             <div className="flex-shrink-0">
-                                <img className="w-8 h-8 rounded-full" src={letter.author.image} alt={letter.title}/>
+                                <img className="w-8 h-8 rounded-full" src={letter.author?.image} alt={letter.title}/>
                             </div>
                             <div className="flex-1 min-w-0">
                                 <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
-                                {letter.author.saint_name} {letter.author.full_name}
+                                {letter.author?.saint_name} {letter.author?.full_name}
                                 </p>
                                 <p className="text-sm text-gray-500 truncate dark:text-gray-400">
-                                    {letter.author.email}
+                                    {letter.author?.email}
                                 </p>
                             </div>
                         </div>
-                    <span className="text-sm mt-4 ml-12 text-gray-500 dark:text-gray-400">{getDateFromDateByHour(letter.created_on,0)}</span>
+                    <span className="text-sm mt-4 ml-12 text-gray-500 dark:text-gray-400">{getDateFromDateByHour(letter.created_on?letter.created_on:"2023-01-01",0)}</span>
                     </div>
                     <div id="phan-gioi-thieu">
                         <div className="space-y-2" dangerouslySetInnerHTML={{ __html: letter.content?letter.content:"" }} />
@@ -153,14 +153,14 @@ const letters: NextPage<Props> = ({ letter, recentlyPostedLetter }) => {
                                     <h2 className="card-title text-gray-700 dark:text-gray-200">{post.title}</h2>
                                     <div className="flex items-center space-x-4">
                                         <div className="flex-shrink-0">
-                                            <img className="w-8 h-8 rounded-full" src={post.author.image} alt={post.title}/>
+                                            <img className="w-8 h-8 rounded-full" src={post.author?.image} alt={post.title}/>
                                         </div>
                                         <div className="flex-1 min-w-0">
                                             <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
-                                                {post.author.full_name}
+                                                {post.author?.full_name}
                                             </p>
                                             <p className="text-sm text-gray-500 truncate dark:text-gray-400">
-                                                {post.author.email}
+                                                {post.author?.email}
                                             </p>
                                         </div>
                                     </div>

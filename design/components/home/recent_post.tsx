@@ -1,8 +1,16 @@
+import type { NextPage } from 'next'
 import PostPreviewCard from '../card/postPreview'
 import {sample_posts} from '../../types/sample_data/posts'
+import PostType, { PostCard } from '../../types/post'
 
-export default function RecentPost()
-{
+type Props = {
+  posts: PostCard[] | undefined
+}
+
+const PostCardView: NextPage<Props> = ({posts}) => {
+  if(posts == undefined){
+    return (<></>)
+  }else{
     return(
       <div className="my-12 sm:flex sm:flex-col sm:items-center">
         <div className="sm:justify-center not-prose relative  bg-gradient-to-r from-pink-400 to-blue-400 md:max-w-3xl lg:max-w-5xl sm:rounded-xl overflow-hidden dark:bg-slate-800/25">
@@ -15,7 +23,7 @@ export default function RecentPost()
               <div className="snap-center shrink-0">
                 <div className="shrink-0 w-2 sm:w-24"></div>
               </div>
-              {sample_posts.map((post,idx)=>(
+              {posts.map((post,idx)=>(
                 <PostPreviewCard key={idx} props={{posts_preview:post}}/>
               ))}
               <div className="snap-center shrink-0">
@@ -26,4 +34,6 @@ export default function RecentPost()
         </div>
       </div>
     )
+  }
 }
+export default PostCardView;

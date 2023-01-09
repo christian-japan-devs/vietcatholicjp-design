@@ -1,15 +1,14 @@
 import {User} from './user';
 
 export type LetterType = {
-    id: string
-    slug: string
+    id?: string
+    slug?: string
     title: string
-    created_on: string
-    cover_image: string
-    author: User
-    excerpt: string
-    image_url: string
-    content: string
+    created_on?: string
+    author?: User
+    excerpt?: string
+    image_url?: string
+    content?: string
 }
 
 export type VideoPostCastType = {
