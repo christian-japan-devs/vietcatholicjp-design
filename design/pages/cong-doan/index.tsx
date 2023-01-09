@@ -2,7 +2,6 @@
 import Layout from '../../components/layout/Layout'
 import React, { useState, useEffect } from 'react'
 import {MetaProps} from '../../components/layout/meta'
-import NavBar from '../../components/layout/navbar'
 import Groups from '../../components/home/groups'
 import {GroupsType} from '../../types/group'
 
