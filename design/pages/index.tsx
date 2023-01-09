@@ -7,7 +7,7 @@ import MassSchedule from '../components/home/mass_schedule'
 import VideoPostCast from '../components/home/video_postcast'
 import Notice from '../components/home/notice'
 import PriorityNotice from '../components/home/priority_notice'
-import SecondLetter from '../components/home/letter2'
+import PostView from '../components/card/PostView'
 import RecentPost from '../components/home/recent_post'
 import Groups from '../components/home/groups'
 import ContactUs from '../components/home/contactus'
@@ -70,7 +70,6 @@ const Home: NextPage<Props> = ({ letter }) => {
     })
     .then((res) => res.json())
     .then((data) => {
-      console.log(data)
       setVideoLinks(data)
     })
   },[])
@@ -90,7 +89,7 @@ const Home: NextPage<Props> = ({ letter }) => {
       <Notice announcements={announcements}/>
       <PriorityNotice/>
       <VideoPostCast videoLinks={videoLinks}/>
-      <SecondLetter/>
+      <PostView  post={letter}/>
       <RecentPost/>
       <Groups/>
       <ContactUs/>

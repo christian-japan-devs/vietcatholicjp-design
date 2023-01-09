@@ -1,16 +1,14 @@
 import { PostCard} from "../post";
 
-export const sample_posts:PostCard[] = [
+export const sample_posts = [
     {
         title:"Sứ điệp của Đức Thánh Cha Phanxicô 2022-2023",
         slug:"su-diep-cua-duc-thanh-cha-Phanxico-2023",
         author:{
             full_name:"Lm. P.M Nguyen Huu Hien",
             image:'/youth_event/missa-01.jpg',
-            user:{
-                username:"father_pm_nguyen_huu_hien",
-                email:"pmnguyenhuuhien@gmail.com",
-            }
+            username:"father_pm_nguyen_huu_hien",
+            email:"pmnguyenhuuhien@gmail.com",
         },
         excerpt:"Sứ điệp của cha, cho các con là những người trẻ, sứ điệp lớn lao mà Giáo hội cưu mang, đó là Chúa Giêsu ...",
         date:"11/11/2022"
@@ -21,10 +19,8 @@ export const sample_posts:PostCard[] = [
         author:{
             full_name:"Lm. Micaer Nguyen Minh Lap",
             image:'/youth_event/missa-01.jpg',
-            user:{
-                username:"father_micaer_nguyen_minh_lap",
-                email:"mi_nobito@yahoo.com",
-            }
+            username:"father_micaer_nguyen_minh_lap",
+            email:"mi_nobito@yahoo.com",
         },
         excerpt:"Đáp lại lời kêu gọi của Đức Thánh Cha Phanxicô, Hội Thánh Việt Nam tích cực tham gia Thượng Hội Đồng Giám Mục cấp Giáo phận....",
         date:"11/11/2022"
@@ -35,10 +31,8 @@ export const sample_posts:PostCard[] = [
         author:{
             full_name:"Lm. Bosco Dương Trung Tín",
             image:'/youth_event/missa-01.jpg',
-            user:{
-                username:"father_duong_trung_tin",
-                email:"Boscoduongtrungtin@gmail.com",
-            }
+            username:"father_duong_trung_tin",
+            email:"Boscoduongtrungtin@gmail.com",
         },
         excerpt:"“Sách Thánh có thể dạy anh nên người khôn ngoan để được ơn cứu độ nhờ tin vào Đức Giê-su Ki-tô” (2Tm 3,15). Chúng ta đã được nghe...",
         date:"04/12/2022"
@@ -49,27 +43,23 @@ export const sample_posts:PostCard[] = [
         author:{
             full_name:"Trần Giang",
             image:'/youth_event/missa-01.jpg',
-            user:{
-                username:"tranggiang",
-                email:"tranggiang@gmail.com",
-            }
+            username:"tranggiang",
+            email:"tranggiang@gmail.com",
         },
         excerpt:"Bỏ lại cái se lạnh của mùa thu lá rụng, hàng cây dọc dãy phố đổ bóng không chiếc lá, trời chập chững bƣớc vào đông....",
         date:"01/12/2022"
     },
 ]
 
-export const sample_notices:PostCard[] = [
+export const sample_notices = [
     {
         title:"Đại hội giới trẻ 2023",
         slug:"dai-hoi-gioi-tre-2023",
         author:{
             full_name:"Lm. Joseph Nguyen Thanh Nha",
             image:'/youth_event/missa-01.jpg',
-            user:{
-                username:"father_joshep_nhasj",
-                email:"josephnhasj@gmail.com",
-            }
+            username:"father_joshep_nhasj",
+            email:"josephnhasj@gmail.com",
         },
         excerpt:"Đại hội giới trẻ công giáo Việt Nam tại Nhật Bản lần thứ II, ngày 4 và 5 tháng 5, 2023..",
         date:"10/12/2022"
@@ -80,10 +70,8 @@ export const sample_notices:PostCard[] = [
         author:{
             full_name:"Lm. Micaer Nguyen Minh Lap",
             image:'/youth_event/missa-01.jpg',
-            user:{
-                username:"father_micaer_nguyen_minh_lap",
-                email:"mi_nobito@yahoo.com",
-            }
+            username:"father_micaer_nguyen_minh_lap",
+            email:"mi_nobito@yahoo.com",
         },
         excerpt:"Cộng đoàn Oska xin thông báo về việc mở lớp học giáo lý hôn phối tháng 3 năm 2023, vùng Osaka.",
         date:"08/12/2022"
@@ -94,10 +82,8 @@ export const sample_notices:PostCard[] = [
         author:{
             full_name:"Lm. Bosco Dương Trung Tín",
             image:'/youth_event/missa-01.jpg',
-            user:{
-                username:"father_duong_trung_tin",
-                email:"Boscoduongtrungtin@gmail.com",
-            }
+            username:"father_duong_trung_tin",
+            email:"Boscoduongtrungtin@gmail.com",
         },
         excerpt:"Thông báo về việc bầu ban điều hành mới khoá 2023-2025 cộng đoàn Aichi...",
         date:"04/12/2022"
@@ -108,10 +94,8 @@ export const sample_notices:PostCard[] = [
         author:{
             full_name:"Lm. P.M Nguyen Huu Hien",
             image:'/youth_event/missa-01.jpg',
-            user:{
-                username:"father_micaer_nguyen_minh_lap",
-                email:"mi_nobito@yahoo.com",
-            }
+            username:"father_micaer_nguyen_minh_lap",
+            email:"mi_nobito@yahoo.com",
         },
         excerpt:"Cộng đoàn Tokyo xin thông báo về chương trình từ thiện giúp đỡ trẻ em nghèo ở Việt Nam...",
         date:"08/12/2022"
@@ -161,6 +145,7 @@ export const sample_letter1={
 export const sample_letter2={
     title:"Thư ngỏ",
     slug:"thu-ngo-12-2022",
+    image_url:"/youth_event/youth-event-1.jpeg",
     author:{
         full_name:"PVLC",
         image:'/youth_event/missa-01.jpg',

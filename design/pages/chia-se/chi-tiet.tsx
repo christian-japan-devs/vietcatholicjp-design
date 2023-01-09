@@ -57,7 +57,7 @@ export default function Index() {
                                           {post.author.full_name}
                                       </p>
                                       <p className="text-sm text-gray-500 truncate dark:text-gray-400">
-                                          {post.author.user?.email}
+                                          {post.author.email}
                                       </p>
                                   </div>
                               </div>
@@ -137,7 +137,7 @@ export default function Index() {
                                                 {post.author.full_name}
                                             </p>
                                             <p className="text-sm text-gray-500 truncate dark:text-gray-400">
-                                                {post.author.user?.email}
+                                                {post.author.email}
                                             </p>
                                         </div>
                                     </div>
