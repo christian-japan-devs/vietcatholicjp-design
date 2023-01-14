@@ -6,18 +6,20 @@ interface SEO {
   image: string
 }
 
-export interface Post {
-  title: string
+export interface Post extends SEO {
   slug: string
   date: string
-  seo: SEO
   content: string
 }
 
-export interface PostCard {
+export interface TitleSlug {
+  title?: string
+  chapter_title?: string
+  slug?: string
+}
+
+export interface PostCard extends TitleSlug {
   id?:string
-  title: string
-  slug: string
   author: User
   image_url?:string
   excerpt: string
@@ -27,11 +29,9 @@ export interface PostCard {
   number_shared?: number
 }
 
-export interface PostChapter {
+export interface PostChapter extends TitleSlug {
   id?:string
-  chapter_title: string
-  slug: string
-  content: string
+  content?: string
   image?:string
   chapter_summary?: string
 }
