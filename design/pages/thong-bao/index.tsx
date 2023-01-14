@@ -14,7 +14,7 @@ const meta_data:MetaProps = {
   title:"",
   description:"",
   ogUrl:"",
-  ogImage:"/vietcatholicjp-share.jpg"
+  ogImage:'/happy-new-year-2023.jpg'
 }
 
 const Index: NextPage = () => {
@@ -43,7 +43,7 @@ const Index: NextPage = () => {
   return (
     <Layout meta_data={meta_data} current_page='share'>
       <div className="w-full bg-white dark:bg-gray-900/60">
-        <div className="lg:flex px-4 xl:px-8 mx-auto max-w-screen-2xl">
+        <div className="lg:flex px-2 md:px-4 xl:px-8 md:mx-auto max-w-screen-2xl">
           <aside className="fixed inset-0 z-20 flex-none h-full lg:w-48 xl:w-72 lg:static lg:h-auto lg:overflow-y-visible lg:pt-0 lg:block hidden">
             <div className="overflow-y-auto z-20 h-full scrolling-touch max-w-2xs lg:h-[calc(100vh-3rem)] lg:block lg:sticky top:24 lg:top-28 lg:mr-0">
               <nav className="pt-16 px-1 pl-3 lg:pl-0 lg:pt-2 font-normal text-base lg:text-sm pb-10 lg:pb-20 sticky?lg:h-(screen-18)">
@@ -67,9 +67,9 @@ const Index: NextPage = () => {
             <div className="flex w-full">
               <div className="flex-auto max-w-4xl min-w-0 pt-6 lg:px-2 xl:px-8 lg:pt-8 pb:12 xl:pb-24 lg:pb-16">
                 {announcement&&
-                <div className="relative px-2 lg:px-8">
-                  <div className="mx-auto max-w-5xl pt-4 pb-4 sm:pt-8 sm:pb-8">
-                    <div className="p-4 md:px-16 md:py-4 bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700">
+                <div className="relative md:px-2 lg:px-8">
+                  <div className="md:mx-auto max-w-5xl pt-4 pb-4 sm:pt-8 sm:pb-8">
+                    <div className="py-4 px-2 md:px-16 md:py-4 bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700">
                       <div>
                         <h1 className="text-2xl my-4 font-serif font-bold tracking-tight sm:text-center sm:text-4xl">
                           {announcement.title}
@@ -93,7 +93,6 @@ const Index: NextPage = () => {
                     </div>
                   </div>
                 </div>}
-                
                 <div className="my-12 sm:flex sm:flex-col sm:items-center lg:hidden">
                   <div className="sm:justify-center not-prose relative  bg-gradient-to-r from-pink-400 to-blue-400 md:max-w-2xl lg:max-w-4xl sm:rounded-xl overflow-hidden dark:bg-slate-800/25">
                     <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,#fff,rgba(255,255,255,0.6))] dark:bg-grid-slate-700/25 dark:[mask-image:linear-gradient(0deg,rgba(255,255,255,0.1),rgba(255,255,255,0.5))]" ></div>
