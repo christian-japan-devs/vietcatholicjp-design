@@ -44,11 +44,7 @@ const Home: NextPage<Props> = ({}) => {
   const [post, setPost] = useState<PostType>()
   const [posts, setPosts] = useState<PostCard[]>([])
   const [groups, setGroups] = useState<GroupsType[]>([])
-  const [massScheduleHome, setMassScheduleHome] = useState<MassDateSchedule>({
-    title:"",
-    date:"",
-    time_schedule:[]
-  })
+  const [massScheduleHome, setMassScheduleHome] = useState<MassDateSchedule[]>([])
   const [responseMessage, setResponseMessage] = useState<string>("")
 
   useEffect(()=>{
@@ -71,6 +67,7 @@ const Home: NextPage<Props> = ({}) => {
       .then((data) => {
         if(data.status=='ok'){
           setMassScheduleHome(data.mass_schedules)
+          console.log(data.mass_schedules)
         }
     })
     fetch(makeUrl("/api/announcement/?type=short"),{
@@ -128,7 +125,7 @@ const Home: NextPage<Props> = ({}) => {
     <Layout meta_data={meta_data} current_page='home'>
       <Hero/> 
       <LetterView post={letter}/>
-      <MassSchedule schedule={massScheduleHome} gospel_link={massScheduleHome.audio_link}/>
+      <MassSchedule schedules={massScheduleHome}/>
       <Notice announcements={announcements}/>
       <PriorityNotice/>
       <VideoPostCast videoLinks={videoLinks}/>
