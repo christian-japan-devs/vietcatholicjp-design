@@ -10,7 +10,7 @@ type PostPreviewProps = {
 export default function NoticeSidePreviewCard({ props }: { props: PostPreviewProps }){
     return (
         <div className="w-48 md:w-64 bg-base-100 shadow border rounded-xl">
-            <Link href={"/chia-se/chi-tiet/"+(props.posts_preview.slug)} legacyBehavior>
+            <Link href={"/thong-bao/?slug="+(props.posts_preview.slug)} legacyBehavior>
                 <a>
                 <div className="p-4">
                     <h2 className="card-title text-gray-600 dark:text-gray-200">{props.posts_preview.title}</h2>

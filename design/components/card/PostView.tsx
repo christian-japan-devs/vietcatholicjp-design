@@ -23,7 +23,7 @@ const PostView: NextPage<Props> = ({post,readMore}) => {
       <div className="mx-auto max-w-5xl pt-8 pb-8 sm:pt-18 sm:pb-18">
         <div className="md:px-16 md:py-4 bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700">
             {post.post_meta.image_url?
-            <Link href={"/chia-se/thu-muc-vu/"+post.post_meta.slug} legacyBehavior>
+            <Link href={"/chia-se/?slug="+post.post_meta.slug} legacyBehavior>
               <a >
                   <img className="rounded-t-lg" src={post.post_meta.image_url} alt={post.post_meta.title} />
               </a>
