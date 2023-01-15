@@ -28,14 +28,13 @@ export default function Index() {
         .then((data) => {
           if(data.status=='ok'){
             setMassScheduleHome(data.mass_schedules)
-            console.log(data.mass_schedules)
           }
       })
   },[])
 
   return (
     <Layout meta_data={meta_data} current_page='serve'>
-      <section className="max-w-screen-4xl md:flex md:flex-col mb-32 md:items-center my-6 mx-auto px-4">
+      <section className="max-w-screen-4xl md:flex md:flex-col mb-32 md:items-center mt-6 mx-auto md:px-4">
         <div className="space-y-4 mb-8 justify-center text-center">
           <h2 className="text-gray-900  dark:text-gray-200 text-2xl md:text-6xl font-semibold">
             Lịch giờ các Thánh Lễ tiếng Việt

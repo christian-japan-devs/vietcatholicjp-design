@@ -55,7 +55,7 @@ const MassSchedule: NextPage<Props> = ({schedules,is_home=true}) => {
                   <span className="text-gray-800 dark:text-gray-200" aria-hidden="true">&rarr;</span>
                 </a>
               </Link>}
-              <Link href={"/tin-mung/slug="+schedule.gospel?.slug} legacyBehavior>
+              <Link href={"/tin-mung/?slug="+schedule.gospel?.slug} legacyBehavior>
                 <a className="inline-block ml-4 rounded-lg px-2 py-1 text-sm leading-7 text-gray-800 dark:text-gray-200 hover:text-gray-600 hover:bg-gray-100 ring-1 ring-gray-200 hover:ring-gray-200">
                   Đọc lời chúa
                   <span className="text-gray-800 dark:text-gray-200" aria-hidden="true">&rarr;</span>
