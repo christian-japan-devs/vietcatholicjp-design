@@ -27,7 +27,14 @@ const Index: NextPage = () => {
     let headers = {
       'Content-Type': 'application/json',
     };
-    fetch(makeUrl("/api/gospel/getthisweek/"),{
+    let url_string = window.location.href
+    let url = new URL(url_string)
+    let slug = url.searchParams.get('slug')
+    let request_endpoint = makeUrl("/api/gospel/getthisweek/")
+    if(slug){
+      request_endpoint = makeUrl("/api/gospel/"+slug+"/")
+    }
+    fetch(request_endpoint,{
       method: 'GET',
       headers: headers
     })
@@ -169,7 +176,7 @@ const Index: NextPage = () => {
                         {nextGospel.map((gospel,idx)=>(
                           <div key={idx} className="snap-center shrink-0 first:pl-8 last:pr-8">
                             <div className="card w-64 md:w-96 bg-base-100 shadow-xl">
-                              <Link href={"/phung-vu/loi-chua/?slug="+(gospel.slug)} legacyBehavior>
+                              <Link href={"/phung-vu/tin-mung/?slug="+(gospel.slug)} legacyBehavior>
                                 <a>
                                   <div className="card-body">
                                     <h2 className="card-title text-gray-700 dark:text-gray-100">{gospel.title}</h2>

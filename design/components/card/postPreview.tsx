@@ -10,7 +10,7 @@ export default function PostPreviewCard({ props }: { props: PostPreviewProps }){
     return (
         <div className="border bg-base-100 shadow-xl rounded-xl shrink-0 first:pl-4 last:pr-4">
             <div className="card w-64 md:w-72">
-                <Link href={"/chia-se/chi-tiet/"+(props.posts_preview.slug)} legacyBehavior>
+                <Link href={"/chia-se/?slug="+(props.posts_preview.slug)} legacyBehavior>
                     <a>
                     <div className="p-4">
                         <h2 className="card-title text-gray-600 dark:text-gray-200">{props.posts_preview.title}</h2>

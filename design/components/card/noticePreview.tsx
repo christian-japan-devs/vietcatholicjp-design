@@ -10,7 +10,7 @@ export default function NoticePreviewCard({ props }: { props: NoticePreviewProps
     return (
         <div className="snap-center border bg-base-100 shadow-xl rounded-xl shrink-0 first:pl-8 last:pr-8">
             <div className="card w-64 md:w-72">
-                <Link href={"/thong-bao/chi-tiet/"+(props.posts_preview.slug)} legacyBehavior>
+                <Link href={"/thong-bao/?slug="+(props.posts_preview.slug)} legacyBehavior>
                     <a>
                         <div className="p-6">
                             <h2 className="card-title">{props.posts_preview.title}</h2>
