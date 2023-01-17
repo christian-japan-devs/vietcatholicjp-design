@@ -3,11 +3,13 @@ import MyDisclosure from '../../components/Disclosure'
 import Image from 'next/image'
 import React, { useState, useEffect } from 'react'
 import Layout from '../../components/layout/Layout'
+import PostView from '../../components/card/PostView'
 import RecentPost from '../../components/home/recent_post'
 import {notice_detail} from '../../types/sample_data/posts'
 import Groups from '../../components/home/groups'
 import {GroupsType} from '../../types/group'
 import {MetaProps} from '../../components/layout/meta'
+import {makeUrl} from '../../lib/backendapi'
 import Link from 'next/link'
 
 const meta_data = {
@@ -22,8 +24,9 @@ export default function Index() {
   const [vhour, setVHour] = useState(0)
   const [vminute, setVMinute] = useState(0)
   const [vsecond, setVSecond] = useState(0)
-  //const [groups, setGroups] = useState<GroupsType[]>([])
-
+  const [groups, setGroups] = useState([])
+  const [post, setPost] = useState()
+  const [posts, setPosts] = useState([])
   var countDownDate = new Date("May 4, 2023 06:00:00").getTime();
   var x = setInterval(function() {
 
@@ -32,7 +35,7 @@ export default function Index() {
       
     // Find the distance between now and the count down date
     var distance = countDownDate - now;
-      
+    
     // Time calculations for days, hours, minutes and seconds
     setVDay(Math.floor(distance / (1000 * 60 * 60 * 24)))
     setVHour(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)))
@@ -40,6 +43,33 @@ export default function Index() {
     setVSecond(Math.floor((distance % (1000 * 60)) / 1000))
 
   }, 1000);
+
+  useEffect(()=>{
+    let headers = {
+      'Content-Type': 'application/json',
+    }
+    fetch(makeUrl("/api/community/?type=youth"),{
+      method: 'GET',
+      headers: headers
+    })
+    .then((res) => res.json())
+    .then((data) => {
+      if(data.status=='ok'){
+        setGroups(data.communities)
+      }
+    })
+    fetch(makeUrl("/api/post/?type=home&post_type=gioi-tre"),{
+      method: 'GET',
+      headers: headers
+    })
+    .then((res) => res.json())
+    .then((data) => {
+      if(data.status=='ok'){
+        setPost(data.post)
+        setPosts(data.recent_posts)
+      }
+    })
+  },[])
 
   return (
     <Layout meta_data={meta_data} current_page='youth'>
@@ -105,37 +135,9 @@ export default function Index() {
             </div>
             </div>
       </section>
-      <div className="relative px-2 lg:px-8">
-        <div className="mx-auto max-w-5xl pt-4 pb-4 sm:pt-8 sm:pb-8">
-          <div className="p-4 md:px-16 md:py-4 bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700">
-            <div>
-              <h1 className="text-2xl my-4 font-serif font-bold tracking-tight sm:text-center sm:text-4xl">
-                {notice_detail.title}
-              </h1>
-              <div className="mt-2 flex items-center space-x-4">
-                  <div className="flex-shrink-0">
-                      <img className="w-8 h-8 rounded-full" src={notice_detail.author.image} alt={notice_detail.title}/>
-                  </div>
-                  <div className="flex-1 min-w-0">
-                      <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
-                          {notice_detail.author.full_name}
-                      </p>
-                      <p className="text-sm text-gray-500 truncate dark:text-gray-400">
-                          {notice_detail.author.user?.email}
-                      </p>
-                  </div>
-              </div>
-              <span className="text-sm mt-2 text-gray-500 dark:text-gray-400">{notice_detail.date}</span>
-              {notice_detail.content.map((paragraph,idx)=>(
-                <p key={idx} className="mt-6 text-sm md:text-md text-justify text-gray-800 dark:text-gray-200 ">
-                {paragraph}
-                </p>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-      <RecentPost/>
+      <PostView  post={post}/>
+      <Groups groups={groups}/>
+      <RecentPost posts={posts}/>
     </Layout>
   )
 }
