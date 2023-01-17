@@ -3,7 +3,6 @@ import {useState,useEffect} from 'react'
 import Link from 'next/link'
 import PostType from '../../types/post'
 import {getDateFromDateByHour} from '../../lib/helper'
-import ReadMoreAndLess from '../ReadMoreAndLess'
 
 type Props = {
   post: PostType | undefined
@@ -22,35 +21,35 @@ const PostView: NextPage<Props> = ({post,readMore}) => {
     <div className="relative px-2 lg:px-8">
       <div className="mx-auto max-w-5xl pt-8 pb-8 sm:pt-18 sm:pb-18">
         <div className="md:px-16 md:py-4 bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700">
-            {post.post_meta.image_url?
-            <Link href={"/chia-se/?slug="+post.post_meta.slug} legacyBehavior>
+            {post.meta_data?.image_url?
+            <Link href={"/chia-se/?slug="+post.meta_data?.slug} legacyBehavior>
               <a >
-                  <img className="rounded-t-lg" src={post.post_meta.image_url} alt={post.post_meta.title} />
+                  <img className="rounded-t-lg" src={post.meta_data?.image_url} alt={post.meta_data?.title} />
               </a>
             </Link>:""
             }
             <div className="p-4">
             <h1 className="text-3xl font-serif font-bold tracking-tight sm:text-center sm:text-4xl">
-                {post.post_meta.title}
+                {post.meta_data?.title}
               </h1>
               
               <div className="mt-2 flex items-center space-x-4">
                   <div className="flex-shrink-0">
-                      <img className="w-8 h-8 rounded-full" src={post.post_meta.author.image} alt={post.post_meta.title}/>
+                      <img className="w-8 h-8 rounded-full" src={post.meta_data?.author.image} alt={post.meta_data?.title}/>
                   </div>
                   <div className="flex-1 min-w-0">
                       <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
-                      {post.post_meta.author.saint_name} {post.post_meta.author.full_name}
+                      {post.meta_data?.author.saint_name} {post.meta_data?.author.full_name}
                       </p>
                       <p className="text-sm text-gray-500 truncate dark:text-gray-400">
-                          {post.post_meta.author.email}
+                          {post.meta_data?.author.email}
                       </p>
                   </div>
               </div>
-              <span className="text-sm mt-4 text-gray-500 dark:text-gray-400">{getDateFromDateByHour(post.post_meta.created_on,0)}</span>
-              {post.post_meta.audio_link?
+              <span className="text-sm mt-4 text-gray-500 dark:text-gray-400">{getDateFromDateByHour(post.meta_data?.created_on,0)}</span>
+              {post.meta_data?.audio_link?
                   <div className="mt-8 justify-center items-start h-full max-h-full w-full max-w-full border-gray-200 dark:border-gray-700">
-                      <iframe className="w-full h-full" src={post.post_meta.audio_link} title="Vietcatholicjp"></iframe>
+                      <iframe className="w-full h-full" src={post.meta_data?.audio_link} title="Vietcatholicjp"></iframe>
                   </div>:""
               }
               <div className="my-2">

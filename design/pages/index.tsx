@@ -97,7 +97,7 @@ const Home: NextPage<Props> = ({}) => {
         setPosts(data.recent_posts)
       }
     })
-    fetch(makeUrl("/api/community/"),{
+    fetch(makeUrl("/api/community/?type=home"),{
       method: 'GET',
       headers: headers
     })

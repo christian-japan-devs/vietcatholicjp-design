@@ -1,4 +1,4 @@
-import {User} from './user';
+import {User} from './user'
 import {PostChapter,TitleSlug} from './post'
 
 export type GospelType = {

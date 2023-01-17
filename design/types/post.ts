@@ -37,7 +37,7 @@ export interface PostChapter extends TitleSlug {
 }
 
 type PostType = {
-  post_meta: PostCard
+  meta_data: PostCard
   content: PostChapter[]
 }
 
