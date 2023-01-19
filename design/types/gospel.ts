@@ -42,3 +42,13 @@ export interface GospelReflection extends TitleSlug {
   number_readed?: number
   number_shared?: number
 }
+
+export type GospelWord = {
+  id: number
+  word: string
+  word_jp?: string
+  image_url?: string
+  image_vertical:string
+  image_horizontal: string
+  content?: string
+}

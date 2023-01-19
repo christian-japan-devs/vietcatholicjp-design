@@ -1,4 +1,5 @@
 import type { NextPage } from 'next'
+import Link from 'next/link'
 import React, { useState, useEffect,Fragment } from 'react'
 import Layout from '../components/layout/Layout'
 import Hero from '../components/home/hero1'
@@ -20,6 +21,7 @@ import {GroupsType} from '../types/group'
 import {VideoPostCastType} from '../types/letter'
 import {MassDateSchedule} from '../types/shedule'
 import { Dialog, Transition } from '@headlessui/react'
+import {GospelWord} from '@/types/gospel'
 
 const meta_data:MetaProps = {
   title:"Giáo đoàn công giáo Việt Nam tại Nhật",
@@ -42,10 +44,12 @@ const Home: NextPage<Props> = ({}) => {
   const [announcements, setAnnouncements] = useState<NoticeType[]>([])
   const [videoLinks, setVideoLinks] = useState<VideoPostCastType[]>([])
   const [post, setPost] = useState<PostType>()
+  const [word, setWord] = useState<GospelWord>()
   const [posts, setPosts] = useState<PostCard[]>([])
   const [groups, setGroups] = useState<GroupsType[]>([])
   const [massScheduleHome, setMassScheduleHome] = useState<MassDateSchedule[]>([])
   const [responseMessage, setResponseMessage] = useState<string>("")
+  const [onLoading, setOnLoading] = useState(false)
 
   useEffect(()=>{
     let headers = {
@@ -67,7 +71,6 @@ const Home: NextPage<Props> = ({}) => {
       .then((data) => {
         if(data.status=='ok'){
           setMassScheduleHome(data.mass_schedules)
-          console.log(data.mass_schedules)
         }
     })
     fetch(makeUrl("/api/announcement/?type=short"),{
@@ -116,6 +119,28 @@ const Home: NextPage<Props> = ({}) => {
   function closeModal() {
     setIsOpen(false)
   }
+
+  function onGetWord() {
+    setOnLoading(true)
+    let headers = {
+      'Content-Type': 'application/json',
+    };
+    fetch(makeUrl("/api/gospel-random/?type=home"),{
+      method: 'GET',
+      headers: headers
+    })
+    .then((res) => res.json())
+    .then((data) => {
+      if(data.status === 'ok'){
+        setWord(data.gospel_random)
+        setOnLoading(false)
+      }else{
+        onMessage("Xin lỗi đã có lỗi xảy ra, vui lòng thử lại sau.")
+        openModal()
+      }
+    })
+  }
+
   const onMessage = (message: string) => {
     setResponseMessage(message)
     openModal()
@@ -124,6 +149,19 @@ const Home: NextPage<Props> = ({}) => {
   return (
     <Layout meta_data={meta_data} current_page='home'>
       <Hero/> 
+      <div className="flex md:my-4 justify-center">
+          <div className="items-center block p-4 max-w-lg mx-2 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 ">
+              <p className="font-serif text-center text-lg my-4 text-gray-600 dark:text-gray-200">{word?.word?word.word:"Bấm vào nút phía dưới để nhận câu Lời Chúa cho năm 2023 của bạn."}</p>
+              <div className="flex items-center">
+              {word?.image_vertical?<div className="flex items-center space-x-4">
+                <a href={word?.image_vertical} target="_blank" className="text-gray-200 bg-red-500 dark:bg-red-700 p-2 rounded shadow-sm hover:bg-red-800 dark:text-gray-200">Tải ảnh nền phone</a>
+                <a href={word?.image_horizontal} target="_blank" className="text-gray-200 bg-cyan-500 dark:bg-cyan-700 p-2 rounded shadow-sm hover:bg-cyan-800 dark:text-gray-200">Ảnh cover Fb</a>
+                </div>
+                :<button type="button" onClick={onGetWord} disabled={onLoading} className={"text-gray-200 p-2 rounded shadow-sm hover:bg-red-800 dark:text-gray-200 "+(onLoading?"bg-gray-500 dark:bg-gray-800":"bg-red-500 dark:bg-red-700")}>{onLoading?"Đang tải...":"Nhận lời Chúa"}</button>
+              }
+              </div>
+          </div>
+      </div>
       <LetterView post={letter}/>
       <MassSchedule schedules={massScheduleHome}/>
       <Notice announcements={announcements}/>
