@@ -25,9 +25,9 @@ const PrayerCard = ({ prayer , idx}: Props) => {
             }
             <Tab.Group>
                 <Tab.List className="flex space-x-1 rounded-xl bg-blue-900/20 p-1">
-                    <Tab key="vietnamese" onClick={()=>setSelectedTab("vietnamese")} className={"w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-blue-700 "+(selected_tab==="vietnamese"?'bg-white shadow':'text-blue-100 hover:bg-white/[0.12] hover:text-white')}>Tiếng Việt</Tab>
-                    <Tab key="japanese" onClick={()=>setSelectedTab("japanese")} className={"w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-blue-700 "+(selected_tab==="japanese"?'bg-white shadow':'text-blue-100 hover:bg-white/[0.12] hover:text-white')}>日本語</Tab>
-                    <Tab key="english" onClick={()=>setSelectedTab("english")} className={"w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-blue-700 "+(selected_tab==="english"?'bg-white shadow':'text-blue-100 hover:bg-white/[0.12] hover:text-white')}>English</Tab>
+                    <Tab key="vietnamese" onClick={()=>setSelectedTab("vietnamese")} className={"w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-blue-700 "+(selected_tab==="vietnamese"?'bg-white shadow':'text-blue-300 hover:bg-white/[0.12] hover:text-white')}>Tiếng Việt</Tab>
+                    <Tab key="japanese" onClick={()=>setSelectedTab("japanese")} className={"w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-blue-700 "+(selected_tab==="japanese"?'bg-white shadow':'text-blue-300 hover:bg-white/[0.12] hover:text-white')}>日本語</Tab>
+                    <Tab key="english" onClick={()=>setSelectedTab("english")} className={"w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-blue-700 "+(selected_tab==="english"?'bg-white shadow':'text-blue-300 hover:bg-white/[0.12] hover:text-white')}>English</Tab>
                 </Tab.List>
                 <Tab.Panels>
                     <Tab.Panel key="vietnamese">

@@ -11,7 +11,7 @@ import {makeUrl} from '@/lib/backendapi'
 
 const meta_data:MetaProps = {
   title:"Thông tin liên lạc",
-  description:"Thông tin liên lạc quý Cha đang sinh sống tại Nhật",
+  description:"Thông tin địa chỉ về các cộng đoàn, nhóm giới trẻ tại Nhật",
   ogUrl:"",
   ogImage:""
 }
@@ -57,7 +57,7 @@ export default function Index() {
       <section className="max-w-screen-xl md:flex md:flex-col md:items-center my-6 mx-auto px-4">
         <div className="space-y-4 mb-8 text-center">
             <h2 className="text-gray-900  dark:text-gray-200 text-2xl md:text-4xl font-semibold">
-              Địa chỉ quý Cha tại Nhật.
+              Địa chỉ các nhà Dòng tại Nhật.
             </h2>
             <h3 className="text-gray-600 mb-4 dark:text-gray-200 text-md">
              Bấm chọn để xem thông tin chi tiết.

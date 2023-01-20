@@ -1,18 +1,17 @@
 
 import type { NextPage } from 'next'
 import React, { useState, useEffect } from 'react'
-import {MetaProps} from '../../../components/layout/meta'
+import {MetaProps} from '@/components/layout/meta'
 import Link from 'next/link'
-import {phung_vu_nav} from '../../../lib/constants'
-import {GospelMeta,GospelType,GospelReflection,CommuintyPrayer} from '../../../types/gospel'
-import {makeUrl} from '../../../lib/backendapi'
-import {getDateFromDateByHour} from '../../../lib/helper'
-import PostLayout from '../../../components/layout/PostLayout'
-import {TitleSlug} from '../../../types/post'
+import {GospelMeta,GospelType,GospelReflection,CommuintyPrayer} from '@/types/gospel'
+import {makeUrl} from '@/lib/backendapi'
+import {getDateFromDateByHour} from '@/lib/helper'
+import PostLayout from '@/components/layout/PostLayout'
+import {TitleSlug} from '@/types/post'
 
 const meta_data:MetaProps = {
   title:'Phụng vụ lời Chúa',
-  description:'',
+  description:'Các bài đọc và suy niệm Chúa Nhật',
   ogUrl:"",
   ogImage:"/vietcatholicjp-share.jpg"
 }
