@@ -14,7 +14,7 @@ export default function Custom404() {
         <Layout meta_data={meta_data} current_page='home'>
             <section className="mt-12 max-w-screen-lg mx-auto px-4">
                 <h1 className="font-bold text-3xl">
-                    404 - Page Not Found
+                    Hiện tại đang cập nhật, xin vui lòng quay lại sau.
                 </h1>
             </section>
         </Layout>

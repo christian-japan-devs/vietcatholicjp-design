@@ -1,10 +1,12 @@
+import {ContactFather} from './contact'
 // Nhà thờ
 export type ChurchType = {
     id:string,
     name:string,
     kanji: string,
     introduction:string,
-    image:string,
+    image?:string,
+    mass_time?: string,
     phone?:string,
     email?:string,
     url?:string,
@@ -41,7 +43,8 @@ export type RegionType = {
     id: string,
     name: string,
     kanji: string,
-    country: CountryType
+    country: CountryType,
+    region_province?: ProvinceType[]
 }
 
 //Giáo phận
@@ -58,5 +61,7 @@ export type ProvinceType = {
     name: string,
     kanji: string,
     region: RegionType,
-    diocese?: DioceseType
+    diocese?: DioceseType,
+    father_province?: ContactFather[],
+    church_province?: ChurchType[]
 }

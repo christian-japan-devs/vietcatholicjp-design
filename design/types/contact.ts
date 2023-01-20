@@ -1,17 +1,17 @@
 import {GroupsType} from './group'
-import {ChurchType,ProvinceType} from './church'
+import {User} from './user'
+import {ChurchType,ProvinceType,RegionType} from './church'
 import {Profile} from './user'
 
 export type ContactFather = {
     id: string,
-    saint_name: string,
-    name: string,
-    church: ChurchType,
-    province: ProvinceType,
-    profile: Profile,
+    user: User,
+    church?: ChurchType,
+    province?: ProvinceType,
+    address?: string,
+    facebook?: string,
+    phone_number?: string,
     group: GroupsType,
-    from_date: string,
-    to_date: string,
     create_on: string,
     is_active: number
 }
