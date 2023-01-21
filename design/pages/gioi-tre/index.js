@@ -136,7 +136,7 @@ export default function Index() {
             </div>
       </section>
       <PostView  post={post}/>
-      <Groups groups={groups}/>
+      <Groups  title="Các nhóm giới trẻ tại Nhật" groups={groups}/>
       <RecentPost posts={posts}/>
     </Layout>
   )

@@ -8,6 +8,7 @@ import {MetaProps} from '@/components/layout/meta'
 import {RegionType} from '@/types/church'
 import {GroupsType} from '@/types/group'
 import {makeUrl} from '@/lib/backendapi'
+import GroupPreviewCard from '@/components/card/groupPreview'
 
 const meta_data:MetaProps = {
   title:"Thông tin liên lạc",
@@ -21,6 +22,7 @@ export default function Index() {
   const [isOpen, setIsOpen] = useState(false)
   const [selectedGroup, setSelectedGroup] = useState<GroupsType>()
   const [communiyRegions, setCommunityRegions] = useState<RegionType[]>([])
+  const [selectedPerfecture, setSelectedPerfecture] = useState('all')
 
   function closeModal() {
     setIsOpen(false)
@@ -52,12 +54,17 @@ export default function Index() {
     setSelectedRegion(value);
   }
 
+  const selectPerfectureChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    const value = event.target.value;
+    setSelectedPerfecture(value);
+  };
+
   return (
     <Layout meta_data={meta_data} current_page='contact'>
       <section className="max-w-screen-xl md:flex md:flex-col md:items-center my-6 mx-auto px-4">
         <div className="space-y-4 mb-8 text-center">
             <h2 className="text-gray-900  dark:text-gray-200 text-2xl md:text-4xl font-semibold">
-              Địa chỉ các nhà Dòng tại Nhật.
+              Địa chỉ các nhóm cộng đoàn đang sinh hoạt tại Nhật.
             </h2>
             <h3 className="text-gray-600 mb-4 dark:text-gray-200 text-md">
              Bấm chọn để xem thông tin chi tiết.
@@ -71,46 +78,35 @@ export default function Index() {
           </div>
           {communiyRegions?.map((region,idx)=>(
             <div key={idx} className="overflow-x-auto mt-8 relative dark:bg-slate-900 dark:border rounded shadow-md sm:rounded-lg">
-            <h3 className='text-gray-800 my-2 text-center text-2xl dark:text-gray-200 font-semibold'>Vùng {region.name}-{region.kanji}</h3>
-            <div className="border-b border-gray-300"></div>
-            {region.region_province?.map((province,idx1)=>(
-              province.community_province?.length==0?<></>:
-              <div key={idx1}>
-                <h4 className='text-gray-800 my-2 text-center text-xl dark:text-gray-200 font-semibold'>{province.name}-{province.kanji}</h4>
-                <table className="w-full mt-2 text-sm text-left text-gray-800 dark:text-gray-200">
-                  <thead className="text-xs text-gray-900 bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                      <tr>
-                          <th scope="col" className="py-2 px-3 sm:py-4 sm:px-6">
-                              ******
-                          </th>
-                          <th scope="col" className="py-2 px-3 sm:py-4 sm:px-6">
-                              Nhóm
-                          </th>
-                          <th scope="col" className="py-2 px-3 sm:py-4 sm:px-6">
-                              Nhà thờ
-                          </th>
-                      </tr>
-                  </thead>
-                  <tbody>
-                    {province.community_province?.map((group,idx)=>(
-                      <tr key={idx} onClick={()=>openModal(group)} className="py-bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                          <td className="py-2 px-3 sm:py-4 sm:px-6">
-                            <div className="flex-shrink-0">
-                              <img className="w-8 h-8 rounded-full" src={group.image} alt={group.name}/>
-                            </div>
-                          </td>
-                          <td className="py-2 px-3 sm:py-4 sm:px-6">
-                              {group.name}
-                          </td>
-                          <td className="py-2 px-3 sm:py-4 sm:px-6">
-                            {group.church?.name}
-                          </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+              <div className="my-12 sm:flex sm:flex-col sm:items-center">
+                <div className="sm:justify-center not-prose relative bg-gradient-to-r from-teal-400 to-cyan-400 md:max-w-3xl lg:max-w-5xl sm:rounded-xl overflow-hidden dark:bg-slate-800/25">
+                <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,#fff,rgba(255,255,255,0.6))] dark:bg-grid-slate-700/25 dark:[mask-image:linear-gradient(0deg,rgba(255,255,255,0.1),rgba(255,255,255,0.5))]" ></div>
+                <h1 className="text-3xl my-4 text-center font-serif tracking-tight sm:text-center sm:text-5xl">
+                    {region.name+"-"+region.kanji}
+                </h1>
+                <div className="relative rounded-xl overflow-auto">
+                    <div className="flex gap-2 mx-4 md:mx-12 lg:mx-24">
+                        <div className="form-control w-full min-w-xs">
+                            <SelectPrefectures selectedRegion={selectedRegion} onChange={selectPerfectureChange}/>
+                        </div>
+                    </div>
+                    <div className="my-4 ms:my-12 relative w-full flex gap-6 snap-x overflow-x-auto pb-8">
+                        <div className="snap-center shrink-0">
+                            <div className="shrink-0 w-2 sm:w-24"></div>
+                        </div>
+                        {region.region_province?.map((province,idx1)=>(
+                          province.community_province?.length==0?<></>:
+                          province.community_province?.map((group,idx)=>(
+                            <GroupPreviewCard key={idx} group_preview={group} />
+                          ))
+                        ))}
+                        <div className="snap-center shrink-0">
+                            <div className="shrink-0 w-24s sm:w-48"></div>
+                        </div>
+                    </div>
+                </div>
               </div>
-            ))}
+            </div>
           </div>
           ))}
         </div>

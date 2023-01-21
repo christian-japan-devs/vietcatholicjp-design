@@ -84,7 +84,7 @@ export default function Index() {
           }
         </div>
       </section>
-      <Groups groups={groups}/>
+      <Groups title="Các cộng đoàn tại Nhật" groups={groups}/>
     </Layout>
   )
 }

@@ -157,7 +157,7 @@ const Home: NextPage<Props> = ({}) => {
                 <a href={word?.image_vertical} target="_blank" className="text-gray-300 backdrop-blur-md bg-white/20 p-2 rounded shadow-sm hover:bg-gray-300 hover:text-gray-800">Ảnh nền phone</a>
                 <a href={word?.image_horizontal} target="_blank" className="text-gray-300 backdrop-blur-md bg-white/20 p-2 rounded shadow-sm hover:bg-gray-300 hover:text-gray-800">Ảnh cover Fb</a>
                 </div>
-                :<button type="button" onClick={onGetWord} disabled={onLoading} className={"text-gray-300 p-2 rounded shadow-sm hover:bg-gray-300 hover:text-gray-800"+(onLoading?"bg-gray-500 dark:bg-gray-800":"backdrop-blur-md bg-white/10")}>{onLoading?"Đang tải...":"Lấy Lộc đầu năm mới"}</button>
+                :<button type="button" onClick={onGetWord} disabled={onLoading} className={"text-gray-300 p-2 rounded shadow-sm hover:bg-gray-300 hover:text-gray-800 dark:text-gray-800"+(onLoading?"bg-gray-500 dark:bg-gray-800":"backdrop-blur-md bg-white/10")}>{onLoading?"Đang tải...":"Lấy Lộc đầu năm mới"}</button>
               }
               </div>
           </div>
@@ -169,7 +169,7 @@ const Home: NextPage<Props> = ({}) => {
       <VideoPostCast videoLinks={videoLinks}/>
       <PostView  post={post}/>
       <RecentPost posts={posts}/>
-      <Groups groups={groups}/>
+      <Groups title="Nhóm giới trẻ và cộng đoàn tại Nhật" groups={groups}/>
       <ContactUs onMessage={onMessage}/>
       <Transition appear show={isOpen} as={Fragment}>
               <Dialog as='div' className='relative z-10' onClose={closeModal}>

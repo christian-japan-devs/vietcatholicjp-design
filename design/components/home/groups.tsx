@@ -7,9 +7,10 @@ import SelectRegions from '../select/regions'
 
 type Props = {
     groups: GroupsType[] | undefined
+    title: string
 }
 
-const Groups: NextPage<Props> = ({groups}) => {
+const Groups: NextPage<Props> = ({title, groups}) => {
 
     const [selectedRegion, setSelectedRegion] = useState('all')
     const [selectedPerfecture, setSelectedPerfecture] = useState('all')
@@ -32,7 +33,7 @@ const Groups: NextPage<Props> = ({groups}) => {
                 <div className="sm:justify-center not-prose relative bg-gradient-to-r from-teal-400 to-cyan-400 md:max-w-3xl lg:max-w-5xl sm:rounded-xl overflow-hidden dark:bg-slate-800/25">
                 <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,#fff,rgba(255,255,255,0.6))] dark:bg-grid-slate-700/25 dark:[mask-image:linear-gradient(0deg,rgba(255,255,255,0.1),rgba(255,255,255,0.5))]" ></div>
                 <h1 className="text-3xl my-4 text-center font-serif tracking-tight sm:text-center sm:text-5xl">
-                    Cộng đoàn & nhóm giới trẻ
+                    {title}
                 </h1>
                 <div className="relative rounded-xl overflow-auto">
                     <div className="flex gap-2 mx-4 md:mx-12 lg:mx-24">
