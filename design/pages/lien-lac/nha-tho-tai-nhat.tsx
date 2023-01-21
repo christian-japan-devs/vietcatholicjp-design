@@ -86,9 +86,6 @@ export default function Index() {
                           <th scope="col" className="py-2 px-3 sm:py-4 sm:px-6">
                               Nhà thờ
                           </th>
-                          <th scope="col" className="py-2 px-3 sm:py-4 sm:px-6">
-                              Google map
-                          </th>
                       </tr>
                   </thead>
                   <tbody>
@@ -100,14 +97,10 @@ export default function Index() {
                             </div>
                           </td>
                           <td className="py-2 px-3 sm:py-4 sm:px-6">
-                              {church.name}
-                          </td>
-                          <td className="py-2 px-3 sm:py-4 sm:px-6">
-                            <a href={selectedChurch?.google_map_link} target="_blank" rel="noopener noreferrer">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="fill-current text-gray-700 hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-400">
-                              <path d="M18.9762 5.5914L14.6089 18.6932C14.4726 19.1023 13.8939 19.1023 13.7575 18.6932L11.7868 12.7808C11.6974 12.5129 11.4871 12.3026 11.2192 12.2132L5.30683 10.2425C4.89772 10.1061 4.89772 9.52743 5.30683 9.39106L18.4086 5.0238C18.7594 4.90687 19.0931 5.24061 18.9762 5.5914Z" stroke="#464455" strokeLinecap="round" strokeLinejoin="round"/>
-                              </svg>
-                            </a>
+                            <div className="flex flex-col">
+                              <span>{church.name}</span>
+                              <span>{church.kanji}</span>
+                            </div>
                           </td>
                       </tr>
                     ))}

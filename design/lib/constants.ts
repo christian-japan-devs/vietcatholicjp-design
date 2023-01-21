@@ -36,8 +36,7 @@ export const href_cs_nhat_ban = '/chia-se/nhat-ban';
 export const href_lien_lac = '/lien-lac';
 export const href_lien_lac_nha_tho = '/lien-lac/nha-tho-tai-nhat';
 export const href_lien_lac_dong_tu = '/lien-lac/dong-tu-tai-nhat';
-export const href_lien_lac_cong_doan = '/lien-lac/gioi-tre';
-export const href_lien_lac_nhom_gioi_tre = '/lien-lac/cong-doan';
+export const href_lien_lac_nhom_cong_doan = '/lien-lac/nhom-cong-giao-tai-nhat';
 
 export const href_signup = '/account/signup'
 export const href_signin = '/account/signin'
@@ -103,8 +102,7 @@ export const subNavigation = [
         //{name:'Quý Tu Sĩ', href: href_lien_lac},
         {name:'Nhà Thờ', href: href_lien_lac_nha_tho},
         {name:'Nhà Dòng', href: href_lien_lac_dong_tu},
-        {name:'Cộng đoàn', href: href_lien_lac_cong_doan},
-        {name:'Nhóm Giới Trẻ', href: href_lien_lac_nhom_gioi_tre}
+        {name:'Nhóm cộng đoàn', href: href_lien_lac_nhom_cong_doan},
     ]},
 ]
 

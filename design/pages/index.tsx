@@ -157,7 +157,7 @@ const Home: NextPage<Props> = ({}) => {
                 <a href={word?.image_vertical} target="_blank" className="text-gray-300 backdrop-blur-md bg-white/20 p-2 rounded shadow-sm hover:bg-gray-300 hover:text-gray-800">Ảnh nền phone</a>
                 <a href={word?.image_horizontal} target="_blank" className="text-gray-300 backdrop-blur-md bg-white/20 p-2 rounded shadow-sm hover:bg-gray-300 hover:text-gray-800">Ảnh cover Fb</a>
                 </div>
-                :<button type="button" onClick={onGetWord} disabled={onLoading} className={"text-gray-300 p-2 rounded shadow-sm hover:bg-gray-300 hover:text-gray-800"+(onLoading?"bg-gray-500 dark:bg-gray-800":"backdrop-blur-md bg-white/10")}>{onLoading?"Đang tải...":"Nhận lời Chúa"}</button>
+                :<button type="button" onClick={onGetWord} disabled={onLoading} className={"text-gray-300 p-2 rounded shadow-sm hover:bg-gray-300 hover:text-gray-800"+(onLoading?"bg-gray-500 dark:bg-gray-800":"backdrop-blur-md bg-white/10")}>{onLoading?"Đang tải...":"Lấy Lộc đầu năm mới"}</button>
               }
               </div>
           </div>

@@ -1,4 +1,5 @@
 import {ContactFather} from './contact'
+import {GroupsType} from './group'
 // Nhà thờ
 export type ChurchType = {
     id:string,
@@ -63,5 +64,6 @@ export type ProvinceType = {
     region: RegionType,
     diocese?: DioceseType,
     father_province?: ContactFather[],
-    church_province?: ChurchType[]
+    church_province?: ChurchType[],
+    community_province?:GroupsType[]
 }
