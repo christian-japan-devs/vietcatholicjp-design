@@ -34,7 +34,7 @@ export default function Index() {
         }
     })
 
-    fetch(makeUrl("/api/community/?type=community"),{
+    fetch(makeUrl("/api/community/search/?type=community"),{
       method: 'GET',
       headers: headers
     })

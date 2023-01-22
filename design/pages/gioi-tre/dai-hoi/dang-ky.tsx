@@ -112,22 +112,12 @@ const Mass: NextPage = () => {
                             <EventCard event={event} key={event.id} onSubmit={handleOnSubmitRegister}/>
                         ))}
                     </div>
-                    {session?<div className="flex my-4 justify-center">
+                    {<div className="flex my-4 justify-center">
                         <div className="items-center block p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                             <p className="font-normal mb-4 text-gray-600 dark:text-gray-400">* Xin vui lòng đọc kỹ hướng dẫn dưới đây về việc đăng ký và chuyển khoản phí tham dự đại hội.</p>
                             <div className="flex items-center">
                                 <Link  href="/gioi-tre/dai-hoi/huong-dan/dang-ky" legacyBehavior>
                                     <a   className="text-gray-200 bg-cyan-500 p-2 rounded shadow-sm hover:bg-cyan-800 dark:text-blue-500">Hướng dẫn</a>
-                                </Link>
-                            </div>
-                        </div>
-                    </div>:
-                    <div className="flex my-4 justify-center">
-                        <div className="items-center block p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                            <p className="font-normal mb-4 text-gray-600 dark:text-gray-400">* Lưu ý: Để có thể đăng ký, bạn phải có tài khoản và đăng nhập. Nếu chưa có tài khoản vui lòng tạo tài khoản mới bằng cách nhấp vào nút xanh phía dưới.</p>
-                            <div className="flex items-center">
-                                <Link  href="/account/signup" legacyBehavior>
-                                    <a   className="text-gray-200 bg-cyan-500 p-2 rounded shadow-sm hover:bg-cyan-800 dark:text-blue-500">Tạo tài khoản mới</a>
                                 </Link>
                             </div>
                         </div>

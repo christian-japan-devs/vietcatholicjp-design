@@ -38,7 +38,7 @@ export default function EventCard({event,onSubmit}: Props ){
                     </div>
                 </div>
                 <div className="flex mt-4 justify-center items-center space-x-3 md:mt-6">
-                    <button onClick={()=> onSubmit(event.id)} className="inline-flex items-center py-2 px-4 text-sm font-medium text-center text-white bg-purple-600 rounded-lg hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-purple-500 dark:hover:bg-purple-800 dark:focus:ring-purple-800">Đăng ký</button>
+                    <button className="inline-flex items-center py-2 px-4 text-sm font-medium text-center text-white bg-purple-600 rounded-lg hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-purple-500 dark:hover:bg-purple-800 dark:focus:ring-purple-800">Đăng ký</button>
                 </div>
             </div>
         </div>
