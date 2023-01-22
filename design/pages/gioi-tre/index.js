@@ -81,7 +81,7 @@ export default function Index() {
                     <img className="mt-4 p-1 w-36 h-36 md:w-48 md:h-48 lg:w-64 lg:h-64 drop-shadow-2xl rounded-full ring-2 ring-gray-300 dark:ring-gray-500" src="/youth_event/youth-logo-2.jpg" alt="DH-GT-VN"/>
                   </div>
                   <div className="justify-center mt-4 grid grid-flow-col gap-5 text-center auto-cols-max">
-                    <div className="flex flex-col mt-4 p-2 backdrop-blur-md bg-white/30 rounded-box text-neutral-content">
+                    <div className="flex flex-col mt-4 p-2 backdrop-blur-md bg-white/30 rounded-box text-white">
                         <span className="countdown font-mono text-2xl md:text-5xl">
                           {vday<100?<span style={{"--value":vday}}></span>:<>
                           <span style={{"--value":Math.floor(vday/100)}}></span>
@@ -90,19 +90,19 @@ export default function Index() {
                         </span>
                         Ngày
                     </div> 
-                    <div className="flex flex-col mt-4 p-2 backdrop-blur-md bg-white/30 rounded-box text-neutral-content">
+                    <div className="flex flex-col mt-4 p-2 backdrop-blur-md bg-white/30 rounded-box text-white">
                         <span className="countdown font-mono text-2xl md:text-5xl">
                         <span style={{"--value":vhour}}></span>
                         </span>
                         giờ
                     </div> 
-                    <div className="flex flex-col mt-4  p-2 backdrop-blur-md bg-white/30 rounded-box text-neutral-content">
+                    <div className="flex flex-col mt-4  p-2 backdrop-blur-md bg-white/30 rounded-box text-white">
                         <span className="countdown font-mono text-2xl md:text-5xl">
                         <span style={{"--value":vminute}}></span>
                         </span>
                         phút
                     </div> 
-                    <div className="flex flex-col mt-4  p-2 backdrop-blur-md bg-white/30 rounded-box text-neutral-content">
+                    <div className="flex flex-col mt-4 text-white p-2 backdrop-blur-md bg-white/30 rounded-box">
                         <span className="countdown font-mono text-2xl md:text-5xl">
                         <span style={{"--value":vsecond}}></span>
                         </span>

@@ -32,7 +32,7 @@ export interface PostCard extends TitleSlug {
 export interface PostChapter extends TitleSlug {
   id?:string
   content?: string
-  image?:string
+  image_url?:string
   chapter_summary?: string
 }
 
