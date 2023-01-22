@@ -63,7 +63,14 @@ const PostView: NextPage<Props> = ({post,readMore}) => {
                           #
                         </a>
                       </h2>
-                      <div className="space-y-2" dangerouslySetInnerHTML={{ __html: chapter.content?chapter.content:"" }} />
+                      {chapter.image_url&&
+                        <Link href={"/chia-se/?slug="+post.meta_data?.slug} legacyBehavior>
+                          <a >
+                              <img className="rounded-lg" src={chapter?.image_url} alt={chapter?.title} />
+                          </a>
+                        </Link>
+                      }
+                      <div className="space-y-2 text-md md:text-lg mt-4" dangerouslySetInnerHTML={{ __html: chapter.content?chapter.content:"" }} />
                     </div>
                   )):<div>
                   <h2 className="relative group my-4 text-lg md:text-xl font-bold">{post.content[0].chapter_title}
