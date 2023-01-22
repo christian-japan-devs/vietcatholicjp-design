@@ -48,7 +48,7 @@ export default function Index() {
     let headers = {
       'Content-Type': 'application/json',
     }
-    fetch(makeUrl("/api/community/?type=youth"),{
+    fetch(makeUrl("/api/community/search/?type=youth"),{
       method: 'GET',
       headers: headers
     })
