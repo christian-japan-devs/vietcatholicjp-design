@@ -110,9 +110,9 @@ const Index: NextPage = () => {
                         }
                         {post?.content.map((chapter,idx)=>(
                           <div key={idx}>
-                              <h2 className="relative group my-4 text-lg md:text-xl font-bold">{chapter.chapter_title}
+                              <h2 className="relative group my-4 text-lg md:text-xl font-bold">{chapter.title}
                                 <span id={chapter.slug} className="absolute -top-[140px]"></span>
-                                <a className="ml-2 text-blue-700 opacity-0 transition-opacity dark:text-blue-500 group-hover:opacity-100" href={"#"+chapter.slug} aria-label={"Link to this section: "+chapter.chapter_title}>
+                                <a className="ml-2 text-blue-700 opacity-0 transition-opacity dark:text-blue-500 group-hover:opacity-100" href={"#"+chapter.slug} aria-label={"Link to this section: "+chapter.title}>
                                   #
                                 </a>
                               </h2>
