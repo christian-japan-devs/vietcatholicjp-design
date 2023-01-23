@@ -14,7 +14,8 @@ export interface Post extends SEO {
 
 export interface TitleSlug {
   title?: string
-  chapter_title?: string
+  title_jp?: string
+  title_en?: string
   slug?: string
 }
 
@@ -32,6 +33,8 @@ export interface PostCard extends TitleSlug {
 export interface PostChapter extends TitleSlug {
   id?:string
   content?: string
+  content_jp?: string
+  content_en?: string
   image_url?:string
   chapter_summary?: string
 }

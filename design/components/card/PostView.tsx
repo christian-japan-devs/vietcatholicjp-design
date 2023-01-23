@@ -57,7 +57,7 @@ const PostView: NextPage<Props> = ({post,readMore}) => {
                   isReadMoreShown?  
                   post.content.map((chapter,idx)=>(
                     <div key={idx}>
-                      <h2 className="relative group my-4 text-lg md:text-xl font-bold">{chapter.chapter_title}
+                      <h2 className="relative group my-4 text-lg md:text-xl font-bold">{chapter.title}
                         <span id={chapter.slug} className="absolute -top-[140px]"></span>
                         <a className="ml-2 text-blue-700 opacity-0 transition-opacity dark:text-blue-500 group-hover:opacity-100" href="#leading-paragraph" aria-label="Link to this section: Leading paragraph">
                           #
@@ -73,7 +73,7 @@ const PostView: NextPage<Props> = ({post,readMore}) => {
                       <div className="space-y-2 text-md md:text-lg mt-4" dangerouslySetInnerHTML={{ __html: chapter.content?chapter.content:"" }} />
                     </div>
                   )):<div>
-                  <h2 className="relative group my-4 text-lg md:text-xl font-bold">{post.content[0].chapter_title}
+                  <h2 className="relative group my-4 text-lg md:text-xl font-bold">{post.content[0].title}
                     <span id={post.content[0].slug} className="absolute -top-[140px]"></span>
                     <a className="ml-2 text-blue-700 opacity-0 transition-opacity dark:text-blue-500 group-hover:opacity-100" href="#leading-paragraph" aria-label="Link to this section: Leading paragraph">
                       #

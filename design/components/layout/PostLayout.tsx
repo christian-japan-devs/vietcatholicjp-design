@@ -65,7 +65,7 @@ const PostLayout: NextPage<Props> = ({meta_data, current_page, children, chapter
                         <h5 className="text-slate-900 font-semibold mb-4 text-sm leading-6 dark:text-slate-100">Phụ lục</h5>
                         <ul className="text-slate-700 dark:text-slate-100 text-sm leading-6">
                             {chapters?.map((chapter,idx)=>(
-                                <li key={idx}><a href={"#"+(chapter.slug)} className="block py-1 hover:text-sky-500 dark:text-slate-200 dark:hover:text-slate-100">{chapter.chapter_title}</a></li>
+                                <li key={idx}><a href={"#"+(chapter.slug)} className="block py-1 hover:text-sky-500 dark:text-slate-200 dark:hover:text-slate-100">{chapter.title}</a></li>
                             ))}
                         </ul>
                     </div>

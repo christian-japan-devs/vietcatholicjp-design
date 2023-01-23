@@ -73,7 +73,7 @@ const Layout_Post = ({ children , meta_data, current_page,page_navigates}: Props
                                     {page_navigates?.map((chapter,idx)=>(
                                         <li key={idx} className="border-b border-gray-200 mt-2 pl-4 hover:bg-sky-100 dark:hover:bg-sky-600 rounded-md">
                                             <a href={"#"+(chapter.slug)} onClick={closeModal} className="py-2 transition-colors duration-200 relative block hover:text-gray-900 text-gray-500 dark:text-gray-200 dark:hover:text-white ">
-                                                {chapter.title?chapter.title:chapter.chapter_title}
+                                                {chapter.title?chapter.title:chapter.title}
                                             </a>
                                         </li>
                                     ))}
