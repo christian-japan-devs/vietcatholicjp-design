@@ -121,7 +121,7 @@ const Index: NextPage = () => {
                     </div>
                     }
                     {gospelReflection&&
-                    <div className="p-4 md:px-8 md:py-8 bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700">
+                    <div className="p-4 mt-4 md:px-8 md:py-8 bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700">
                       <div>
                         <h1 className="text-3xl mt-4 font-serif font-bold tracking-tight text-center sm:text-4xl">{gospelReflection.title}
                           <span id={gospelReflection.slug} className="absolute -top-[140px]"></span>

@@ -110,8 +110,9 @@ export default function Index() {
                     </div>
                   </div>
                   <div className="mt-8 mb-12 flex gap-x-4 justify-center">
-                    <Link  href="/gioi-tre/dai-hoi/dang-ky" legacyBehavior>
                       <a
+                        href='https://docs.google.com/forms/d/e/1FAIpQLSfm8q-3nS5EVMHmNgF1anAPp6ozVH9knpvX35WfSBHcQqeSPQ/viewform?usp=sf_link'
+                        target='_blank'
                         className="inline-block rounded-lg backdrop-blur-md bg-white/30 px-4 py-1.5 md:py-4 text-sm md:text-2xl font-semibold leading-7 text-white shadow-sm ring-1 ring-gray-200 hover:bg-pink-700 hover:ring-pinnk-700"
                       >
                         Đăng ký
@@ -119,7 +120,6 @@ export default function Index() {
                           &rarr;
                         </span>
                       </a>
-                    </Link>
                     <Link  href="/gioi-tre/dai-hoi" legacyBehavior>
                       <a
                         className="inline-block rounded-lg backdrop-blur-md bg-white/30 px-4 py-1.5 md:py-4 text-sm md:text-2xl font-semibold leading-7 text-white shadow-sm ring-1 ring-gray-200 hover:bg-pink-700 hover:ring-pinnk-700"
@@ -135,7 +135,7 @@ export default function Index() {
             </div>
             </div>
       </section>
-      <PostView  post={post}/>
+      <PostView readMore={true} post={post}/>
       <Groups  title="Các nhóm giới trẻ tại Nhật" groups={groups}/>
       <RecentPost posts={posts}/>
     </Layout>

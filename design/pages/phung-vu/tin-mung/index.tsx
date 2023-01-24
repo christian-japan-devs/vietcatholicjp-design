@@ -8,6 +8,7 @@ import {makeUrl} from '@/lib/backendapi'
 import {getDateFromDateByHour} from '@/lib/helper'
 import PostLayout from '@/components/layout/PostLayout'
 import {TitleSlug} from '@/types/post'
+import GospelCard from '@/components/card/gospelCard'
 
 const meta_data:MetaProps = {
   title:'Phụng vụ lời Chúa',
@@ -68,16 +69,8 @@ const Index: NextPage = () => {
               </div>
             }
             <div>
-                {gospel.content.map((chapter,idx)=>(
-                  <div key={idx}>
-                    <h2 className="relative group my-4 text-lg md:text-xl font-bold">{chapter.title}
-                      <span id={chapter.slug} className="absolute -top-[140px]"></span>
-                      <a className="ml-2 text-blue-700 opacity-0 transition-opacity dark:text-blue-500 group-hover:opacity-100" href={"#"+chapter.slug} aria-label={"Link to this section: "+chapter.title}>
-                        #
-                      </a>
-                    </h2>
-                    <div id="post_content" className="my-4 space-y-2 indent-4 md:indent-8 md:text-md lg:text-lg xl:text-xl" dangerouslySetInnerHTML={{ __html: chapter.content?chapter.content:"" }} />
-                  </div>
+                {gospel.content.map((gospel,idx)=>(
+                  <GospelCard idx={idx} gospel={gospel}/>
                 ))}
               </div>
           </div>
