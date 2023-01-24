@@ -10,7 +10,7 @@ type Props = {
 }
 
 const PostView: NextPage<Props> = ({post,readMore}) => {
-  const [isReadMoreShown, setReadMoreShown] = useState(false)
+  const [isReadMoreShown, setReadMoreShown] = useState(readMore)
   const toggleBtn = () => {
     setReadMoreShown(prevState => !prevState)
   }
