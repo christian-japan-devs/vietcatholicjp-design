@@ -27,7 +27,7 @@ export default function Index() {
   const [groups, setGroups] = useState([])
   const [post, setPost] = useState()
   const [posts, setPosts] = useState([])
-  var countDownDate = new Date("May 4, 2023 06:00:00").getTime();
+  var countDownDate = new Date("May 5, 2023 23:22:10").getTime();
   var x = setInterval(function() {
 
     // Get today's date and time
