@@ -11,7 +11,7 @@ type Props = {
 const GospelCard = ({ gospel , idx}: Props) => {
     const [selected_tab, setSelectedTab] = useState("vietnamese")
     return (
-        <div key={idx} className="mt-4 md:px-8 md:py-8 md:bg-white md:border md:border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700">
+        <div key={idx} className="mt-4 md:px-8 md:py-8">
             <h1 className="text-2xl my-4 font-serif font-bold tracking-tight text-center sm:text-3xl">{selected_tab=="vietnamese"?gospel.title:selected_tab=="japanese"?gospel.title_jp:gospel.title_en}
                 <span id={gospel.title} className="absolute -top-[140px]"></span>
                 <a className="ml-2 text-blue-700 opacity-0 transition-opacity dark:text-blue-500 group-hover:opacity-100" href={"#"+gospel.title} aria-label={"Link to this section: "+gospel.title}>
