@@ -8,4 +8,4 @@ export default function Hero()
           <img className="-mt-12 w-32 h-32 md:-mt-32 md:w-64 md:h-64 lg:mt-12 lg:w-96 lg:h-96 justify-center" alt="" aria-hidden="true" src="/viet-catholicjp-312.svg"/>
         </div>
     )
-gi
+}
