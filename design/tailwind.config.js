@@ -22,9 +22,9 @@ module.exports = {
         'll': '136px',
         'bs': '89px',
         'ls': '124px',
-        'tbl': '98px',
+        'tbl': '240px',
         'tll': '136px',
-        'tbs': '89px',
+        'tbs': '210px',
         'tls': '124px',
       }
     },
