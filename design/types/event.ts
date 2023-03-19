@@ -42,3 +42,16 @@ export type EventTicket = {
     updated_by?: string,
     updated_on?: string,
 }
+
+export type Ticket = {
+    id: number,
+    email?: string,
+    full_name: string,
+    group_name?: string,
+    ticket_code: string,
+    payment_code: string,
+    saint_name: string,
+    status: string,
+    team_no: string,
+    ticket: string,
+}

@@ -4,7 +4,6 @@ import { Tab } from '@headlessui/react'
 import Disclosure from '../../../components/Disclosure'
 import Layout from '../../../components/layout/Layout'
 import {youth_day_programs} from '../../../types/sample_data/youthday'
-import TicketCard from '@/components/card/ticket'
 const meta_data = {
     title:"Đại hội giới trẻ tại Nhật bản",
     description:"Đại hội giới trẻ công giáo Việt Nam tại Nhật Bản lần thứ 2 tháng 5 năm 2023.",
@@ -51,7 +50,6 @@ export default function Event() {
                 </div>
             </div>
             <div className='items-center'>
-                <TicketCard/>
                 <div className="w-full max-w-3xl shadow-md rounded-xl items-center sm:px-4 bg-gradient-to-b to-pink-600 from-sky-500 bg-gray-700y-400 dark:to-gray-700 dark:from-stone-900">
                     <div className="sm:hidden">
                         <div className="max-w-sm mt-4">

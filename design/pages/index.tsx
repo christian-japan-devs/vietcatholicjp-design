@@ -26,7 +26,7 @@ const meta_data:MetaProps = {
   title:"Giáo đoàn công giáo Việt Nam tại Nhật",
   description:"Cổng thông tin điện tử chính thức của người công giáo Việt Nam hiện đang sinh sống và làm việc tại Nhật. Chia sẻ giờ Lễ tiếng Việt hàng tuần, lịch giải tội của quý Cha, thông tin liên lạc với quý Cha, các nhóm giới trẻ và cộng đoàn trên toàn nước Nhật.",
   ogUrl:"https://www.vietcatholic.jp",
-  ogImage:"/happy-new-year-2023.jpg"
+  ogImage:"/vietcatholic_cover_mua_chay.jpg"
 }
 
 interface Props {
