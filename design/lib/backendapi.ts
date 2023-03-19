@@ -216,3 +216,20 @@ export async function fetchNewUser(username: string, email: string, password: st
     }
     return json
 }
+
+/**
+ * Create new user
+ * @param payment_code 
+ * @param email 
+ * @returns 
+ */
+export async function getMyTicket(payment_code: string, email: string): Promise<Response> {
+    let headers = {
+        'Content-Type': 'application/json'
+    }
+    console.log(makeUrl("/api/event/youthday/get-ticket?pcode="+payment_code+"&email="+email))
+    return fetch(makeUrl("/api/event/youthday/get-ticket?pcode="+payment_code+"&email="+email), {
+        method: 'GET',
+        headers: headers
+    })
+}

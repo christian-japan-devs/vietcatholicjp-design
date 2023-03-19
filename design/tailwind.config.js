@@ -18,13 +18,13 @@ module.exports = {
         'ticket': '370px',
       },
       spacing: {
-        'bl': '98px',
+        'bl': '190px',
         'll': '136px',
-        'bs': '89px',
+        'bs': '180px',
         'ls': '124px',
-        'tbl': '240px',
+        'tbl': '78px',
         'tll': '136px',
-        'tbs': '210px',
+        'tbs': '64px',
         'tls': '124px',
       }
     },

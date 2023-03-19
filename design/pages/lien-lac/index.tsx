@@ -13,7 +13,7 @@ const meta_data:MetaProps = {
   title:"Thông tin liên lạc",
   description:"Thông tin liên lạc quý Cha đang sinh sống tại Nhật",
   ogUrl:"",
-  ogImage:""
+  ogImage:"/vietcatholic_cover_mua_chay.jpg"
 }
 
 export default function Index() {
