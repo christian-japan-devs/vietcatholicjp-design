@@ -94,14 +94,14 @@ const MassSchedule: NextPage<Props> = ({schedules,is_home=true}) => {
                       {mass.church.name}
                     </td>
                     <td className="py-2 px-3 sm:py-4 sm:px-6">
-                      {mass.province.name}
+                      {mass.church.province.name}
                     </td>
                     <td className="py-2 px-3 sm:py-4 sm:px-6">
                       {mass.father.user.full_name}
                     </td>
                   </tr>
                 )):
-                  schedule.time_schedule.filter(timesch => timesch.province.name===selectedPerfecture).map((mass,idx)=>(
+                  schedule.time_schedule.filter(timesch => timesch.church.province.name===selectedPerfecture).map((mass,idx)=>(
                     <tr key={idx} onClick={()=>openModal(mass)} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                         <td className="py-2 px-3 sm:py-4 sm:px-6">
                           {mass.time}
@@ -110,7 +110,7 @@ const MassSchedule: NextPage<Props> = ({schedules,is_home=true}) => {
                           {mass.church.name}
                         </td>
                         <td className="py-2 px-3 sm:py-4 sm:px-6">
-                          {mass.province.name}
+                          {mass.church.province.name}
                         </td>
                         <td className="py-2 px-3 sm:py-4 sm:px-6">
                           {mass.father.user.full_name}
@@ -168,7 +168,7 @@ const MassSchedule: NextPage<Props> = ({schedules,is_home=true}) => {
                           </div>
                           <div className="mt-4 flex space-x-2">
                             <a href={massTime?.church.google_map_link} target="_blank" className="inline-flex justify-center rounded-md border border-rose-500 hover:bg-rose-500 px-4 py-2 text-sm font-medium text-gray-800 dark:text-gray-200">{massTime?.church.name}</a>
-                            <div className="inline-flex justify-center rounded-md border border-cyan-500 px-4 py-2 text-sm font-medium text-gray-800 dark:text-gray-200">{massTime?.province.name}</div>
+                            <div className="inline-flex justify-center rounded-md border border-cyan-500 px-4 py-2 text-sm font-medium text-gray-800 dark:text-gray-200">{massTime?.church.province.name}</div>
                           </div>
                           <div className="text-sm my-2 text-gray-900 dark:text-white">{massTime?.church.address}</div>
                         </div>
