@@ -11,7 +11,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         'hero-youth-event': "url('/youth_event/youth-event-1.jpeg')",
-        'hero-index': "url('/vietcatholic_cover_mua_chay.jpg')",
+        'hero-index': "url('/Mua_Phuc_Sinh.jpg')",
         'footer-texture': "url('/img/footer-texture.png')",
       },
       maxWidth: {
