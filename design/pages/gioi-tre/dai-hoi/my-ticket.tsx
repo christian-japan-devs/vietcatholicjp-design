@@ -11,7 +11,7 @@ const meta_data = {
   title:"Đại hội giới trẻ lần II tại Nhật",
   description:"Lấy vé tham dự Đại Hội",
   ogUrl:"/gioi-tre/dai-hoi",
-  ogImage:"/vietcatholicjp-bg.jpeg"
+  ogImage:"/youth_event/youth-event-1.jpeg"
 }
 
 const SignUp: NextPage = () => {
