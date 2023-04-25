@@ -31,7 +31,7 @@ export default function TicketCard({ticket,onSubmit}: Props ){
             </div>
             <div className={"z-10 absolute w-full "+qr_code_position}>
                 <div className={"flex justify-center"}>
-                    <QRCodeSVG value={"event=VCJYII&id="+ticket.id+"&code="+ticket.ticket_code+"&email="+ticket.email} size={qr_code_side}  fgColor="#2B6F25"/>
+                    <QRCodeSVG value={"event=VCJYII&id="+ticket.id+"&code="+ticket.ticket_code+"&email="+ticket.email} size={qr_code_side}  fgColor="#80135e"/>
                 </div>
             </div>
         </div>
