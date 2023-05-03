@@ -55,7 +55,7 @@ const QRcodeReader: NextPage<Props> = ({type})  => {
                 console.log(results);
                 let headers = {
                     'Content-Type': 'application/json',
-                    Authorization: `Bearer ${session?.accessToken}`,
+                    //Authorization: `Bearer ${session?.accessToken}`,
                 };
                 if(!isRequesting){
                     console.log(isRequesting)
