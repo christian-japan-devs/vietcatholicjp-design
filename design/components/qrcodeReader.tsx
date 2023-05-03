@@ -73,7 +73,7 @@ const QRcodeReader: NextPage<Props> = ({type})  => {
                             openModal()
                         } else {
                             if(modalType != 'ok') {
-                                if(data.status=='P') {
+                                if(data.status=='PS') {
                                     setModalType('warning')
                                     setModalTitle('Mã đã duyệt.')
                                     //console.log(data)
